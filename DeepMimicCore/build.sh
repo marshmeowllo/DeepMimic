@@ -76,7 +76,7 @@ freeglut() {
   fi
   cd freeglut-3.0.0
   if [ ! -f Makefile ]; then
-    cmake . -DCMAKE_INSTALL_PREFIX=install || exit 1
+    cmake -DCMAKE_C_FLAGS="-fcommon" . -DCMAKE_INSTALL_PREFIX=install || exit 1
   fi
   if [ ! -d install ]; then
     make install || exit 1
