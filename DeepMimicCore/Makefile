@@ -14,14 +14,17 @@ MKDIR = mkdir -p
 
 # PYTHON_INC = /home/yuaylong/miniconda3/bin/python
 # PYTHON_LIB = /usr/lib/ -lpython3.6m
-PYTHON_INC = /home/yuaylong/miniconda3/envs/mimic/include/python3.11
+PYTHON_INC = /home/yuaylong/miniconda3/envs/mimic/include/python3.13
 PYTHON_LIB = /home/yuaylong/miniconda3/envs/mimic/lib
+
 INC = -I./ \
 	-I$(EIGEN_DIR) \
 	-I$(BULLET_INC_DIR) \
 	-I$(GLEW_INC_DIR) \
 	-I$(FREEGLUT_INC_DIR) \
-	-I$(BULLET_INC_DIR)
+	-I$(BULLET_INC_DIR) \
+	-I$(PYTHON_INC)
+
 
 LIBDIRS = -L$(GLEW_LIB_DIR) -L$(FREEGLUT_LIB_DIR) -L$(BULLET_LIB_DIR)
 LIBS = -lGLEW -lGL -lGLU -lglut -lBulletDynamics -lBulletCollision -lLinearMath -lm -lstdc++
