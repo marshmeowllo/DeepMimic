@@ -14,7 +14,7 @@ MKDIR = mkdir -p
 
 # PYTHON_INC = /home/yuaylong/miniconda3/bin/python
 # PYTHON_LIB = /usr/lib/ -lpython3.6m
-PYTHON_INC = /home/yuaylong/miniconda3/envs/mimic/include/python3.13
+PYTHON_INC = /home/yuaylong/miniconda3/envs/mimic/include/python3.12
 PYTHON_LIB = /home/yuaylong/miniconda3/envs/mimic/lib
 
 INC = -I./ \
