@@ -1,0 +1,34 @@
+\doxysection{Sim\+Plane.\+h}
+\hypertarget{SimPlane_8h_source}{}\label{SimPlane_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/SimRigidBody.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimPlane}{cSimPlane}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcSimPlane_1_1tParams}{tParams}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcSimPlane_1_1tParams}{tParams}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mMass;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mFriction;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ tVector\ mOrigin;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ tVector\ mNormal;}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classcSimPlane}{cSimPlane}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimPlane}{\string~cSimPlane}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcSimPlane_1_1tParams}{tParams}}\&\ params);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetCoeffs()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ cShape::eShape\ GetShape()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSize()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{Sim\+Char\+Builder.\+h}
+\hypertarget{SimCharBuilder_8h_source}{}\label{SimCharBuilder_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/SimCharacter.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimCharBuilder}{cSimCharBuilder}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{enum}\ eCharType}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ eCharNone,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ cCharGeneral,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ eCharMax}
+\DoxyCodeLine{00014\ \ \ \ \ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CreateCharacter(eCharType\ char\_type,\ std::shared\_ptr<cSimCharacter>\&\ out\_char);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ParseCharType(\textcolor{keyword}{const}\ std::string\&\ char\_type\_str,\ eCharType\&\ out\_char\_type);}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

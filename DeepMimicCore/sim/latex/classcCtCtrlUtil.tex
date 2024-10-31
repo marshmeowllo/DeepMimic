@@ -1,0 +1,77 @@
+\doxysection{c\+Ct\+Ctrl\+Util Class Reference}
+\hypertarget{classcCtCtrlUtil}{}\label{classcCtCtrlUtil}\index{cCtCtrlUtil@{cCtCtrlUtil}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtCtrlUtil_a462e25a623e5a2270ee05906e03a6211}\label{classcCtCtrlUtil_a462e25a623e5a2270ee05906e03a6211} 
+static int {\bfseries Get\+Param\+Dim\+Torque} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id)
+\item 
+\Hypertarget{classcCtCtrlUtil_accf9a7b9b86ca4544a9b7301bd62ef87}\label{classcCtCtrlUtil_accf9a7b9b86ca4544a9b7301bd62ef87} 
+static int {\bfseries Get\+Param\+Dim\+Vel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id)
+\item 
+\Hypertarget{classcCtCtrlUtil_a1404e63caf7f0bbb17ba255025e20187}\label{classcCtCtrlUtil_a1404e63caf7f0bbb17ba255025e20187} 
+static int {\bfseries Get\+Param\+Dim\+PD} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id)
+\item 
+\Hypertarget{classcCtCtrlUtil_a59e485ae55da063b40d37b47d769fe55}\label{classcCtCtrlUtil_a59e485ae55da063b40d37b47d769fe55} 
+static void {\bfseries Build\+Bounds\+Torque} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a3b63da6a4c219eaab5382bbe30aa657e}\label{classcCtCtrlUtil_a3b63da6a4c219eaab5382bbe30aa657e} 
+static void {\bfseries Build\+Bounds\+Vel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a4b30b8894f720239a2c1caf064ee6bcd}\label{classcCtCtrlUtil_a4b30b8894f720239a2c1caf064ee6bcd} 
+static void {\bfseries Build\+Bounds\+PD} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a7b58549acf85df960ff341a2b324a720}\label{classcCtCtrlUtil_a7b58549acf85df960ff341a2b324a720} 
+static void {\bfseries Build\+Offset\+Scale\+Torque} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_a02ff5796b266a8c487d381ac3f4dcda0}\label{classcCtCtrlUtil_a02ff5796b266a8c487d381ac3f4dcda0} 
+static void {\bfseries Build\+Offset\+Scale\+Vel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_a4b60864a6919d4ca499bb15b399008e8}\label{classcCtCtrlUtil_a4b60864a6919d4ca499bb15b399008e8} 
+static void {\bfseries Build\+Offset\+Scale\+PD} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtCtrlUtil_adbc812b6e72eb9fc34233647131ae20c}\label{classcCtCtrlUtil_adbc812b6e72eb9fc34233647131ae20c} 
+static const double {\bfseries g\+Max\+PDExp\+Val} = 2.\+0 \texorpdfstring{$\ast$}{*} M\+\_\+\+PI
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtCtrlUtil_ad4d35bfd5e97124163ffa9076470f55c}\label{classcCtCtrlUtil_ad4d35bfd5e97124163ffa9076470f55c} 
+static void {\bfseries Build\+Bounds\+PDRevolute} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_aa0fd796dc319320c1be7379cbc8d634c}\label{classcCtCtrlUtil_aa0fd796dc319320c1be7379cbc8d634c} 
+static void {\bfseries Build\+Bounds\+PDPrismatic} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a3e35915b3d4cfe29876abf6422b17603}\label{classcCtCtrlUtil_a3e35915b3d4cfe29876abf6422b17603} 
+static void {\bfseries Build\+Bounds\+PDPlanar} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_aa26caaffb3f30961395d3ab6986b5531}\label{classcCtCtrlUtil_aa26caaffb3f30961395d3ab6986b5531} 
+static void {\bfseries Build\+Bounds\+PDFixed} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a9a61648e24285290c98d90f86bbf8024}\label{classcCtCtrlUtil_a9a61648e24285290c98d90f86bbf8024} 
+static void {\bfseries Build\+Bounds\+PDSpherical} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max)
+\item 
+\Hypertarget{classcCtCtrlUtil_a755bc74d3931e563b7a52469ecfb59b3}\label{classcCtCtrlUtil_a755bc74d3931e563b7a52469ecfb59b3} 
+static void {\bfseries Build\+Offset\+Scale\+PDRevolute} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_ae6dbbf2bb8f6c003eb1d7ef0e481f909}\label{classcCtCtrlUtil_ae6dbbf2bb8f6c003eb1d7ef0e481f909} 
+static void {\bfseries Build\+Offset\+Scale\+PDPrismatic} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_a7f8e151c57a0ce4b1d94711ad246bfca}\label{classcCtCtrlUtil_a7f8e151c57a0ce4b1d94711ad246bfca} 
+static void {\bfseries Build\+Offset\+Scale\+PDPlanar} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_aa41c541bd71d72fcf47d84c7c29133e9}\label{classcCtCtrlUtil_aa41c541bd71d72fcf47d84c7c29133e9} 
+static void {\bfseries Build\+Offset\+Scale\+PDFixed} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\item 
+\Hypertarget{classcCtCtrlUtil_a9a515e38f46848623a069b3fce9ed4fe}\label{classcCtCtrlUtil_a9a515e38f46848623a069b3fce9ed4fe} 
+static void {\bfseries Build\+Offset\+Scale\+PDSpherical} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ct\+Ctrl\+Util.\+h\item 
+Ct\+Ctrl\+Util.\+cpp\end{DoxyCompactItemize}

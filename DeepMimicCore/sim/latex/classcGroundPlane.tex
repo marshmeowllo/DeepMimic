@@ -1,0 +1,374 @@
+\doxysection{c\+Ground\+Plane Class Reference}
+\hypertarget{classcGroundPlane}{}\label{classcGroundPlane}\index{cGroundPlane@{cGroundPlane}}
+
+
+Inheritance diagram for c\+Ground\+Plane\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classcGroundPlane__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Ground\+Plane\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcGroundPlane__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcGroundPlane_abe26ea6b370eab86f189c3283cef44c7}{Init}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world, const \mbox{\hyperlink{structcGround_1_1tParams}{t\+Params}} \&params)
+\item 
+virtual void \mbox{\hyperlink{classcGroundPlane_a23d11ff6d3bc8d5c59b9f771e39a6d20}{Update}} (double time\+\_\+elapsed, const t\+Vector \&bound\+\_\+min, const t\+Vector \&bound\+\_\+max)
+\item 
+virtual void \mbox{\hyperlink{classcGroundPlane_a9d94c05052565990337ab792261c0985}{Clear}} ()
+\item 
+virtual double \mbox{\hyperlink{classcGroundPlane_a13eff7f98229521fb09c9463aaf35288}{Sample\+Height}} (const t\+Vector \&pos) const
+\item 
+virtual double \mbox{\hyperlink{classcGroundPlane_ab5129ab0ad2e736bc02408fd6b63cadb}{Sample\+Height}} (const t\+Vector \&pos, bool \&out\+\_\+valid\+\_\+sample) const
+\item 
+virtual void \mbox{\hyperlink{classcGroundPlane_a9fdbb1a2586273a3b8034668281cc7f8}{Sample\+Height}} (const Eigen\+::\+Matrix\+Xd \&pos, Eigen\+::\+Vector\+Xd \&out\+\_\+h) const
+\item 
+\Hypertarget{classcGroundPlane_a9c54b0a96951bf92e6690ae5be794c09}\label{classcGroundPlane_a9c54b0a96951bf92e6690ae5be794c09} 
+virtual const t\+Vector \& {\bfseries Get\+Prev\+Center} () const
+\item 
+virtual e\+Class \mbox{\hyperlink{classcGroundPlane_aa5e87b43b457882ac9276c66edd10d4f}{Get\+Ground\+Class}} () const
+\item 
+virtual void \mbox{\hyperlink{classcGroundPlane_a21a71157b869e085041ab5692e12b5c4}{Calc\+AABB}} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Sample\+Height\+Vel} (const t\+Vector \&pos, double \&out\+\_\+h, t\+Vector \&out\+\_\+vel, bool \&out\+\_\+valid\+\_\+sample) const
+\item 
+virtual void {\bfseries Set\+Blend\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Param\+Blend} (double blend)
+\item 
+virtual size\+\_\+t {\bfseries Get\+Update\+Count} () const
+\item 
+virtual void {\bfseries Seed\+Rand} (unsigned long seed)
+\item 
+virtual void {\bfseries Sample\+Placement} (const t\+Vector \&origin, t\+Vector \&out\+\_\+pos, t\+Quaternion \&out\+\_\+rot)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcGround_ac72f7c1e1c3483c65f5c891fd6d6c3b1}{Get\+Size}} () const override
+\item 
+virtual double {\bfseries Get\+Vert\+SpacingX} () const
+\item 
+virtual double {\bfseries Get\+Vert\+SpacingZ} () const
+\item 
+virtual bool {\bfseries Output} (const std\+::string \&out\+\_\+file) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a0bfaec35073e508a540382afbf2e01ee}{Set\+Pos}} (const t\+Vector \&pos)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7e9ab664f0958e50aa0d65020e2f7b17}{Set\+Rotation}} (const t\+Vector \&axis, double theta)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7e1ad901ca8a66fc16c7fdd1a1d671e7}{Set\+Rotation}} (const t\+Quaternion \&q)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_a1acb5103a21e14739673302fa391eadb}{Get\+Linear\+Velocity}} () const
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_af8141a02fbd64ee0e84a7bdb38618952}{Get\+Linear\+Velocity}} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a11de36271a112b282b78ce2d8b0fb273}{Set\+Linear\+Velocity}} (const t\+Vector \&vel)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_ab84ac43a82c48b6eec71d44b490bad3c}{Get\+Angular\+Velocity}} () const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a2b564d6287b31f1e678a6610d8846281}{Set\+Angular\+Velocity}} (const t\+Vector \&vel)
+\item 
+virtual void {\bfseries Set\+Damping} (double linear\+\_\+damping, double angular\+\_\+damping)
+\item 
+virtual double {\bfseries Get\+Mass} () const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_ae79744916017d7d73691a88addf3abef}{Apply\+Force}} (const t\+Vector \&force)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7a2286de8d9fd06793aad0a014d35310}{Apply\+Force}} (const t\+Vector \&force, const t\+Vector \&local\+\_\+pos)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_ab93203415d1b15ca38795be6612f3846}{Apply\+Torque}} (const t\+Vector \&torque)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_aeb8816b439a5f2a68ef87e6f34b31f5a}{Clear\+Forces}} ()
+\item 
+virtual void {\bfseries Set\+Kinematic\+Object} (bool is\+\_\+kin)
+\item 
+virtual bool {\bfseries Is\+Kinematic\+Object} () const
+\item 
+virtual void {\bfseries Disable\+Deactivation} ()
+\item 
+virtual void {\bfseries Constrain} (const t\+Vector \&linear\+\_\+factor, const t\+Vector \&angular\+\_\+factor)
+\item 
+virtual bool {\bfseries Has\+Sim\+Body} () const
+\item 
+virtual const std\+::unique\+\_\+ptr$<$ bt\+Rigid\+Body $>$ \& {\bfseries Get\+Sim\+Body} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual t\+Vector {\bfseries Get\+Pos} () const
+\item 
+virtual void {\bfseries Get\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const
+\item 
+virtual t\+Quaternion {\bfseries Get\+Rotation} () const
+\item 
+virtual t\+Matrix {\bfseries Get\+World\+Transform} () const
+\item 
+virtual t\+Matrix {\bfseries Get\+Local\+Transform} () const
+\item 
+virtual t\+Vector {\bfseries World\+To\+Local\+Pos} (const t\+Vector \&world\+\_\+pos) const
+\item 
+virtual t\+Vector {\bfseries Local\+To\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual t\+Matrix3 {\bfseries Get\+Local\+To\+World\+Rot\+Mat} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COM} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COMVel} () const
+\item 
+virtual void {\bfseries Register\+Contact} ()
+\item 
+virtual void {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual void {\bfseries Update\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& {\bfseries Get\+Contact\+Handle} () const
+\item 
+virtual bool {\bfseries Is\+In\+Contact} () const
+\item 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} () const
+\item 
+virtual short {\bfseries Get\+Col\+Group} () const
+\item 
+virtual void {\bfseries Set\+Col\+Group} (short col\+\_\+group)
+\item 
+virtual short {\bfseries Get\+Col\+Mask} () const
+\item 
+virtual void {\bfseries Set\+Col\+Mask} (short col\+\_\+mask)
+\item 
+virtual e\+Type {\bfseries Get\+Type} () const
+\item 
+virtual c\+Shape\+::e\+Shape {\bfseries Get\+Shape} () const
+\item 
+virtual const bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Shape} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcGroundPlane_adbac31ee97c277fd4a455ad430c16295}\label{classcGroundPlane_adbac31ee97c277fd4a455ad430c16295} 
+static EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW bool {\bfseries Parse\+Params\+Json} (const Json\+::\+Value \&json, Eigen\+::\+Vector\+Xd \&out\+\_\+params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+static e\+Class {\bfseries Get\+Class\+From\+Type} (e\+Type ground\+\_\+type)
+\item 
+static void {\bfseries Parse\+Type} (const std\+::string \&str, e\+Type \&out\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcGroundPlane_ae1972a2e2d96bc1b00083aeb658fec29}\label{classcGroundPlane_ae1972a2e2d96bc1b00083aeb658fec29} 
+t\+Vector {\bfseries m\+Prev\+Center}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+c\+Rand {\bfseries m\+Rand}
+\item 
+\mbox{\hyperlink{structcGround_1_1tParams}{t\+Params}} {\bfseries m\+Params}
+\item 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Blend\+Params}
+\item 
+size\+\_\+t {\bfseries m\+Update\+Count}
+\item 
+double {\bfseries m\+Time}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Rigid\+Body $>$ {\bfseries m\+Sim\+Body}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Shape $>$ {\bfseries m\+Col\+Shape}
+\item 
+\mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries m\+Contact\+Handle}
+\item 
+bool {\bfseries m\+Enable\+Contact\+Fall}
+\item 
+e\+Type {\bfseries m\+Type}
+\item 
+short {\bfseries m\+Col\+Group}
+\item 
+short {\bfseries m\+Col\+Mask}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcGround_a24e9e6bd0cbe8828e59f251414776146}\label{classcGround_a24e9e6bd0cbe8828e59f251414776146} 
+enum {\bfseries e\+Class} \{ {\bfseries e\+Class\+Plane}
+, {\bfseries e\+Class\+Max}
+, {\bfseries e\+Class\+Invalid}
+ \}
+\item 
+\Hypertarget{classcGround_a8ead1a1cd121affd166ab9f4656ebbd7}\label{classcGround_a8ead1a1cd121affd166ab9f4656ebbd7} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Plane}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a7031e8c95243ce20c8163100e523d77c}\label{classcSimObj_a7031e8c95243ce20c8163100e523d77c} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Dynamic}
+, {\bfseries e\+Type\+Static}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries g\+Type\+Key} = "{}Type"{}
+\item 
+static const std\+::string {\bfseries g\+Ground\+Width\+Key} = "{}Ground\+Width"{}
+\item 
+static const std\+::string {\bfseries g\+Vert\+Spacing\+XKey} = "{}Vert\+Spacing\+X"{}
+\item 
+static const std\+::string {\bfseries g\+Vert\+Spacing\+ZKey} = "{}Vert\+Spacing\+Z"{}
+\item 
+static const std\+::string {\bfseries g\+Params\+Key} = "{}Params"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcGround}{c\+Ground}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Setup\+Rand\+Gen} ()
+\item 
+virtual void {\bfseries Calc\+Blend\+Params} (double blend, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual int {\bfseries Get\+Num\+Param\+Sets} () const
+\item 
+virtual int {\bfseries Get\+Blend\+Param\+Size} () const
+\item 
+virtual void {\bfseries Flag\+Update} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+virtual void {\bfseries Add\+To\+World} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+virtual void {\bfseries Remove\+From\+World} ()
+\item 
+virtual const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimRigidBody_a44d4f41b3d4230b7aaa567ff0643deb6}{Get\+Collision\+Object}} () const
+\item 
+virtual bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimRigidBody_a66e82387116c0b779e4b2118b876db9d}{Get\+Collision\+Object}} ()
+\item 
+virtual int {\bfseries Get\+Num\+Constraints} () const
+\item 
+virtual \mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{c\+World\+::t\+Constraint\+Handle}} {\bfseries Get\+Constraint} (int c) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& {\bfseries Get\+World} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcGroundPlane_a21a71157b869e085041ab5692e12b5c4}\label{classcGroundPlane_a21a71157b869e085041ab5692e12b5c4} 
+\index{cGroundPlane@{cGroundPlane}!CalcAABB@{CalcAABB}}
+\index{CalcAABB@{CalcAABB}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{CalcAABB()}{CalcAABB()}}
+{\footnotesize\ttfamily void c\+Ground\+Plane\+::\+Calc\+AABB (\begin{DoxyParamCaption}\item[{t\+Vector \&}]{out\+\_\+min,  }\item[{t\+Vector \&}]{out\+\_\+max }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcGroundPlane_a9d94c05052565990337ab792261c0985}\label{classcGroundPlane_a9d94c05052565990337ab792261c0985} 
+\index{cGroundPlane@{cGroundPlane}!Clear@{Clear}}
+\index{Clear@{Clear}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void c\+Ground\+Plane\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_aa5e87b43b457882ac9276c66edd10d4f}\label{classcGroundPlane_aa5e87b43b457882ac9276c66edd10d4f} 
+\index{cGroundPlane@{cGroundPlane}!GetGroundClass@{GetGroundClass}}
+\index{GetGroundClass@{GetGroundClass}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{GetGroundClass()}{GetGroundClass()}}
+{\footnotesize\ttfamily c\+Ground\+Plane\+::e\+Class c\+Ground\+Plane\+::\+Get\+Ground\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_abe26ea6b370eab86f189c3283cef44c7}\label{classcGroundPlane_abe26ea6b370eab86f189c3283cef44c7} 
+\index{cGroundPlane@{cGroundPlane}!Init@{Init}}
+\index{Init@{Init}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void c\+Ground\+Plane\+::\+Init (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&}]{world,  }\item[{const \mbox{\hyperlink{structcGround_1_1tParams}{t\+Params}} \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_a9fdbb1a2586273a3b8034668281cc7f8}\label{classcGroundPlane_a9fdbb1a2586273a3b8034668281cc7f8} 
+\index{cGroundPlane@{cGroundPlane}!SampleHeight@{SampleHeight}}
+\index{SampleHeight@{SampleHeight}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{SampleHeight()}{SampleHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void c\+Ground\+Plane\+::\+Sample\+Height (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{pos,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_a13eff7f98229521fb09c9463aaf35288}\label{classcGroundPlane_a13eff7f98229521fb09c9463aaf35288} 
+\index{cGroundPlane@{cGroundPlane}!SampleHeight@{SampleHeight}}
+\index{SampleHeight@{SampleHeight}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{SampleHeight()}{SampleHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily double c\+Ground\+Plane\+::\+Sample\+Height (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_ab5129ab0ad2e736bc02408fd6b63cadb}\label{classcGroundPlane_ab5129ab0ad2e736bc02408fd6b63cadb} 
+\index{cGroundPlane@{cGroundPlane}!SampleHeight@{SampleHeight}}
+\index{SampleHeight@{SampleHeight}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{SampleHeight()}{SampleHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double c\+Ground\+Plane\+::\+Sample\+Height (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{pos,  }\item[{bool \&}]{out\+\_\+valid\+\_\+sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+\Hypertarget{classcGroundPlane_a23d11ff6d3bc8d5c59b9f771e39a6d20}\label{classcGroundPlane_a23d11ff6d3bc8d5c59b9f771e39a6d20} 
+\index{cGroundPlane@{cGroundPlane}!Update@{Update}}
+\index{Update@{Update}!cGroundPlane@{cGroundPlane}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void c\+Ground\+Plane\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+elapsed,  }\item[{const t\+Vector \&}]{bound\+\_\+min,  }\item[{const t\+Vector \&}]{bound\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcGround}{c\+Ground}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ground\+Plane.\+h\item 
+Ground\+Plane.\+cpp\end{DoxyCompactItemize}

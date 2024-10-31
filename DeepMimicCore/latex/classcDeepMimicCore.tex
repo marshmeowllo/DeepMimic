@@ -1,0 +1,260 @@
+\doxysection{c\+Deep\+Mimic\+Core Class Reference}
+\hypertarget{classcDeepMimicCore}{}\label{classcDeepMimicCore}\index{cDeepMimicCore@{cDeepMimicCore}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcDeepMimicCore_aa349f5116a8eb35417a3f3636eff2c54}\label{classcDeepMimicCore_aa349f5116a8eb35417a3f3636eff2c54} 
+{\bfseries c\+Deep\+Mimic\+Core} (bool enable\+\_\+draw)
+\item 
+\Hypertarget{classcDeepMimicCore_a05f5ae0fd800b0c2ae52e4b9079a588f}\label{classcDeepMimicCore_a05f5ae0fd800b0c2ae52e4b9079a588f} 
+virtual void {\bfseries Seed\+Rand} (int seed)
+\item 
+\Hypertarget{classcDeepMimicCore_a79c29f82b1042b5b187c4b46fbbf40eb}\label{classcDeepMimicCore_a79c29f82b1042b5b187c4b46fbbf40eb} 
+virtual void {\bfseries Parse\+Args} (const std\+::vector$<$ std\+::string $>$ \&args)
+\item 
+\Hypertarget{classcDeepMimicCore_ad02461ed379d0616f68e59334bacc797}\label{classcDeepMimicCore_ad02461ed379d0616f68e59334bacc797} 
+virtual void {\bfseries Init} ()
+\item 
+\Hypertarget{classcDeepMimicCore_aa54f02c68b9d0c71f39818155a265c59}\label{classcDeepMimicCore_aa54f02c68b9d0c71f39818155a265c59} 
+virtual void {\bfseries Update} (double timestep)
+\item 
+\Hypertarget{classcDeepMimicCore_a5337fce9a269df2c9e8485ea7fafed19}\label{classcDeepMimicCore_a5337fce9a269df2c9e8485ea7fafed19} 
+virtual void {\bfseries Reset} ()
+\item 
+\Hypertarget{classcDeepMimicCore_a3cf44cd226fd4823f0c1e21c23fe7681}\label{classcDeepMimicCore_a3cf44cd226fd4823f0c1e21c23fe7681} 
+virtual double {\bfseries Get\+Time} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a9aaff5c241ab31e7155821f96d5b75d9}\label{classcDeepMimicCore_a9aaff5c241ab31e7155821f96d5b75d9} 
+virtual std\+::string {\bfseries Get\+Name} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a6d45c8b1a2ed16c45ef10f82f9efcc7a}\label{classcDeepMimicCore_a6d45c8b1a2ed16c45ef10f82f9efcc7a} 
+virtual bool {\bfseries Enable\+Draw} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a53c0b8bdf0ee028d512137333c609705}\label{classcDeepMimicCore_a53c0b8bdf0ee028d512137333c609705} 
+virtual void {\bfseries Draw} ()
+\item 
+\Hypertarget{classcDeepMimicCore_a404bb088fa986f48b7aca6725293944b}\label{classcDeepMimicCore_a404bb088fa986f48b7aca6725293944b} 
+virtual void {\bfseries Keyboard} (int key, int x, int y)
+\item 
+\Hypertarget{classcDeepMimicCore_aa0aafdb68b7670f4c990156d85edae54}\label{classcDeepMimicCore_aa0aafdb68b7670f4c990156d85edae54} 
+virtual void {\bfseries Mouse\+Click} (int button, int state, int x, int y)
+\item 
+\Hypertarget{classcDeepMimicCore_a66909521aa255daa2b5dae2de1da8d51}\label{classcDeepMimicCore_a66909521aa255daa2b5dae2de1da8d51} 
+virtual void {\bfseries Mouse\+Move} (int x, int y)
+\item 
+\Hypertarget{classcDeepMimicCore_a9551cc6b7827d2fb064d73f18b9d00d9}\label{classcDeepMimicCore_a9551cc6b7827d2fb064d73f18b9d00d9} 
+virtual void {\bfseries Reshape} (int w, int h)
+\item 
+\Hypertarget{classcDeepMimicCore_ad411bd3eb1c364e5b11843997b4aa4d7}\label{classcDeepMimicCore_ad411bd3eb1c364e5b11843997b4aa4d7} 
+virtual void {\bfseries Shutdown} ()
+\item 
+\Hypertarget{classcDeepMimicCore_a72b6e5177c103f8d95c0eb04836e2a03}\label{classcDeepMimicCore_a72b6e5177c103f8d95c0eb04836e2a03} 
+virtual bool {\bfseries Is\+Done} () const
+\item 
+\Hypertarget{classcDeepMimicCore_acc90be85239f67255a5b5b619e06777e}\label{classcDeepMimicCore_acc90be85239f67255a5b5b619e06777e} 
+virtual c\+Draw\+Scene \texorpdfstring{$\ast$}{*} {\bfseries Get\+Draw\+Scene} () const
+\item 
+\Hypertarget{classcDeepMimicCore_ad69ff2a497b7ec5b442f577aa427b142}\label{classcDeepMimicCore_ad69ff2a497b7ec5b442f577aa427b142} 
+virtual void {\bfseries Set\+Playback\+Speed} (double speed)
+\item 
+\Hypertarget{classcDeepMimicCore_af805ab1daeb5ac0d86236567f8f5e090}\label{classcDeepMimicCore_af805ab1daeb5ac0d86236567f8f5e090} 
+virtual void {\bfseries Set\+Updates\+Per\+Sec} (double updates\+\_\+per\+\_\+sec)
+\item 
+\Hypertarget{classcDeepMimicCore_a5654e21f732b12a9c9d4e99b189282f3}\label{classcDeepMimicCore_a5654e21f732b12a9c9d4e99b189282f3} 
+virtual int {\bfseries Get\+Win\+Width} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a0dcf66d89b0cd8c44df63bdc7664223b}\label{classcDeepMimicCore_a0dcf66d89b0cd8c44df63bdc7664223b} 
+virtual int {\bfseries Get\+Win\+Height} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a8d2f870f651d42fc8c982d533cc45791}\label{classcDeepMimicCore_a8d2f870f651d42fc8c982d533cc45791} 
+virtual int {\bfseries Get\+Num\+Update\+Substeps} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a8b5cc9713b1b4384d7d53ea8dfa31051}\label{classcDeepMimicCore_a8b5cc9713b1b4384d7d53ea8dfa31051} 
+virtual bool {\bfseries Is\+RLScene} () const
+\item 
+\Hypertarget{classcDeepMimicCore_ace564e439d007d7e76979e15ab95a343}\label{classcDeepMimicCore_ace564e439d007d7e76979e15ab95a343} 
+virtual int {\bfseries Get\+Num\+Agents} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a6e508f0fe1f541878fb4bc47a44e3035}\label{classcDeepMimicCore_a6e508f0fe1f541878fb4bc47a44e3035} 
+virtual bool {\bfseries Need\+New\+Action} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a175bceb9576f8467d326a1d0d32a4fc0}\label{classcDeepMimicCore_a175bceb9576f8467d326a1d0d32a4fc0} 
+virtual std\+::vector$<$ double $>$ {\bfseries Record\+State} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a8e57ba2fdf2b9e7ab8b6cd96f07b4636}\label{classcDeepMimicCore_a8e57ba2fdf2b9e7ab8b6cd96f07b4636} 
+virtual std\+::vector$<$ double $>$ {\bfseries Record\+Goal} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a3cb5afcdc2abf990a727eccf6a2320cc}\label{classcDeepMimicCore_a3cb5afcdc2abf990a727eccf6a2320cc} 
+virtual void {\bfseries Set\+Action} (int agent\+\_\+id, const std\+::vector$<$ double $>$ \&action)
+\item 
+\Hypertarget{classcDeepMimicCore_a061f3b34d7ece5501e779f62ea260078}\label{classcDeepMimicCore_a061f3b34d7ece5501e779f62ea260078} 
+virtual void {\bfseries Log\+Val} (int agent\+\_\+id, double val)
+\item 
+\Hypertarget{classcDeepMimicCore_a0f5bdbd96a394fd639f144a3e4c2d5e8}\label{classcDeepMimicCore_a0f5bdbd96a394fd639f144a3e4c2d5e8} 
+virtual int {\bfseries Get\+Action\+Space} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_ae79f67b4ca8e8ba1a15677abc788b7e7}\label{classcDeepMimicCore_ae79f67b4ca8e8ba1a15677abc788b7e7} 
+virtual int {\bfseries Get\+State\+Size} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a1e53cac3e7d9f4193f55ba9a9f338cfb}\label{classcDeepMimicCore_a1e53cac3e7d9f4193f55ba9a9f338cfb} 
+virtual int {\bfseries Get\+Goal\+Size} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a529f79a7058285deae62b4de27b47893}\label{classcDeepMimicCore_a529f79a7058285deae62b4de27b47893} 
+virtual int {\bfseries Get\+Action\+Size} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_aeb831ea7f3d38611508c3f7bc38b3a2d}\label{classcDeepMimicCore_aeb831ea7f3d38611508c3f7bc38b3a2d} 
+virtual int {\bfseries Get\+Num\+Actions} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a32471c736dc01820feaa6e5904e1b1c8}\label{classcDeepMimicCore_a32471c736dc01820feaa6e5904e1b1c8} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+State\+Offset} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a5ad6d5bc3f62aa0f198e787ee5bbea94}\label{classcDeepMimicCore_a5ad6d5bc3f62aa0f198e787ee5bbea94} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+State\+Scale} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_acdc5e63cea739c6d79978c45a6d3ca97}\label{classcDeepMimicCore_acdc5e63cea739c6d79978c45a6d3ca97} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Goal\+Offset} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_ad97cd7e042affd8296bd4ad03b16f009}\label{classcDeepMimicCore_ad97cd7e042affd8296bd4ad03b16f009} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Goal\+Scale} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_ae22345c4507496a00463fedc6a188504}\label{classcDeepMimicCore_ae22345c4507496a00463fedc6a188504} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Action\+Offset} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a16f1cd87b5fa3bde4e29ba23b6c6a900}\label{classcDeepMimicCore_a16f1cd87b5fa3bde4e29ba23b6c6a900} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Action\+Scale} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a6ff6a80898f6bb4f30bc6319d7d111e1}\label{classcDeepMimicCore_a6ff6a80898f6bb4f30bc6319d7d111e1} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Action\+Bound\+Min} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a00320ea2bc78bd4ea55ea7200115069a}\label{classcDeepMimicCore_a00320ea2bc78bd4ea55ea7200115069a} 
+virtual std\+::vector$<$ double $>$ {\bfseries Build\+Action\+Bound\+Max} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a37867d5a6845424f273a1105bdc1886c}\label{classcDeepMimicCore_a37867d5a6845424f273a1105bdc1886c} 
+virtual std\+::vector$<$ int $>$ {\bfseries Build\+State\+Norm\+Groups} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_aa6eaef26280257d9f4a64c76c5c494b7}\label{classcDeepMimicCore_aa6eaef26280257d9f4a64c76c5c494b7} 
+virtual std\+::vector$<$ int $>$ {\bfseries Build\+Goal\+Norm\+Groups} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_aaf1bc95afb23a1cbf049ddb8f47b2058}\label{classcDeepMimicCore_aaf1bc95afb23a1cbf049ddb8f47b2058} 
+virtual double {\bfseries Calc\+Reward} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a7dc83c75264f20c0312a6362f50407a9}\label{classcDeepMimicCore_a7dc83c75264f20c0312a6362f50407a9} 
+virtual double {\bfseries Get\+Reward\+Min} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a9175ca44746924eae2b36d87c94e5b6b}\label{classcDeepMimicCore_a9175ca44746924eae2b36d87c94e5b6b} 
+virtual double {\bfseries Get\+Reward\+Max} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a21df3d5f8b29b95040a3e6e6420bf267}\label{classcDeepMimicCore_a21df3d5f8b29b95040a3e6e6420bf267} 
+virtual double {\bfseries Get\+Reward\+Fail} (int agent\+\_\+id)
+\item 
+\Hypertarget{classcDeepMimicCore_ab441c064f9db12c6fb64ebfd626db71e}\label{classcDeepMimicCore_ab441c064f9db12c6fb64ebfd626db71e} 
+virtual double {\bfseries Get\+Reward\+Succ} (int agent\+\_\+id)
+\item 
+\Hypertarget{classcDeepMimicCore_a7f23b46221f0fb7521711365d1768732}\label{classcDeepMimicCore_a7f23b46221f0fb7521711365d1768732} 
+virtual bool {\bfseries Enable\+AMPTask\+Reward} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a6a2814c13b8ff8fcef26e6e7b461ccb1}\label{classcDeepMimicCore_a6a2814c13b8ff8fcef26e6e7b461ccb1} 
+virtual int {\bfseries Get\+AMPObs\+Size} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a21ae6b4dfd2651a46446b7866cd5d464}\label{classcDeepMimicCore_a21ae6b4dfd2651a46446b7866cd5d464} 
+virtual std\+::vector$<$ double $>$ {\bfseries Get\+AMPObs\+Offset} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a8c59e04c0a53c7b53254c2e96e642373}\label{classcDeepMimicCore_a8c59e04c0a53c7b53254c2e96e642373} 
+virtual std\+::vector$<$ double $>$ {\bfseries Get\+AMPObs\+Scale} () const
+\item 
+\Hypertarget{classcDeepMimicCore_ace0c2b04e2242eae02a5f0839b73fa5a}\label{classcDeepMimicCore_ace0c2b04e2242eae02a5f0839b73fa5a} 
+virtual std\+::vector$<$ int $>$ {\bfseries Get\+AMPObs\+Norm\+Group} () const
+\item 
+\Hypertarget{classcDeepMimicCore_aaaae7003dc1969264ca1d23fd2661263}\label{classcDeepMimicCore_aaaae7003dc1969264ca1d23fd2661263} 
+virtual std\+::vector$<$ double $>$ {\bfseries Record\+AMPObs\+Agent} (int agent\+\_\+id)
+\item 
+\Hypertarget{classcDeepMimicCore_a21ad201486768d2f3914bb09a4cc5124}\label{classcDeepMimicCore_a21ad201486768d2f3914bb09a4cc5124} 
+virtual std\+::vector$<$ double $>$ {\bfseries Record\+AMPObs\+Expert} (int agent\+\_\+id)
+\item 
+\Hypertarget{classcDeepMimicCore_aca5bc0838d799682ce680c0ef95b3bca}\label{classcDeepMimicCore_aca5bc0838d799682ce680c0ef95b3bca} 
+virtual bool {\bfseries Is\+Episode\+End} () const
+\item 
+\Hypertarget{classcDeepMimicCore_ac1b3f32f613bf7f30cbaf618665fc002}\label{classcDeepMimicCore_ac1b3f32f613bf7f30cbaf618665fc002} 
+virtual bool {\bfseries Check\+Valid\+Episode} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a39e9a1b2e82e9a5930bdda3c01ee1de1}\label{classcDeepMimicCore_a39e9a1b2e82e9a5930bdda3c01ee1de1} 
+virtual int {\bfseries Check\+Terminate} (int agent\+\_\+id) const
+\item 
+\Hypertarget{classcDeepMimicCore_a0c2dcf745ffa04f8a6e9a9fdfe3c1c46}\label{classcDeepMimicCore_a0c2dcf745ffa04f8a6e9a9fdfe3c1c46} 
+virtual void {\bfseries Set\+Mode} (int mode)
+\item 
+\Hypertarget{classcDeepMimicCore_a9772848ffea034c4611aea88b8c2fe59}\label{classcDeepMimicCore_a9772848ffea034c4611aea88b8c2fe59} 
+virtual void {\bfseries Set\+Sample\+Count} (int count)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcDeepMimicCore_a5b79bdd89420df14431b225b41fbc51d}\label{classcDeepMimicCore_a5b79bdd89420df14431b225b41fbc51d} 
+virtual void {\bfseries Setup\+Scene} ()
+\item 
+\Hypertarget{classcDeepMimicCore_ab42e3c0e1f7a7336813a3c4990423cac}\label{classcDeepMimicCore_ab42e3c0e1f7a7336813a3c4990423cac} 
+virtual void {\bfseries Clear\+Scene} ()
+\item 
+\Hypertarget{classcDeepMimicCore_acbe6e56a949ebcd80016ca4ecac15e9b}\label{classcDeepMimicCore_acbe6e56a949ebcd80016ca4ecac15e9b} 
+virtual int {\bfseries Get\+Curr\+Time} () const
+\item 
+\Hypertarget{classcDeepMimicCore_afcdcbde861f116678a8545d57265a955}\label{classcDeepMimicCore_afcdcbde861f116678a8545d57265a955} 
+virtual void {\bfseries Init\+Frame\+Buffer} ()
+\item 
+\Hypertarget{classcDeepMimicCore_abc20315c20d02b5a9788cd2af1620baa}\label{classcDeepMimicCore_abc20315c20d02b5a9788cd2af1620baa} 
+virtual void {\bfseries Calc\+Device\+Coord} (int pixel\+\_\+x, int pixel\+\_\+y, double \&out\+\_\+device\+\_\+x, double \&out\+\_\+device\+\_\+y) const
+\item 
+\Hypertarget{classcDeepMimicCore_a89dff5c890e7f1df9495638be821c085}\label{classcDeepMimicCore_a89dff5c890e7f1df9495638be821c085} 
+virtual double {\bfseries Get\+Aspect\+Ratio} ()
+\item 
+\Hypertarget{classcDeepMimicCore_aedd9c56d821ae0ea5432e5bd472e46b9}\label{classcDeepMimicCore_aedd9c56d821ae0ea5432e5bd472e46b9} 
+virtual void {\bfseries Copy\+Frame} (c\+Texture\+Desc \&src) const
+\item 
+\Hypertarget{classcDeepMimicCore_a8eccdd90aeb16fa2e905adb9db949df9}\label{classcDeepMimicCore_a8eccdd90aeb16fa2e905adb9db949df9} 
+virtual const std\+::shared\+\_\+ptr$<$ c\+RLScene $>$ \& {\bfseries Get\+RLScene} () const
+\item 
+\Hypertarget{classcDeepMimicCore_a767dfbd8ed0eb595bc30cf795f6176cc}\label{classcDeepMimicCore_a767dfbd8ed0eb595bc30cf795f6176cc} 
+virtual void {\bfseries Convert\+Vector} (const Eigen\+::\+Vector\+Xd \&in\+\_\+vec, std\+::vector$<$ double $>$ \&out\+\_\+vec) const
+\item 
+\Hypertarget{classcDeepMimicCore_a963431c6edce14528543c345d3700773}\label{classcDeepMimicCore_a963431c6edce14528543c345d3700773} 
+virtual void {\bfseries Convert\+Vector} (const Eigen\+::\+Vector\+Xi \&in\+\_\+vec, std\+::vector$<$ int $>$ \&out\+\_\+vec) const
+\item 
+\Hypertarget{classcDeepMimicCore_ab4dd927e34930e14d984b44c96810c39}\label{classcDeepMimicCore_ab4dd927e34930e14d984b44c96810c39} 
+virtual void {\bfseries Convert\+Vector} (const std\+::vector$<$ double $>$ \&in\+\_\+vec, Eigen\+::\+Vector\+Xd \&out\+\_\+vec) const
+\item 
+\Hypertarget{classcDeepMimicCore_aaf5b6e273cec5ac1fa2953d935760890}\label{classcDeepMimicCore_aaf5b6e273cec5ac1fa2953d935760890} 
+virtual void {\bfseries Convert\+Vector} (const std\+::vector$<$ int $>$ \&in\+\_\+vec, Eigen\+::\+Vector\+Xi \&out\+\_\+vec) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcDeepMimicCore_abf987ab5b232fe24ccb42d6174b223e4}\label{classcDeepMimicCore_abf987ab5b232fe24ccb42d6174b223e4} 
+unsigned long int {\bfseries m\+Rand\+Seed}
+\item 
+\Hypertarget{classcDeepMimicCore_a1dbde1869b0181a24a62ad537a83055a}\label{classcDeepMimicCore_a1dbde1869b0181a24a62ad537a83055a} 
+std\+::shared\+\_\+ptr$<$ c\+Arg\+Parser $>$ {\bfseries m\+Arg\+Parser}
+\item 
+\Hypertarget{classcDeepMimicCore_af6cd97ce275890cf479e64fc3cea1953}\label{classcDeepMimicCore_af6cd97ce275890cf479e64fc3cea1953} 
+std\+::shared\+\_\+ptr$<$ c\+Scene $>$ {\bfseries m\+Scene}
+\item 
+\Hypertarget{classcDeepMimicCore_a4056fa4aef3904071bc0162aa2bc8c53}\label{classcDeepMimicCore_a4056fa4aef3904071bc0162aa2bc8c53} 
+std\+::shared\+\_\+ptr$<$ c\+RLScene $>$ {\bfseries m\+RLScene}
+\item 
+\Hypertarget{classcDeepMimicCore_a760a88725947b0de1d29d4da6f50ac10}\label{classcDeepMimicCore_a760a88725947b0de1d29d4da6f50ac10} 
+std\+::shared\+\_\+ptr$<$ c\+Texture\+Desc $>$ {\bfseries m\+Default\+Frame\+Buffer}
+\item 
+\Hypertarget{classcDeepMimicCore_a4d3de8b2076a24ed4e91b0d92727fd4c}\label{classcDeepMimicCore_a4d3de8b2076a24ed4e91b0d92727fd4c} 
+int {\bfseries m\+Num\+Update\+Substeps}
+\item 
+\Hypertarget{classcDeepMimicCore_a2321e8f2bdfa1d21fd672e98e230c3a8}\label{classcDeepMimicCore_a2321e8f2bdfa1d21fd672e98e230c3a8} 
+double {\bfseries m\+Playback\+Speed}
+\item 
+\Hypertarget{classcDeepMimicCore_a1cb761e1eb3761fc12c039d0e7462002}\label{classcDeepMimicCore_a1cb761e1eb3761fc12c039d0e7462002} 
+double {\bfseries m\+Updates\+Per\+Sec}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Deep\+Mimic\+Core.\+h\item 
+Deep\+Mimic\+Core.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\doxysection{PDController.\+h}
+\hypertarget{PDController_8h_source}{}\label{PDController_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}util/json/json.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}sim/Controller.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}sim/SimBodyJoint.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcPDController}{cPDController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcController}{cController}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{enum}\ eParam}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ eParamJointID,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ eParamKp,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ eParamKd,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ eParamTargetTheta0,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ eParamTargetTheta1,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ eParamTargetTheta2,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ eParamTargetTheta3,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ eParamTargetTheta4,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ eParamTargetTheta5,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ eParamTargetTheta6,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ eParamTargetVel0,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ eParamTargetVel1,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ eParamTargetVel2,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ eParamTargetVel3,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ eParamTargetVel4,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ eParamTargetVel5,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ eParamTargetVel6,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ eParamUseWorldCoord,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ eParamMax}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{typedef}\ Eigen::Matrix<double,\ eParamMax,\ 1>\ tParams;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LoadParams(\textcolor{keyword}{const}\ std::string\&\ file,\ Eigen::MatrixXd\&\ out\_buffer);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LoadParams(\textcolor{keyword}{const}\ Json::Value\&\ root,\ Eigen::MatrixXd\&\ out\_buffer);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ParsePDParams(\textcolor{keyword}{const}\ Json::Value\&\ root,\ tParams\&\ out\_params);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classcPDController}{cPDController}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcPDController}{\string~cPDController}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}*\ character,\ \textcolor{keyword}{const}\ tParams\&\ params);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{double}\ time\_step);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateControlForce(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}\&\ GetJoint();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}\&\ GetJoint()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetKp()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetKp(\textcolor{keywordtype}{double}\ kp);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetKd(\textcolor{keywordtype}{double}\ kd);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetKd()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetTorqueLimit()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetForceLimit()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTargetTheta(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ theta);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTargetVel(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetUseWorldCoord(\textcolor{keywordtype}{bool}\ use);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ UseWorldCoord()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetTargetTheta(Eigen::VectorXd\&\ out\_theta)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetTargetVel(Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsActive()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ tParams\ mParams;}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetJointDim()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetJointID()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyControlForces(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTau(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTauRevolute(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTauPlanar(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTauPrismatic(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTauFixed(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointTauSpherical(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_joint\_tau);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PostProcessTargetPose(Eigen::VectorXd\&\ out\_pose)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PostProcessTargetVel(Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ \};}
+
+\end{DoxyCode}

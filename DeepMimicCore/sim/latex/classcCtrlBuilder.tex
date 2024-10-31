@@ -1,0 +1,86 @@
+\doxysection{c\+Ctrl\+Builder Class Reference}
+\hypertarget{classcCtrlBuilder}{}\label{classcCtrlBuilder}\index{cCtrlBuilder@{cCtrlBuilder}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtrlBuilder_aa15727ed583a20ced86970ad2fd344f5}\label{classcCtrlBuilder_aa15727ed583a20ced86970ad2fd344f5} 
+enum {\bfseries e\+Char\+Ctrl} \{ \newline
+{\bfseries e\+Char\+Ctrl\+None}
+, {\bfseries e\+Char\+Ctrl\+Ct}
+, {\bfseries e\+Char\+Ctrl\+Ct\+PD}
+, {\bfseries e\+Char\+Ctrl\+Ct\+Vel}
+, \newline
+{\bfseries e\+Char\+Ctrl\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtrlBuilder_a1cc7d2c37fb48d49850d3875c69e4d3c}\label{classcCtrlBuilder_a1cc7d2c37fb48d49850d3875c69e4d3c} 
+static void {\bfseries Parse\+Char\+Ctrl} (const std\+::string \&char\+\_\+ctrl\+\_\+str, e\+Char\+Ctrl \&out\+\_\+char\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a67f3179d9195e44604c597baf2239a6b}\label{classcCtrlBuilder_a67f3179d9195e44604c597baf2239a6b} 
+static bool {\bfseries Build\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtrlBuilder_ac733dd4f1bde3a7d828244ab96eb1d64}\label{classcCtrlBuilder_ac733dd4f1bde3a7d828244ab96eb1d64} 
+static bool {\bfseries Build\+Ct\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_ad693cf89d213d374c1a7bbbfa8d80066}\label{classcCtrlBuilder_ad693cf89d213d374c1a7bbbfa8d80066} 
+static bool {\bfseries Build\+Ct\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a150d37ed379c2df513b0eb57bef7011f}\label{classcCtrlBuilder_a150d37ed379c2df513b0eb57bef7011f} 
+static bool {\bfseries Build\+Ct\+Vel\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_afbf1ffdfde1745328902b77cff7dc89f}\label{classcCtrlBuilder_afbf1ffdfde1745328902b77cff7dc89f} 
+static bool {\bfseries Build\+Ct\+Target\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_ac38add928b04df1a2711a6539109114e}\label{classcCtrlBuilder_ac38add928b04df1a2711a6539109114e} 
+static bool {\bfseries Build\+Dog\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_aa71c8638d9a78d10bdbd249beb24b842}\label{classcCtrlBuilder_aa71c8638d9a78d10bdbd249beb24b842} 
+static bool {\bfseries Build\+Raptor\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a99e19f4ca0b6309fcbeae3de0917be48}\label{classcCtrlBuilder_a99e19f4ca0b6309fcbeae3de0917be48} 
+static bool {\bfseries Build\+Biped3\+DStep\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a5cdb63d3b76c4cac7647e59dea017b67}\label{classcCtrlBuilder_a5cdb63d3b76c4cac7647e59dea017b67} 
+static bool {\bfseries Build\+Biped3\+DSym\+Step\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_acd5343060ec015036f542baa26d4996a}\label{classcCtrlBuilder_acd5343060ec015036f542baa26d4996a} 
+static bool {\bfseries Build\+Ct\+Tar\+Pose\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a3f1c7e2bd1be0b80d489390d38b73cb5}\label{classcCtrlBuilder_a3f1c7e2bd1be0b80d489390d38b73cb5} 
+static bool {\bfseries Build\+Ct\+Sym\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_ae6477597e84d3f8276d90b669fd77d5e}\label{classcCtrlBuilder_ae6477597e84d3f8276d90b669fd77d5e} 
+static bool {\bfseries Build\+Ct\+Heading\+Controller} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_ae278d3637f93e6fd97e936d2191cbcc2}\label{classcCtrlBuilder_ae278d3637f93e6fd97e936d2191cbcc2} 
+static bool {\bfseries Build\+Ct\+Heading\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a42a6243cdaef8f62cf84699c5afdb12f}\label{classcCtrlBuilder_a42a6243cdaef8f62cf84699c5afdb12f} 
+static bool {\bfseries Build\+Ct\+Sym\+Heading\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a05bb84be5308d8e6740810048e2f1167}\label{classcCtrlBuilder_a05bb84be5308d8e6740810048e2f1167} 
+static bool {\bfseries Build\+Ct\+Strike\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a4aa3146862763f6760b0c1ead5ec5b89}\label{classcCtrlBuilder_a4aa3146862763f6760b0c1ead5ec5b89} 
+static bool {\bfseries Build\+Ct\+Strike\+Obj\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\item 
+\Hypertarget{classcCtrlBuilder_a8c31ce4a077d1e017142ef56539733b0}\label{classcCtrlBuilder_a8c31ce4a077d1e017142ef56539733b0} 
+static bool {\bfseries Build\+Ct\+Cmd\+PDController} (const \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{t\+Ctrl\+Params}} \&params, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&out\+\_\+ctrl)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ctrl\+Builder.\+h\item 
+Ctrl\+Builder.\+cpp\end{DoxyCompactItemize}

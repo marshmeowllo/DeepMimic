@@ -1,0 +1,229 @@
+\doxysection{c\+World Class Reference}
+\hypertarget{classcWorld}{}\label{classcWorld}\index{cWorld@{cWorld}}
+
+
+Inheritance diagram for c\+World\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classcWorld__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+World\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcWorld__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcWorld_1_1tConstraintEntry}{t\+Constraint\+Entry}}
+\item 
+struct \mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{t\+Constraint\+Handle}}
+\item 
+struct \mbox{\hyperlink{structcWorld_1_1tParams}{t\+Params}}
+\item 
+struct \mbox{\hyperlink{structcWorld_1_1tRayTestResult}{t\+Ray\+Test\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcWorld_aadb8fd7579a8ec4ad7b4ca0e4abe6efe}\label{classcWorld_aadb8fd7579a8ec4ad7b4ca0e4abe6efe} 
+enum {\bfseries e\+Contact\+Flag} \{ \newline
+{\bfseries e\+Contact\+Flag\+None} = 0
+, {\bfseries e\+Contact\+Flag\+Character} = 0x1
+, {\bfseries e\+Contact\+Flag\+Environment} = 0x1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, {\bfseries e\+Contact\+Flag\+Object} = 0x1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \newline
+{\bfseries e\+Contact\+Flag\+All} = c\+Contact\+Manager\+::g\+Flag\+All
+ \}
+\item 
+\Hypertarget{classcWorld_a3e09ff73e2b6b798baa21ae2d545b1f0}\label{classcWorld_a3e09ff73e2b6b798baa21ae2d545b1f0} 
+typedef t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcWorld_1_1tRayTestResult}{t\+Ray\+Test\+Result}} $>$ {\bfseries t\+Ray\+Test\+Results}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcWorld_aa736bffe362deb1323f483d3e32da620}\label{classcWorld_aa736bffe362deb1323f483d3e32da620} 
+virtual void {\bfseries Init} (const \mbox{\hyperlink{structcWorld_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcWorld_ad7d1218ff49f35a928f319b98064aa97}\label{classcWorld_ad7d1218ff49f35a928f319b98064aa97} 
+virtual void {\bfseries Reset} ()
+\item 
+\Hypertarget{classcWorld_a789620db800a82950b828adb911d9e25}\label{classcWorld_a789620db800a82950b828adb911d9e25} 
+virtual void {\bfseries Update} (double time\+\_\+elapsed)
+\item 
+\Hypertarget{classcWorld_aca901d4f8963dd245bccca901b92e62a}\label{classcWorld_aca901d4f8963dd245bccca901b92e62a} 
+virtual void {\bfseries Add\+Rigid\+Body} (\mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}} \&obj)
+\item 
+\Hypertarget{classcWorld_a0d48f04515b9c6ea909bbcd83a4b108b}\label{classcWorld_a0d48f04515b9c6ea909bbcd83a4b108b} 
+virtual void {\bfseries Remove\+Rigid\+Body} (\mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}} \&obj)
+\item 
+\Hypertarget{classcWorld_a1103e9753f852c5fc31c475732c2972e}\label{classcWorld_a1103e9753f852c5fc31c475732c2972e} 
+virtual void {\bfseries Add\+Collision\+Object} (bt\+Collision\+Object \texorpdfstring{$\ast$}{*}col\+\_\+obj, int col\+\_\+filter\+\_\+group, int col\+\_\+filter\+\_\+mask)
+\item 
+\Hypertarget{classcWorld_a5bb087b4903beca1d421d9e26490e2fe}\label{classcWorld_a5bb087b4903beca1d421d9e26490e2fe} 
+virtual void {\bfseries Remove\+Collision\+Object} (bt\+Collision\+Object \texorpdfstring{$\ast$}{*}col\+\_\+obj)
+\item 
+\Hypertarget{classcWorld_a964b4b5ad1aefc318ee317346099dbfb}\label{classcWorld_a964b4b5ad1aefc318ee317346099dbfb} 
+virtual void {\bfseries Add\+Character} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \&sim\+\_\+char)
+\item 
+\Hypertarget{classcWorld_a7dc348532fd08e33b6ac6a43ce869bd4}\label{classcWorld_a7dc348532fd08e33b6ac6a43ce869bd4} 
+virtual void {\bfseries Remove\+Character} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \&sim\+\_\+char)
+\item 
+\Hypertarget{classcWorld_aba9833a11ce282f0110d19b87afa3d50}\label{classcWorld_aba9833a11ce282f0110d19b87afa3d50} 
+virtual void {\bfseries Constrain} (\mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}} \&obj)
+\item 
+\Hypertarget{classcWorld_a8324a8b442f1592cee70eea89091a2ac}\label{classcWorld_a8324a8b442f1592cee70eea89091a2ac} 
+virtual void {\bfseries Constrain} (\mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}} \&obj, const t\+Vector \&linear\+\_\+factor, const t\+Vector \&angular\+\_\+factor)
+\item 
+\Hypertarget{classcWorld_a7afa2617c896be9d008c60633f3aa6e5}\label{classcWorld_a7afa2617c896be9d008c60633f3aa6e5} 
+virtual void {\bfseries Remove\+Constraint} (\mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{t\+Constraint\+Handle}} \&handle)
+\item 
+\Hypertarget{classcWorld_ac0584c934da8f49b283ef5608cdc7e21}\label{classcWorld_ac0584c934da8f49b283ef5608cdc7e21} 
+virtual void {\bfseries Add\+Joint} (const \mbox{\hyperlink{classcSimJoint}{c\+Sim\+Joint}} \&joint)
+\item 
+\Hypertarget{classcWorld_ab2879970912f1d877dbee12027abeafd}\label{classcWorld_ab2879970912f1d877dbee12027abeafd} 
+virtual void {\bfseries Remove\+Joint} (\mbox{\hyperlink{classcSimJoint}{c\+Sim\+Joint}} \&joint)
+\item 
+\Hypertarget{classcWorld_a6375c25bc6731d7ee6b0a8b3948d2cfd}\label{classcWorld_a6375c25bc6731d7ee6b0a8b3948d2cfd} 
+virtual void {\bfseries Set\+Gravity} (const t\+Vector \&gravity)
+\item 
+\Hypertarget{classcWorld_a077f81ea55d7f7795fb34d42564953e1}\label{classcWorld_a077f81ea55d7f7795fb34d42564953e1} 
+virtual \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+\Hypertarget{classcWorld_ae2c64b79408be196dbf2462906724952}\label{classcWorld_ae2c64b79408be196dbf2462906724952} 
+virtual void {\bfseries Update\+Contact} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \&handle)
+\item 
+\Hypertarget{classcWorld_aaf763f90e235d847dbb418f08cd0137e}\label{classcWorld_aaf763f90e235d847dbb418f08cd0137e} 
+virtual bool {\bfseries Is\+In\+Contact} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \&handle) const
+\item 
+\Hypertarget{classcWorld_a406cb78e3b07a3b2b8c37be9b77171e3}\label{classcWorld_a406cb78e3b07a3b2b8c37be9b77171e3} 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \&handle) const
+\item 
+\Hypertarget{classcWorld_ace9f82d18b57b175b1d2bbea5ded2a2c}\label{classcWorld_ace9f82d18b57b175b1d2bbea5ded2a2c} 
+virtual const \mbox{\hyperlink{classcContactManager}{c\+Contact\+Manager}} \& {\bfseries Get\+Contact\+Manager} () const
+\item 
+\Hypertarget{classcWorld_a036a01f15f91c2fbd6d709a9372b3f83}\label{classcWorld_a036a01f15f91c2fbd6d709a9372b3f83} 
+virtual void {\bfseries Ray\+Test} (const t\+Vector \&beg, const t\+Vector \&end, t\+Ray\+Test\+Results \&results) const
+\item 
+\Hypertarget{classcWorld_aaa64224952909cabed53a18c69746741}\label{classcWorld_aaa64224952909cabed53a18c69746741} 
+virtual void {\bfseries Add\+Perturb} (const \mbox{\hyperlink{structtPerturb}{t\+Perturb}} \&perturb)
+\item 
+\Hypertarget{classcWorld_a8d9fff74b0f89e4a65247e68ed3151a2}\label{classcWorld_a8d9fff74b0f89e4a65247e68ed3151a2} 
+virtual const \mbox{\hyperlink{classcPerturbManager}{c\+Perturb\+Manager}} \& {\bfseries Get\+Perturb\+Manager} () const
+\item 
+\Hypertarget{classcWorld_abc5b301eaba08b9b9cd46dd99de0240d}\label{classcWorld_abc5b301eaba08b9b9cd46dd99de0240d} 
+virtual t\+Vector {\bfseries Get\+Gravity} () const
+\item 
+\Hypertarget{classcWorld_a45df46e343f8a8d266ab93e577460b2a}\label{classcWorld_a45df46e343f8a8d266ab93e577460b2a} 
+virtual double {\bfseries Get\+Scale} () const
+\item 
+\Hypertarget{classcWorld_ae84a93dd88da4b8fdc7f67aa891d53f7}\label{classcWorld_ae84a93dd88da4b8fdc7f67aa891d53f7} 
+virtual double {\bfseries Get\+Time\+Step} () const
+\item 
+\Hypertarget{classcWorld_a3a957329812d941b47782bf77824398e}\label{classcWorld_a3a957329812d941b47782bf77824398e} 
+virtual void {\bfseries Set\+Default\+Linear\+Damping} (double damping)
+\item 
+\Hypertarget{classcWorld_a628cc7499b9df6883700f3486e2a3173}\label{classcWorld_a628cc7499b9df6883700f3486e2a3173} 
+virtual double {\bfseries Get\+Default\+Linear\+Damping} () const
+\item 
+\Hypertarget{classcWorld_a07574fd645b7b2c25752c742ae2e9dc2}\label{classcWorld_a07574fd645b7b2c25752c742ae2e9dc2} 
+virtual void {\bfseries Set\+Default\+Angular\+Damping} (double damping)
+\item 
+\Hypertarget{classcWorld_a9879341138aef0c125813929a258372c}\label{classcWorld_a9879341138aef0c125813929a258372c} 
+virtual double {\bfseries Get\+Default\+Angular\+Damping} () const
+\item 
+\Hypertarget{classcWorld_a4518de64da4f847b46775d7beff9caf8}\label{classcWorld_a4518de64da4f847b46775d7beff9caf8} 
+std\+::unique\+\_\+ptr$<$ bt\+Multi\+Body\+Dynamics\+World $>$ \& {\bfseries Get\+Internal\+World} ()
+\item 
+\Hypertarget{classcWorld_a23b26360ad036ed4aeb93fd9832a4045}\label{classcWorld_a23b26360ad036ed4aeb93fd9832a4045} 
+const std\+::unique\+\_\+ptr$<$ bt\+Multi\+Body\+Dynamics\+World $>$ \& {\bfseries Get\+Internal\+World} () const
+\item 
+\Hypertarget{classcWorld_af1b54e4775b5f0fbebe2b435dcaad0fb}\label{classcWorld_af1b54e4775b5f0fbebe2b435dcaad0fb} 
+virtual bt\+Box\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Box\+Shape} (const t\+Vector \&box\+\_\+sizee) const
+\item 
+\Hypertarget{classcWorld_aac517307dc8693fc21b76f73f6b885f7}\label{classcWorld_aac517307dc8693fc21b76f73f6b885f7} 
+virtual bt\+Capsule\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Capsule\+Shape} (double radius, double height) const
+\item 
+\Hypertarget{classcWorld_a846ae7cd0976d43626495d17314e7a35}\label{classcWorld_a846ae7cd0976d43626495d17314e7a35} 
+virtual bt\+Static\+Plane\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Plane\+Shape} (const t\+Vector \&normal, const t\+Vector \&origin) const
+\item 
+\Hypertarget{classcWorld_a05cd17a5143e78d143486dea23421cba}\label{classcWorld_a05cd17a5143e78d143486dea23421cba} 
+virtual bt\+Sphere\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Sphere\+Shape} (double radius) const
+\item 
+\Hypertarget{classcWorld_a8dba36f1665355cec21678040d511fc2}\label{classcWorld_a8dba36f1665355cec21678040d511fc2} 
+virtual bt\+Cylinder\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Cylinder\+Shape} (double radius, double height) const
+\item 
+\Hypertarget{classcWorld_ad24eb7131cebae6b5c454fe8ff093299}\label{classcWorld_ad24eb7131cebae6b5c454fe8ff093299} 
+virtual t\+Vector {\bfseries Get\+Size\+Box} (const \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \&obj) const
+\item 
+\Hypertarget{classcWorld_af924f9555c3bcfbeb25a785e28bfbd17}\label{classcWorld_af924f9555c3bcfbeb25a785e28bfbd17} 
+virtual t\+Vector {\bfseries Get\+Size\+Capsule} (const \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \&obj) const
+\item 
+\Hypertarget{classcWorld_a1a7ec114c7fe92d9d95a221213991f50}\label{classcWorld_a1a7ec114c7fe92d9d95a221213991f50} 
+virtual t\+Vector {\bfseries Get\+Size\+Plane} (const \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \&obj) const
+\item 
+\Hypertarget{classcWorld_a5ad5cbe5caaead3c8322a733842e5cda}\label{classcWorld_a5ad5cbe5caaead3c8322a733842e5cda} 
+virtual t\+Vector {\bfseries Get\+Size\+Sphere} (const \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \&obj) const
+\item 
+\Hypertarget{classcWorld_a67496d838536aaae14e7c18e6bab2129}\label{classcWorld_a67496d838536aaae14e7c18e6bab2129} 
+virtual t\+Vector {\bfseries Get\+Size\+Cylinder} (const \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \&obj) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcWorld_ac9775b5c3c7dc3e2198eab1c17ac24ed}\label{classcWorld_ac9775b5c3c7dc3e2198eab1c17ac24ed} 
+virtual int {\bfseries Get\+Num\+Constriants} () const
+\item 
+\Hypertarget{classcWorld_acc547d00d78ef69983610c4dec9afc68}\label{classcWorld_acc547d00d78ef69983610c4dec9afc68} 
+virtual void {\bfseries Build\+Cons\+Factor} (t\+Vector \&out\+\_\+linear\+\_\+factor, t\+Vector \&out\+\_\+angular\+\_\+factor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcWorld_a6a9a4cc7a7766ec4c6d85b3bd06a9a58}\label{classcWorld_a6a9a4cc7a7766ec4c6d85b3bd06a9a58} 
+\mbox{\hyperlink{structcWorld_1_1tParams}{t\+Params}} {\bfseries m\+Params}
+\item 
+\Hypertarget{classcWorld_ac65e32701f6071bf29f23ef57654ac26}\label{classcWorld_ac65e32701f6071bf29f23ef57654ac26} 
+double {\bfseries m\+Time\+Step}
+\item 
+\Hypertarget{classcWorld_add593db9c0dcb81a5799ebbb60ef713b}\label{classcWorld_add593db9c0dcb81a5799ebbb60ef713b} 
+double {\bfseries m\+Default\+Linear\+Damping}
+\item 
+\Hypertarget{classcWorld_aee3ce6c657c072f29d38d5124f4f9f0c}\label{classcWorld_aee3ce6c657c072f29d38d5124f4f9f0c} 
+double {\bfseries m\+Default\+Angular\+Damping}
+\item 
+\Hypertarget{classcWorld_a98b44b2d90f2e843a76cb44adbe7ff18}\label{classcWorld_a98b44b2d90f2e843a76cb44adbe7ff18} 
+std\+::unique\+\_\+ptr$<$ bt\+Multi\+Body\+Dynamics\+World $>$ {\bfseries m\+Sim\+World}
+\item 
+\Hypertarget{classcWorld_a0069abf06804f3ed568aa736afde74fa}\label{classcWorld_a0069abf06804f3ed568aa736afde74fa} 
+std\+::unique\+\_\+ptr$<$ bt\+Constraint\+Solver $>$ {\bfseries m\+Solver}
+\item 
+\Hypertarget{classcWorld_a9769c12f79e138c15fcb622bf4ea3e46}\label{classcWorld_a9769c12f79e138c15fcb622bf4ea3e46} 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Dispatcher $>$ {\bfseries m\+Collision\+Dispatcher}
+\item 
+\Hypertarget{classcWorld_a967d099e1b12eb7abf00f0c8e38d5b26}\label{classcWorld_a967d099e1b12eb7abf00f0c8e38d5b26} 
+std\+::unique\+\_\+ptr$<$ bt\+Default\+Collision\+Configuration $>$ {\bfseries m\+Collision\+Config}
+\item 
+\Hypertarget{classcWorld_a6a7b848c9cb6ecd0c5ff61d9eb2fdead}\label{classcWorld_a6a7b848c9cb6ecd0c5ff61d9eb2fdead} 
+std\+::unique\+\_\+ptr$<$ bt\+Broadphase\+Interface $>$ {\bfseries m\+Broad\+Phase}
+\item 
+\Hypertarget{classcWorld_a86291196f939ad6bbabc343691be2730}\label{classcWorld_a86291196f939ad6bbabc343691be2730} 
+\mbox{\hyperlink{classcContactManager}{c\+Contact\+Manager}} {\bfseries m\+Contact\+Manager}
+\item 
+\Hypertarget{classcWorld_a21e853fcd2547c62eef03577cc55a3b5}\label{classcWorld_a21e853fcd2547c62eef03577cc55a3b5} 
+\mbox{\hyperlink{classcPerturbManager}{c\+Perturb\+Manager}} {\bfseries m\+Perturb\+Manager}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+World.\+h\item 
+World.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\doxysection{Ctrl\+Builder.\+h}
+\hypertarget{CtrlBuilder_8h_source}{}\label{CtrlBuilder_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}sim/SimCharacter.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sim/DeepMimicCharController.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}sim/Ground.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcCtrlBuilder}{cCtrlBuilder}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{enum}\ eCharCtrl}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ eCharCtrlNone,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ eCharCtrlCt,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ eCharCtrlCtPD,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ eCharCtrlCtVel,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ eCharCtrlMax}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ eCharCtrl\ mCharCtrl;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ mCtrlFile;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::shared\_ptr<cSimCharacter>\ mChar;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::shared\_ptr<cGround>\ mGround;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ tVector\ mGravity;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ParseCharCtrl(\textcolor{keyword}{const}\ std::string\&\ char\_ctrl\_str,\ eCharCtrl\&\ out\_char\_ctrl);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtVelController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtTargetController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildDogController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildRaptorController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildBiped3DStepController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildBiped3DSymStepController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtTarPoseController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtSymPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtHeadingController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtHeadingPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtSymHeadingPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtStrikePDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtStrikeObjPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ BuildCtCmdPDController(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcCtrlBuilder_1_1tCtrlParams}{tCtrlParams}}\&\ params,\ std::shared\_ptr<cCharController>\&\ out\_ctrl);}
+\DoxyCodeLine{00063\ \};}
+
+\end{DoxyCode}

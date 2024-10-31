@@ -1,0 +1,187 @@
+\doxysection{c\+Sim\+Obj Class Reference}
+\hypertarget{classcSimObj}{}\label{classcSimObj}\index{cSimObj@{cSimObj}}
+
+
+Inheritance diagram for c\+Sim\+Obj\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcSimObj__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Sim\+Obj\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classcSimObj__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a7031e8c95243ce20c8163100e523d77c}\label{classcSimObj_a7031e8c95243ce20c8163100e523d77c} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Dynamic}
+, {\bfseries e\+Type\+Static}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_adb9f6ca03649139e5300de22c12df44f}\label{classcSimObj_adb9f6ca03649139e5300de22c12df44f} 
+virtual t\+Vector {\bfseries Get\+Pos} () const
+\item 
+\Hypertarget{classcSimObj_ade4d1935acd802c665801e85edaccb0e}\label{classcSimObj_ade4d1935acd802c665801e85edaccb0e} 
+virtual void {\bfseries Set\+Pos} (const t\+Vector \&pos)
+\item 
+\Hypertarget{classcSimObj_a67d5e8d8fa1f4232416d100a253f8fe0}\label{classcSimObj_a67d5e8d8fa1f4232416d100a253f8fe0} 
+virtual void {\bfseries Get\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const
+\item 
+\Hypertarget{classcSimObj_a34a730aea14a801d48be7f506ffe8d2a}\label{classcSimObj_a34a730aea14a801d48be7f506ffe8d2a} 
+virtual t\+Quaternion {\bfseries Get\+Rotation} () const
+\item 
+\Hypertarget{classcSimObj_a479395bb5dfa1df365ac38d56867b044}\label{classcSimObj_a479395bb5dfa1df365ac38d56867b044} 
+virtual void {\bfseries Set\+Rotation} (const t\+Vector \&axis, double theta)
+\item 
+\Hypertarget{classcSimObj_a31ca646919096e9b4a172c016a0c3e5e}\label{classcSimObj_a31ca646919096e9b4a172c016a0c3e5e} 
+virtual void {\bfseries Set\+Rotation} (const t\+Quaternion \&q)
+\item 
+\Hypertarget{classcSimObj_acbd847644860b46f5fecc5636c930399}\label{classcSimObj_acbd847644860b46f5fecc5636c930399} 
+virtual t\+Matrix {\bfseries Get\+World\+Transform} () const
+\item 
+\Hypertarget{classcSimObj_a135f548bf9aac725a2aa46bfe4b64d14}\label{classcSimObj_a135f548bf9aac725a2aa46bfe4b64d14} 
+virtual t\+Matrix {\bfseries Get\+Local\+Transform} () const
+\item 
+\Hypertarget{classcSimObj_a72c5ddfa03f19696928f19add79b70c1}\label{classcSimObj_a72c5ddfa03f19696928f19add79b70c1} 
+virtual t\+Vector {\bfseries Get\+Linear\+Velocity} () const =0
+\item 
+\Hypertarget{classcSimObj_ad6915007dfdd8c78b967e22dcaf60413}\label{classcSimObj_ad6915007dfdd8c78b967e22dcaf60413} 
+virtual t\+Vector {\bfseries Get\+Linear\+Velocity} (const t\+Vector \&local\+\_\+pos) const =0
+\item 
+\Hypertarget{classcSimObj_a232edeaddfe0df487ed3e77bfd62a178}\label{classcSimObj_a232edeaddfe0df487ed3e77bfd62a178} 
+virtual void {\bfseries Set\+Linear\+Velocity} (const t\+Vector \&vel)=0
+\item 
+\Hypertarget{classcSimObj_ac959b87d4c82bdb33175e203aec3a242}\label{classcSimObj_ac959b87d4c82bdb33175e203aec3a242} 
+virtual t\+Vector {\bfseries Get\+Angular\+Velocity} () const =0
+\item 
+\Hypertarget{classcSimObj_a436c9756bc621b2cf35943d98ae299df}\label{classcSimObj_a436c9756bc621b2cf35943d98ae299df} 
+virtual void {\bfseries Set\+Angular\+Velocity} (const t\+Vector \&vel)=0
+\item 
+\Hypertarget{classcSimObj_ad79e17f2ec75dd502c9ebc0e2f9750bc}\label{classcSimObj_ad79e17f2ec75dd502c9ebc0e2f9750bc} 
+virtual t\+Vector {\bfseries World\+To\+Local\+Pos} (const t\+Vector \&world\+\_\+pos) const
+\item 
+\Hypertarget{classcSimObj_a4c817b39026f8776c06fc737e03e2a5b}\label{classcSimObj_a4c817b39026f8776c06fc737e03e2a5b} 
+virtual t\+Vector {\bfseries Local\+To\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+\Hypertarget{classcSimObj_aa6dc213c35ddfcbddbfb86e121c1776f}\label{classcSimObj_aa6dc213c35ddfcbddbfb86e121c1776f} 
+virtual t\+Matrix3 {\bfseries Get\+Local\+To\+World\+Rot\+Mat} () const
+\item 
+\Hypertarget{classcSimObj_ab7cda32c2f9d4ed5c8616c29c72fa2d6}\label{classcSimObj_ab7cda32c2f9d4ed5c8616c29c72fa2d6} 
+virtual t\+Vector {\bfseries Calc\+COM} () const
+\item 
+\Hypertarget{classcSimObj_a4ccd6f51d430161287766c741b091653}\label{classcSimObj_a4ccd6f51d430161287766c741b091653} 
+virtual t\+Vector {\bfseries Calc\+COMVel} () const
+\item 
+\Hypertarget{classcSimObj_a48278b58c1c6f69030b9310c6282c885}\label{classcSimObj_a48278b58c1c6f69030b9310c6282c885} 
+virtual void {\bfseries Register\+Contact} ()
+\item 
+\Hypertarget{classcSimObj_a72517c69800df259561d85ec21a1214e}\label{classcSimObj_a72517c69800df259561d85ec21a1214e} 
+virtual void {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+\Hypertarget{classcSimObj_ac92c1f451c2167ae8d7204343265a0da}\label{classcSimObj_ac92c1f451c2167ae8d7204343265a0da} 
+virtual void {\bfseries Update\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+\Hypertarget{classcSimObj_a5f09f0ca50900cf5f531fa4957201789}\label{classcSimObj_a5f09f0ca50900cf5f531fa4957201789} 
+virtual const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& {\bfseries Get\+Contact\+Handle} () const
+\item 
+\Hypertarget{classcSimObj_a78f83dc03c2f251a835671701e399226}\label{classcSimObj_a78f83dc03c2f251a835671701e399226} 
+virtual bool {\bfseries Is\+In\+Contact} () const
+\item 
+\Hypertarget{classcSimObj_adeafb5b096d2edee513ade5e7a386bba}\label{classcSimObj_adeafb5b096d2edee513ade5e7a386bba} 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} () const
+\item 
+\Hypertarget{classcSimObj_a343d81bd4e3ec67f7a7b69a98e51415f}\label{classcSimObj_a343d81bd4e3ec67f7a7b69a98e51415f} 
+virtual void {\bfseries Apply\+Force} (const t\+Vector \&force)=0
+\item 
+\Hypertarget{classcSimObj_a1a18a7d7530255259d11a275515576d2}\label{classcSimObj_a1a18a7d7530255259d11a275515576d2} 
+virtual void {\bfseries Apply\+Force} (const t\+Vector \&force, const t\+Vector \&local\+\_\+pos)=0
+\item 
+\Hypertarget{classcSimObj_a41ccde9f3718c7e9c144b65e0a62b91e}\label{classcSimObj_a41ccde9f3718c7e9c144b65e0a62b91e} 
+virtual void {\bfseries Apply\+Torque} (const t\+Vector \&torque)=0
+\item 
+\Hypertarget{classcSimObj_a58ff68ae3fc6202701e3d55f64f1a4fe}\label{classcSimObj_a58ff68ae3fc6202701e3d55f64f1a4fe} 
+virtual void {\bfseries Clear\+Forces} ()=0
+\item 
+\Hypertarget{classcSimObj_a8f5a8cb279d15dab0328d363662b4931}\label{classcSimObj_a8f5a8cb279d15dab0328d363662b4931} 
+virtual short {\bfseries Get\+Col\+Group} () const
+\item 
+\Hypertarget{classcSimObj_a0047f7c4ec705327ff63a8924fcac099}\label{classcSimObj_a0047f7c4ec705327ff63a8924fcac099} 
+virtual void {\bfseries Set\+Col\+Group} (short col\+\_\+group)
+\item 
+\Hypertarget{classcSimObj_a72da82e81452b7ec5e28acc57c1e5a49}\label{classcSimObj_a72da82e81452b7ec5e28acc57c1e5a49} 
+virtual short {\bfseries Get\+Col\+Mask} () const
+\item 
+\Hypertarget{classcSimObj_a9c6dbf0c5bf33e4b032d66728dfe4d03}\label{classcSimObj_a9c6dbf0c5bf33e4b032d66728dfe4d03} 
+virtual void {\bfseries Set\+Col\+Mask} (short col\+\_\+mask)
+\item 
+\Hypertarget{classcSimObj_ad3f22900787d48103c233761e04d6204}\label{classcSimObj_ad3f22900787d48103c233761e04d6204} 
+virtual e\+Type {\bfseries Get\+Type} () const
+\item 
+\Hypertarget{classcSimObj_aff15bf6696e8dd24ff98f976aabd82d4}\label{classcSimObj_aff15bf6696e8dd24ff98f976aabd82d4} 
+virtual c\+Shape\+::e\+Shape {\bfseries Get\+Shape} () const
+\item 
+\Hypertarget{classcSimObj_af19ead8e90784db40995fac6df1df385}\label{classcSimObj_af19ead8e90784db40995fac6df1df385} 
+virtual t\+Vector {\bfseries Get\+Size} () const =0
+\item 
+\Hypertarget{classcSimObj_a46ab613f5c42668db2b2f429c6291ac0}\label{classcSimObj_a46ab613f5c42668db2b2f429c6291ac0} 
+virtual void {\bfseries Calc\+AABB} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\item 
+\Hypertarget{classcSimObj_a88e09c071e45f752605e2f33558dd921}\label{classcSimObj_a88e09c071e45f752605e2f33558dd921} 
+virtual const bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Shape} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a0a3dadc999a9f910ed11e84d4c76f236}\label{classcSimObj_a0a3dadc999a9f910ed11e84d4c76f236} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& {\bfseries Get\+World} () const
+\item 
+\Hypertarget{classcSimObj_ae43240f1c1e0022d25ee0905582ec7de}\label{classcSimObj_ae43240f1c1e0022d25ee0905582ec7de} 
+virtual const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Object} () const =0
+\item 
+\Hypertarget{classcSimObj_ad412705cd1ee38cb5a94b46885d31e07}\label{classcSimObj_ad412705cd1ee38cb5a94b46885d31e07} 
+virtual bt\+Collision\+Object \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Object} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a92fd661e04a511de50b391f0326e3671}\label{classcSimObj_a92fd661e04a511de50b391f0326e3671} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+\Hypertarget{classcSimObj_a0111ae39db47feb17822872756b00ca8}\label{classcSimObj_a0111ae39db47feb17822872756b00ca8} 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Shape $>$ {\bfseries m\+Col\+Shape}
+\item 
+\Hypertarget{classcSimObj_a2455bc3ba1a6f7697e4e00438ecf4b51}\label{classcSimObj_a2455bc3ba1a6f7697e4e00438ecf4b51} 
+\mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries m\+Contact\+Handle}
+\item 
+\Hypertarget{classcSimObj_af946de587c8e8e5b712b1b3b1883733a}\label{classcSimObj_af946de587c8e8e5b712b1b3b1883733a} 
+bool {\bfseries m\+Enable\+Contact\+Fall}
+\item 
+\Hypertarget{classcSimObj_ab5e1b8ca447ea22a16c4afa7804274e0}\label{classcSimObj_ab5e1b8ca447ea22a16c4afa7804274e0} 
+e\+Type {\bfseries m\+Type}
+\item 
+\Hypertarget{classcSimObj_a98d2f1045b107d8e254f249c4f77e8d1}\label{classcSimObj_a98d2f1045b107d8e254f249c4f77e8d1} 
+short {\bfseries m\+Col\+Group}
+\item 
+\Hypertarget{classcSimObj_a238109d7fe245afe7620176ab694cc60}\label{classcSimObj_a238109d7fe245afe7620176ab694cc60} 
+short {\bfseries m\+Col\+Mask}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sim\+Obj.\+h\item 
+Sim\+Obj.\+cpp\end{DoxyCompactItemize}

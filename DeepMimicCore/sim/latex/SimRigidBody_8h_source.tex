@@ -1,0 +1,55 @@
+\doxysection{Sim\+Rigid\+Body.\+h}
+\hypertarget{SimRigidBody_8h_source}{}\label{SimRigidBody_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/SimObj.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcSimObj}{cSimObj}},\ \textcolor{keyword}{public}\ btDefaultMotionState}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimRigidBody}{\string~cSimRigidBody}}();}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPos(\textcolor{keyword}{const}\ tVector\&\ pos);}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tVector\&\ axis,\ \textcolor{keywordtype}{double}\ theta);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tQuaternion\&\ q);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ vel);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetAngularVelocity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetAngularVelocity(\textcolor{keyword}{const}\ tVector\&\ vel);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetDamping(\textcolor{keywordtype}{double}\ linear\_damping,\ \textcolor{keywordtype}{double}\ angular\_damping);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetMass()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force,\ \textcolor{keyword}{const}\ tVector\&\ local\_pos);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTorque(\textcolor{keyword}{const}\ tVector\&\ torque);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearForces();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetKinematicObject(\textcolor{keywordtype}{bool}\ is\_kin);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsKinematicObject()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ DisableDeactivation();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Constrain(\textcolor{keyword}{const}\ tVector\&\ linear\_factor,\ \textcolor{keyword}{const}\ tVector\&\ angular\_factor);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasSimBody()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::unique\_ptr<btRigidBody>\&\ GetSimBody()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ std::unique\_ptr<btRigidBody>\ mSimBody;}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddToWorld(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveFromWorld();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ btCollisionObject*\ GetCollisionObject()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ btCollisionObject*\ GetCollisionObject();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumConstraints()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{cWorld::tConstraintHandle}}\ GetConstraint(\textcolor{keywordtype}{int}\ c)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

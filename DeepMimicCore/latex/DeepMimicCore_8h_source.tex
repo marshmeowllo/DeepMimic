@@ -1,0 +1,125 @@
+\doxysection{Deep\+Mimic\+Core.\+h}
+\hypertarget{DeepMimicCore_8h_source}{}\label{DeepMimicCore_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}util/ArgParser.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}render/TextureDesc.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}scenes/Scene.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}scenes/RLScene.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}scenes/DrawScene.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcDeepMimicCore}{cDeepMimicCore}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classcDeepMimicCore}{cDeepMimicCore}}(\textcolor{keywordtype}{bool}\ enable\_draw);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcDeepMimicCore}{\string~cDeepMimicCore}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SeedRand(\textcolor{keywordtype}{int}\ seed);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ParseArgs(\textcolor{keyword}{const}\ std::vector<std::string>\&\ args);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{double}\ timestep);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetTime()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ GetName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ EnableDraw()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Keyboard(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ MouseClick(\textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ state,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ MouseMove(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reshape(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Shutdown();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsDone()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ cDrawScene*\ GetDrawScene()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPlaybackSpeed(\textcolor{keywordtype}{double}\ speed);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetUpdatesPerSec(\textcolor{keywordtype}{double}\ updates\_per\_sec);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetWinWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetWinHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumUpdateSubsteps()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ RL\ interface}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsRLScene()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumAgents()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ NeedNewAction(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ RecordState(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ RecordGoal(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetAction(\textcolor{keywordtype}{int}\ agent\_id,\ \textcolor{keyword}{const}\ std::vector<double>\&\ action);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ LogVal(\textcolor{keywordtype}{int}\ agent\_id,\ \textcolor{keywordtype}{double}\ val);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetActionSpace(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetStateSize(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetGoalSize(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetActionSize(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumActions(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ for\ discrete\ actions}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildStateOffset(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildStateScale(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildGoalOffset(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildGoalScale(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildActionOffset(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildActionScale(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildActionBoundMin(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ BuildActionBoundMax(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<int>\ BuildStateNormGroups(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<int>\ BuildGoalNormGroups(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ CalcReward(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetRewardMin(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetRewardMax(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetRewardFail(\textcolor{keywordtype}{int}\ agent\_id);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetRewardSucc(\textcolor{keywordtype}{int}\ agent\_id);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ EnableAMPTaskReward()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetAMPObsSize()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ GetAMPObsOffset()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ GetAMPObsScale()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<int>\ GetAMPObsNormGroup()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ RecordAMPObsAgent(\textcolor{keywordtype}{int}\ agent\_id);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ RecordAMPObsExpert(\textcolor{keywordtype}{int}\ agent\_id);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsEpisodeEnd()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CheckValidEpisode()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ CheckTerminate(\textcolor{keywordtype}{int}\ agent\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetMode(\textcolor{keywordtype}{int}\ mode);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetSampleCount(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ mRandSeed;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::shared\_ptr<cArgParser>\ mArgParser;}
+\DoxyCodeLine{00094\ \ \ \ \ std::shared\_ptr<cScene>\ mScene;}
+\DoxyCodeLine{00095\ \ \ \ \ std::shared\_ptr<cRLScene>\ mRLScene;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ std::shared\_ptr<cTextureDesc>\ mDefaultFrameBuffer;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ mNumUpdateSubsteps;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ info\ for\ rendering}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{double}\ mPlaybackSpeed;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{double}\ mUpdatesPerSec;\ \textcolor{comment}{//\ FPS\ counter}}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetupScene();}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearScene();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCurrTime()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ InitFrameBuffer();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcDeviceCoord(\textcolor{keywordtype}{int}\ pixel\_x,\ \textcolor{keywordtype}{int}\ pixel\_y,\ \textcolor{keywordtype}{double}\&\ out\_device\_x,\ \textcolor{keywordtype}{double}\&\ out\_device\_y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetAspectRatio();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CopyFrame(cTextureDesc\&\ src)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cRLScene>\&\ GetRLScene()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ConvertVector(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ in\_vec,\ std::vector<double>\&\ out\_vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ConvertVector(\textcolor{keyword}{const}\ Eigen::VectorXi\&\ in\_vec,\ std::vector<int>\&\ out\_vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ConvertVector(\textcolor{keyword}{const}\ std::vector<double>\&\ in\_vec,\ Eigen::VectorXd\&\ out\_vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ConvertVector(\textcolor{keyword}{const}\ std::vector<int>\&\ in\_vec,\ Eigen::VectorXi\&\ out\_vec)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ \};}
+
+\end{DoxyCode}

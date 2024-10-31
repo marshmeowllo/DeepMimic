@@ -1,0 +1,21 @@
+<map id="cSimRigidBody" name="cSimRigidBody">
+<area shape="rect" id="Node000001" title=" " alt="" coords="285,79,405,104"/>
+<area shape="rect" id="Node000004" href="$classcGround.html" title=" " alt="" coords="23,152,99,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="287,110,100,156,99,151,286,105"/>
+<area shape="rect" id="Node000006" href="$classcSimBox.html" title=" " alt="" coords="123,152,202,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="304,111,194,154,192,149,302,106"/>
+<area shape="rect" id="Node000007" href="$classcSimCapsule.html" title=" " alt="" coords="227,152,333,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="327,116,293,154,289,150,323,113"/>
+<area shape="rect" id="Node000008" href="$classcSimCylinder.html" title=" " alt="" coords="358,152,466,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="368,113,403,150,399,154,364,116"/>
+<area shape="rect" id="Node000009" href="$classcSimPlane.html" title=" " alt="" coords="491,152,581,177"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="390,106,506,149,504,154,388,111"/>
+<area shape="rect" id="Node000010" href="$classcSimSphere.html" title=" " alt="" coords="605,152,704,177"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="409,104,606,149,604,155,408,110"/>
+<area shape="rect" id="Node000002" href="$classcSimObj.html" title=" " alt="" coords="235,5,311,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,39,336,77,332,80,293,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="336,5,499,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="397,43,359,80,355,77,394,39"/>
+<area shape="rect" id="Node000005" href="$classcGroundPlane.html" title=" " alt="" coords="5,225,117,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="64,191,64,225,59,225,59,191"/>
+</map>

@@ -1,0 +1,82 @@
+\doxysection{t\+Perturb Struct Reference}
+\hypertarget{structtPerturb}{}\label{structtPerturb}\index{tPerturb@{tPerturb}}
+
+
+Collaboration diagram for t\+Perturb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{structtPerturb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structtPerturb_af6533940ca56910afed2c1abb8bcfdc2}\label{structtPerturb_af6533940ca56910afed2c1abb8bcfdc2} 
+enum {\bfseries e\+Perturb} \{ {\bfseries e\+Perturb\+Force}
+, {\bfseries e\+Perturb\+Torque}
+, {\bfseries e\+Perturb\+Max}
+, {\bfseries e\+Perturb\+Invalid}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structtPerturb_a1dd2b1a8800f875affc810113365ffe5}\label{structtPerturb_a1dd2b1a8800f875affc810113365ffe5} 
+{\bfseries t\+Perturb} (e\+Perturb type, \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \texorpdfstring{$\ast$}{*}obj, const t\+Vector \&local\+\_\+pos, const t\+Vector \&perturb, double duration)
+\item 
+\Hypertarget{structtPerturb_a83d4da24efd44dcd48a74eb81ffc614f}\label{structtPerturb_a83d4da24efd44dcd48a74eb81ffc614f} 
+virtual bool {\bfseries Has\+Expired} () const
+\item 
+\Hypertarget{structtPerturb_ae529e2fc9188e07d9e906310da9f2bb4}\label{structtPerturb_ae529e2fc9188e07d9e906310da9f2bb4} 
+virtual void {\bfseries Clear} ()
+\item 
+\Hypertarget{structtPerturb_a822c9e61fc4df82d78398c213dce7cd3}\label{structtPerturb_a822c9e61fc4df82d78398c213dce7cd3} 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+\Hypertarget{structtPerturb_aa8071e366e6c12973baf035e97c73443}\label{structtPerturb_aa8071e366e6c12973baf035e97c73443} 
+virtual void {\bfseries Update} (double time\+\_\+step)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structtPerturb_a142fd6552e035b0c1bf3d49039d82c3f}\label{structtPerturb_a142fd6552e035b0c1bf3d49039d82c3f} 
+static \mbox{\hyperlink{structtPerturb}{t\+Perturb}} {\bfseries Build\+Force} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structtPerturb_a910757180dc97d859f345b88b2125063}\label{structtPerturb_a910757180dc97d859f345b88b2125063} 
+e\+Perturb {\bfseries m\+Type}
+\item 
+\Hypertarget{structtPerturb_a3d3844e9f5c52cb114965876750e83a7}\label{structtPerturb_a3d3844e9f5c52cb114965876750e83a7} 
+\mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Obj}
+\item 
+\Hypertarget{structtPerturb_affce20e750279bf3be9e2256a381c40a}\label{structtPerturb_affce20e750279bf3be9e2256a381c40a} 
+t\+Vector {\bfseries m\+Local\+Pos}
+\item 
+\Hypertarget{structtPerturb_af979c1097469457a7cbe889d69a242f1}\label{structtPerturb_af979c1097469457a7cbe889d69a242f1} 
+t\+Vector {\bfseries m\+Perturb}
+\item 
+\Hypertarget{structtPerturb_a225bb2ff2549073f09a72fa140238f4d}\label{structtPerturb_a225bb2ff2549073f09a72fa140238f4d} 
+double {\bfseries m\+Duration}
+\item 
+\Hypertarget{structtPerturb_a793276e8b34523724044fea6300a777e}\label{structtPerturb_a793276e8b34523724044fea6300a777e} 
+double {\bfseries m\+Time}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structtPerturb_af760836c07b90f6e5b142557cf4b1bea}\label{structtPerturb_af760836c07b90f6e5b142557cf4b1bea} 
+virtual void {\bfseries Apply\+Force} ()
+\item 
+\Hypertarget{structtPerturb_a0ac26ff4ed1cf62d10e2d8e0dc029468}\label{structtPerturb_a0ac26ff4ed1cf62d10e2d8e0dc029468} 
+virtual void {\bfseries Apply\+Torque} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Perturb.\+h\item 
+Perturb.\+cpp\end{DoxyCompactItemize}

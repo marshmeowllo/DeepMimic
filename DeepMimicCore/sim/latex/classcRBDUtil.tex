@@ -1,0 +1,167 @@
+\doxysection{c\+RBDUtil Class Reference}
+\hypertarget{classcRBDUtil}{}\label{classcRBDUtil}\index{cRBDUtil@{cRBDUtil}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcRBDUtil_ae2dc89644721027f09ba58f9c38b0b5c}\label{classcRBDUtil_ae2dc89644721027f09ba58f9c38b0b5c} 
+static void {\bfseries Solve\+Inv\+Dyna} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Vector\+Xd \&acc, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+\Hypertarget{classcRBDUtil_ab6ef4626aa6340d9b0e2a33e9a4c58d5}\label{classcRBDUtil_ab6ef4626aa6340d9b0e2a33e9a4c58d5} 
+static void {\bfseries Solve\+For\+Dyna} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Vector\+Xd \&tau, Eigen\+::\+Vector\+Xd \&out\+\_\+acc)
+\item 
+\Hypertarget{classcRBDUtil_a9d60722264a4925e572c6883e5fd7ccd}\label{classcRBDUtil_a9d60722264a4925e572c6883e5fd7ccd} 
+static void {\bfseries Solve\+For\+Dyna} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Vector\+Xd \&tau, const Eigen\+::\+Vector\+Xd \&total\+\_\+force, Eigen\+::\+Vector\+Xd \&out\+\_\+acc)
+\item 
+\Hypertarget{classcRBDUtil_a1b80902c61a908d1f929d7ac99ef730c}\label{classcRBDUtil_a1b80902c61a908d1f929d7ac99ef730c} 
+static void {\bfseries Build\+Mass\+Mat} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&out\+\_\+mass\+\_\+mat)
+\item 
+\Hypertarget{classcRBDUtil_ab3fda084f7e9949e4a92ddfa011902b3}\label{classcRBDUtil_ab3fda084f7e9949e4a92ddfa011902b3} 
+static void {\bfseries Build\+Mass\+Mat} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&inertia\+\_\+buffer, Eigen\+::\+Matrix\+Xd \&out\+\_\+mass\+\_\+mat)
+\item 
+\Hypertarget{classcRBDUtil_a5ea3c5b2030a24e2228d161f8d5edc5d}\label{classcRBDUtil_a5ea3c5b2030a24e2228d161f8d5edc5d} 
+static void {\bfseries Build\+Bias\+Force} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Vector\+Xd \&out\+\_\+bias\+\_\+force)
+\item 
+\Hypertarget{classcRBDUtil_a59297449dc8fbadb3cb6db06c2c6deb3}\label{classcRBDUtil_a59297449dc8fbadb3cb6db06c2c6deb3} 
+static void {\bfseries Calc\+Gravity\+Force} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Vector\+Xd \&out\+\_\+g\+\_\+force)
+\item 
+\Hypertarget{classcRBDUtil_a8395d038e6a1e16923a2382058dc449c}\label{classcRBDUtil_a8395d038e6a1e16923a2382058dc449c} 
+static void {\bfseries Build\+End\+Effector\+Jacobian} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, int joint\+\_\+id, Eigen\+::\+Matrix\+Xd \&out\+\_\+J)
+\item 
+\Hypertarget{classcRBDUtil_aa05249dcaba40cdcf8cfbc0580f1b487}\label{classcRBDUtil_aa05249dcaba40cdcf8cfbc0580f1b487} 
+static void {\bfseries Build\+End\+Effector\+Jacobian} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int joint\+\_\+id, Eigen\+::\+Matrix\+Xd \&out\+\_\+J)
+\item 
+\Hypertarget{classcRBDUtil_ad06f050805ddd55dd4b7c647879345e3}\label{classcRBDUtil_ad06f050805ddd55dd4b7c647879345e3} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Mult\+Jacobian\+End\+Eff} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&vel, const Eigen\+::\+Matrix\+Xd \&J, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a354dc852555f48a21b3e321b8e3198c6}\label{classcRBDUtil_a354dc852555f48a21b3e321b8e3198c6} 
+static void {\bfseries Build\+Jacobian} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&out\+\_\+J)
+\item 
+\Hypertarget{classcRBDUtil_ac8f0a3eaf8366c8169fc59ba91ee4c1c}\label{classcRBDUtil_ac8f0a3eaf8366c8169fc59ba91ee4c1c} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Extract\+End\+Eff\+Jacobian} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Matrix\+Xd \&J, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a3211f5be373029b904b2090d979c5304}\label{classcRBDUtil_a3211f5be373029b904b2090d979c5304} 
+static void {\bfseries Build\+COMJacobian} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&out\+\_\+J)
+\item 
+\Hypertarget{classcRBDUtil_aa61c56d18c5adf92d09f1268f9a42767}\label{classcRBDUtil_aa61c56d18c5adf92d09f1268f9a42767} 
+static void {\bfseries Build\+COMJacobian} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Matrix\+Xd \&J, Eigen\+::\+Matrix\+Xd \&out\+\_\+J)
+\item 
+\Hypertarget{classcRBDUtil_aab821e868a8c001591bd06e31d9ea1df}\label{classcRBDUtil_aab821e868a8c001591bd06e31d9ea1df} 
+static void {\bfseries Build\+Jacobian\+Dot} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&out\+\_\+\+J\+\_\+dot)
+\item 
+\Hypertarget{classcRBDUtil_a0f6b33195d055e1181e2257fda695af3}\label{classcRBDUtil_a0f6b33195d055e1181e2257fda695af3} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+COMVel\+Prod\+Acc} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model)
+\item 
+\Hypertarget{classcRBDUtil_a76d4ee53a0b21ca24862713526f33578}\label{classcRBDUtil_a76d4ee53a0b21ca24862713526f33578} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+COMVel\+Prod\+Acc\+Aux} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Matrix\+Xd \&Jd)
+\item 
+\Hypertarget{classcRBDUtil_a2e808d07ed45c4b0bf3700f427d095b4}\label{classcRBDUtil_a2e808d07ed45c4b0bf3700f427d095b4} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Calc\+Vel\+Prod\+Acc} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, const Eigen\+::\+Matrix\+Xd \&Jd, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a1dcd8dd6c2df1268061da002e5f26375}\label{classcRBDUtil_a1dcd8dd6c2df1268061da002e5f26375} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Calc\+Joint\+World\+Vel} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_ad54a235392de2edaa9b13bca2ee40151}\label{classcRBDUtil_ad54a235392de2edaa9b13bca2ee40151} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Calc\+Joint\+World\+Vel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&state, const Eigen\+::\+Vector\+Xd \&vel, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a96a78feb705670403b3e094be284fd78}\label{classcRBDUtil_a96a78feb705670403b3e094be284fd78} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Calc\+World\+Vel} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_adf0940116e43ef86264608f43869558a}\label{classcRBDUtil_adf0940116e43ef86264608f43869558a} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Calc\+World\+Vel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&state, const Eigen\+::\+Vector\+Xd \&vel, int joint\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_ad19cd3d5aa444f88000feaeb09ea9901}\label{classcRBDUtil_ad19cd3d5aa444f88000feaeb09ea9901} 
+static t\+Vector {\bfseries Calc\+Co\+MPos} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model)
+\item 
+\Hypertarget{classcRBDUtil_a385bf56c61b5e0835b4c5e217ef28e4d}\label{classcRBDUtil_a385bf56c61b5e0835b4c5e217ef28e4d} 
+static t\+Vector {\bfseries Calc\+Co\+MVel} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model)
+\item 
+\Hypertarget{classcRBDUtil_a737306858ad67cc87256f41360705c91}\label{classcRBDUtil_a737306858ad67cc87256f41360705c91} 
+static t\+Vector {\bfseries Calc\+Co\+MVel} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, const Eigen\+::\+Vector\+Xd \&pose, const Eigen\+::\+Vector\+Xd \&vel)
+\item 
+\Hypertarget{classcRBDUtil_ac7d1edbf35b9b6ce29fc5f176a5d8e06}\label{classcRBDUtil_ac7d1edbf35b9b6ce29fc5f176a5d8e06} 
+static void {\bfseries Calc\+CoM} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, t\+Vector \&out\+\_\+com, t\+Vector \&out\+\_\+vel)
+\item 
+\Hypertarget{classcRBDUtil_a8f43dd473bd4409558b1d5c423fd70b2}\label{classcRBDUtil_a8f43dd473bd4409558b1d5c423fd70b2} 
+static void {\bfseries Calc\+CoM} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, const Eigen\+::\+Vector\+Xd \&pose, const Eigen\+::\+Vector\+Xd \&vel, t\+Vector \&out\+\_\+com, t\+Vector \&out\+\_\+vel)
+\item 
+\Hypertarget{classcRBDUtil_a290642676ecc8088adb9fe2a47581321}\label{classcRBDUtil_a290642676ecc8088adb9fe2a47581321} 
+static c\+Sp\+Alg\+::t\+Sp\+Trans {\bfseries Build\+Parent\+Child\+Transform} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_a393ec92eefe6f45bde96754ff54975dd}\label{classcRBDUtil_a393ec92eefe6f45bde96754ff54975dd} 
+static c\+Sp\+Alg\+::t\+Sp\+Trans {\bfseries Build\+Child\+Parent\+Transform} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_a1f51dd597a77edc68d35e7a5a01cd029}\label{classcRBDUtil_a1f51dd597a77edc68d35e7a5a01cd029} 
+static void {\bfseries Calc\+World\+Joint\+Transforms} (const \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} \&model, Eigen\+::\+Matrix\+Xd \&out\+\_\+trans\+\_\+arr)
+\item 
+\Hypertarget{classcRBDUtil_a7d639b436e56ecb257040bf0f7167eb8}\label{classcRBDUtil_a7d639b436e56ecb257040bf0f7167eb8} 
+static bool {\bfseries Is\+Const\+Joint\+Subspace} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, int j)
+\item 
+\Hypertarget{classcRBDUtil_a451e4c520a865d6ad91f0221c2c26f4a}\label{classcRBDUtil_a451e4c520a865d6ad91f0221c2c26f4a} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_a3a4180ed766b6aeae94291caf1a403eb}\label{classcRBDUtil_a3a4180ed766b6aeae94291caf1a403eb} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Moment\+Inertia} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcRBDUtil_a0bab0b817dc20d18efc7261fdbffadee}\label{classcRBDUtil_a0bab0b817dc20d18efc7261fdbffadee} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Root} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose)
+\item 
+\Hypertarget{classcRBDUtil_ad62181e5292642cfb7fbcc8dde0f7f85}\label{classcRBDUtil_ad62181e5292642cfb7fbcc8dde0f7f85} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Revolute} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_ad5a5d6b2136d429f0af9a122bf22e5f8}\label{classcRBDUtil_ad5a5d6b2136d429f0af9a122bf22e5f8} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Prismatic} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_acf9f9aaf46ba0909f2ae2979347c0046}\label{classcRBDUtil_acf9f9aaf46ba0909f2ae2979347c0046} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Planar} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_a9821d64f6ff68fcb5b683cf2687cf84d}\label{classcRBDUtil_a9821d64f6ff68fcb5b683cf2687cf84d} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Fixed} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_ae562cf04fecc8072c40f9af4e5465208}\label{classcRBDUtil_ae562cf04fecc8072c40f9af4e5465208} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Build\+Joint\+Subspace\+Spherical} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&pose, int j)
+\item 
+\Hypertarget{classcRBDUtil_ae63c6bb63c91b9f2a01d0de24d0122d3}\label{classcRBDUtil_ae63c6bb63c91b9f2a01d0de24d0122d3} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a5fa9ba2bb68a013ac31304b9a2c8f6e1}\label{classcRBDUtil_a5fa9ba2bb68a013ac31304b9a2c8f6e1} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Root} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a7138ef53b1e56061dd1a52d46f3c6757}\label{classcRBDUtil_a7138ef53b1e56061dd1a52d46f3c6757} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Revolute} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_af93acbc3740fa56ee567f8f4066a38b7}\label{classcRBDUtil_af93acbc3740fa56ee567f8f4066a38b7} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Prismatic} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a817ff6ca998c7e4caf16c0bccb855198}\label{classcRBDUtil_a817ff6ca998c7e4caf16c0bccb855198} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Planar} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a75182128ae0e42fed444bd71e7d1d51b}\label{classcRBDUtil_a75182128ae0e42fed444bd71e7d1d51b} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Fixed} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a769752f9b2a3100eb0fec68d5b8253a3}\label{classcRBDUtil_a769752f9b2a3100eb0fec68d5b8253a3} 
+static c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries Build\+Cj\+Spherical} (const Eigen\+::\+Matrix\+Xd \&joint\+\_\+mat, const Eigen\+::\+Vector\+Xd \&q\+\_\+dot, int j)
+\item 
+\Hypertarget{classcRBDUtil_a9b69d4a5aee99bcd18f7539b6914936c}\label{classcRBDUtil_a9b69d4a5aee99bcd18f7539b6914936c} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Moment\+Inertia\+Box} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a78acee0bc12b2d71b932eeda643edc48}\label{classcRBDUtil_a78acee0bc12b2d71b932eeda643edc48} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Moment\+Inertia\+Capsule} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_aaf138bd14c56a3bc5f449bd31241e950}\label{classcRBDUtil_aaf138bd14c56a3bc5f449bd31241e950} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Moment\+Inertia\+Sphere} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a0e0c014bb03aaf308ea66cc3c7066e91}\label{classcRBDUtil_a0e0c014bb03aaf308ea66cc3c7066e91} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Moment\+Inertia\+Cylinder} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\item 
+\Hypertarget{classcRBDUtil_a1cfda7c297cf3905742e7d71bae2dea1}\label{classcRBDUtil_a1cfda7c297cf3905742e7d71bae2dea1} 
+static c\+Sp\+Alg\+::t\+Sp\+Mat {\bfseries Build\+Inertia\+Spatial\+Mat} (const Eigen\+::\+Matrix\+Xd \&body\+\_\+defs, int part\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+RBDUtil.\+h\item 
+RBDUtil.\+cpp\end{DoxyCompactItemize}

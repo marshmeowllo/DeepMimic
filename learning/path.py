@@ -44,3 +44,4 @@ class Path(object):
 
     def calc_return(self):
         return sum(self.rewards)
+    

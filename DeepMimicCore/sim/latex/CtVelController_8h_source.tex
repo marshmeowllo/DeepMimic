@@ -1,0 +1,27 @@
+\doxysection{Ct\+Vel\+Controller.\+h}
+\hypertarget{CtVelController_8h_source}{}\label{CtVelController_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/CtPDController.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcCtVelController}{cCtVelController}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcCtPDController}{cCtPDController}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00009\ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classcCtVelController}{cCtVelController}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcCtVelController}{\string~cCtVelController}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ GetName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCtrlParamSize(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetupPDControllers(\textcolor{keyword}{const}\ Json::Value\&\ json,\ \textcolor{keyword}{const}\ tVector\&\ gravity);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyAction(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ action);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointActionBounds(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_min,\ Eigen::VectorXd\&\ out\_max)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointActionOffsetScale(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_offset,\ Eigen::VectorXd\&\ out\_scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,401 @@
+\doxysection{c\+Ct\+Vel\+Controller Class Reference}
+\hypertarget{classcCtVelController}{}\label{classcCtVelController}\index{cCtVelController@{cCtVelController}}
+
+
+Inheritance diagram for c\+Ct\+Vel\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classcCtVelController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Ct\+Vel\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcCtVelController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classcCtVelController_af8f63633d836fc43c3fff8f21783d0a5}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcCtPDController_a1611427b0e4da1631da57af5bfa42a57}{Reset}} ()
+\item 
+virtual void \mbox{\hyperlink{classcCtPDController_a7d2148dd77d863d813f0a0337b423381}{Clear}} ()
+\item 
+virtual void {\bfseries Set\+Gravity} (const t\+Vector \&gravity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcCtController}{c\+Ct\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Set\+Update\+Rate} (double rate)
+\item 
+virtual double {\bfseries Get\+Update\+Rate} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ab96a2ef7f43c0fbd0824ae5a0ee84d92}{Update\+Calc\+Tau}} (double timestep, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+virtual double {\bfseries Get\+Cycle\+Period} () const
+\item 
+virtual void {\bfseries Set\+Cycle\+Period} (double period)
+\item 
+virtual void {\bfseries Set\+Init\+Time} (double time)
+\item 
+virtual double {\bfseries Get\+Phase} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_acf8ace170c0b403bfbe4e1cb47d40038}{Get\+State\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a7333caae2fa7a33082dae8eaa32e2a25}{Get\+Action\+Size}} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ac61be6284453233129b31c3edb55f9c5}{Build\+State\+Offset\+Scale}} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ab96786775c14e9b00adc55412d333b9f}{Build\+Action\+Bounds}} (Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a9de4b4509192075c239845c63ec305e6}{Build\+Action\+Offset\+Scale}} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ae81e93efa6df52657b149828fba06213}{Build\+State\+Norm\+Groups}} (Eigen\+::\+Vector\+Xi \&out\+\_\+groups) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a3add308061c76bcd016e0b972d51c72d}{Record\+State}} (Eigen\+::\+Vector\+Xd \&out\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const std\+::string \&param\+\_\+file)
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_ad3645072b817da8f199e060f0492aa6a}{Update}} (double timestep)
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_af04d9ac7f697c4c6ca0048dbd0ae63a0}{Post\+Update}} (double timestep)
+\item 
+virtual void {\bfseries Update\+Apply\+Tau} (const Eigen\+::\+Vector\+Xd \&tau)
+\item 
+virtual void {\bfseries Set\+Ground} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcGround}{c\+Ground}} $>$ ground)
+\item 
+virtual bool \mbox{\hyperlink{classcDeepMimicCharController_a0f9e7a9af8a6a0471754f839c9f6f412}{Need\+New\+Action}} () const
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_a808be0ab586cf3588b4a05dc64870045}{Record\+Action}} (Eigen\+::\+Vector\+Xd \&out\+\_\+action) const
+\item 
+virtual e\+Action\+Space \mbox{\hyperlink{classcDeepMimicCharController_ab88c1dba20d9b07930ffbe3e8f8ae495}{Get\+Action\+Space}} () const
+\item 
+virtual double \mbox{\hyperlink{classcDeepMimicCharController_a75693515001a53c43445d5dc27e2e1e6}{Get\+Reward\+Min}} () const
+\item 
+virtual double \mbox{\hyperlink{classcDeepMimicCharController_af80d52e124a80c689f087a80276b21cc}{Get\+Reward\+Max}} () const
+\item 
+virtual void {\bfseries Set\+View\+Dist\+Min} (double dist)
+\item 
+virtual void {\bfseries Set\+View\+Dist\+Max} (double dist)
+\item 
+virtual double {\bfseries Get\+View\+Dist\+Min} () const
+\item 
+virtual double {\bfseries Get\+View\+Dist\+Max} () const
+\item 
+virtual void {\bfseries Get\+View\+Bound} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\item 
+virtual double {\bfseries Get\+Prev\+Action\+Time} () const
+\item 
+virtual const t\+Vector \& {\bfseries Get\+Prev\+Action\+COM} () const
+\item 
+virtual double {\bfseries Get\+Time} () const
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& {\bfseries Get\+Tau} () const
+\item 
+virtual const c\+Circular\+Buffer$<$ double $>$ \& {\bfseries Get\+Val\+Log} () const
+\item 
+virtual void {\bfseries Log\+Val} (double val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries Get\+Num\+Actions} () const
+\item 
+virtual void {\bfseries Handle\+Pose\+Reset} ()
+\item 
+virtual void {\bfseries Handle\+Vel\+Reset} ()
+\item 
+virtual int {\bfseries Num\+Children} () const
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Child} (int i) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classcCtVelController_af48b3bfd7e4c0583de7b1849591b4e06}{Get\+Ctrl\+Param\+Size}} (int joint\+\_\+id) const
+\item 
+virtual void \mbox{\hyperlink{classcCtVelController_a4589995099152d0beb52d0c7f1cf125d}{Setup\+PDControllers}} (const Json\+::\+Value \&json, const t\+Vector \&gravity)
+\item 
+virtual void \mbox{\hyperlink{classcCtVelController_a5dcf21da61c3431f0d5faed8f319e2db}{Apply\+Action}} (const Eigen\+::\+Vector\+Xd \&action)
+\item 
+virtual void \mbox{\hyperlink{classcCtVelController_a12282dc7197fe93d90fbd55247643cc1}{Build\+Joint\+Action\+Bounds}} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max) const
+\item 
+virtual void \mbox{\hyperlink{classcCtVelController_a3e2b58a39146114abe8647d9dbeeed3f}{Build\+Joint\+Action\+Offset\+Scale}} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classcCtPDController_a3b432cf6aeba405c5c535cc32e54f2fe}{Parse\+Params}} (const Json\+::\+Value \&json)
+\item 
+virtual double {\bfseries Get\+Max\+PDExp\+Val} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtPDController_a60b43d5fabd5bd4f6d9528f09115e11d}{Update\+Build\+Tau}} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+virtual void {\bfseries Update\+PDCtrls} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+virtual void {\bfseries Convert\+Action\+To\+Target\+Pose} (int joint\+\_\+id, const Eigen\+::\+Vector\+Xd \&action\+\_\+params, Eigen\+::\+Vector\+Xd \&out\+\_\+theta) const
+\item 
+virtual c\+Kin\+Tree\+::e\+Joint\+Type {\bfseries Get\+Joint\+Type} (int joint\+\_\+id) const
+\item 
+virtual void {\bfseries Set\+PDTargets} (const Eigen\+::\+Vector\+Xd \&targets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcCtController}{c\+Ct\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcCtController_aaf338d3dce07380adeb2bb11922fc84a}{Reset\+Params}} ()
+\item 
+virtual int {\bfseries Get\+Pos\+Feature\+Dim} () const
+\item 
+virtual int {\bfseries Get\+Rot\+Feature\+Dim} () const
+\item 
+virtual int {\bfseries Get\+Vel\+Feature\+Dim} () const
+\item 
+virtual int {\bfseries Get\+Ang\+Vel\+Feature\+Dim} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_aa34772d1b0c2e6b0908f84fef690b65b}{Init\+Resources}} ()
+\item 
+virtual void {\bfseries Build\+Ctrl\+Param\+Offset} (Eigen\+::\+Vector\+Xi \&out\+\_\+offset) const
+\item 
+virtual bool \mbox{\hyperlink{classcCtController_ace12dadeaf5372b917d3e4bcfcabb684}{Check\+Need\+New\+Action}} (double timestep) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a98caf16b0fef7c0523231deb0314c8be}{New\+Action\+Update}} ()
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a00120745a9b64465843a7b504ddbcf82}{Get\+State\+Pose\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a6db4c635dd1a03dbbf89a2e29731859d}{Get\+State\+Vel\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a4ee75fa388511da675e5e8680ec57afa}{Get\+State\+Pose\+Offset}} () const
+\item 
+virtual int {\bfseries Get\+State\+Phase\+Size} () const
+\item 
+virtual int {\bfseries Get\+State\+Phase\+Offset} () const
+\item 
+virtual int {\bfseries Get\+Action\+Ctrl\+Offset} () const
+\item 
+virtual int {\bfseries Get\+Action\+Ctrl\+Size} () const
+\item 
+virtual int {\bfseries Get\+Ctrl\+Param\+Offset} (int joint\+\_\+id) const
+\item 
+virtual void {\bfseries Build\+State\+Phase\+Offset\+Scale} (Eigen\+::\+Vector\+Xd \&phase\+\_\+offset, Eigen\+::\+Vector\+Xd \&phase\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a696c4c6d34d0500a6ff83fc359ec680c}{Build\+State\+Pose}} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a7493cf02844e1fe4519b939d963df0c9}{Build\+State\+Vel}} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+virtual void {\bfseries Build\+State\+Phase} (Eigen\+::\+Vector\+Xd \&out\+\_\+phase) const
+\item 
+virtual int {\bfseries Retarget\+Joint\+ID} (int joint\+\_\+id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init\+Action} ()
+\item 
+virtual void {\bfseries Init\+Tau} ()
+\item 
+virtual int {\bfseries Get\+Pos\+Dim} () const
+\item 
+virtual void {\bfseries Handle\+New\+Action} ()
+\item 
+virtual void {\bfseries Post\+Process\+Action} (Eigen\+::\+Vector\+Xd \&out\+\_\+action) const
+\item 
+virtual bool {\bfseries Has\+Ground} () const
+\item 
+virtual double {\bfseries Sample\+Ground\+Height} (const t\+Vector \&pos) const
+\item 
+virtual int {\bfseries Get\+State\+Vel\+Offset} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries g\+Norm\+Group\+Single} = 0
+\item 
+static const int {\bfseries g\+Norm\+Group\+None} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcImpPDController}{c\+Imp\+PDController}} {\bfseries m\+PDCtrl}
+\item 
+t\+Vector {\bfseries m\+Gravity}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcCtController}{c\+Ct\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries m\+Update\+Rate}
+\item 
+double {\bfseries m\+Cycle\+Period}
+\item 
+bool {\bfseries m\+Enable\+Phase\+Input}
+\item 
+bool {\bfseries m\+Record\+World\+Root\+Pos}
+\item 
+bool {\bfseries m\+Record\+World\+Root\+Rot}
+\item 
+double {\bfseries m\+Phase\+Offset}
+\item 
+double {\bfseries m\+Init\+Time\+Offset}
+\item 
+int {\bfseries m\+Action\+Size}
+\item 
+Eigen\+::\+Vector\+Xi {\bfseries m\+Ctrl\+Param\+Offset}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries m\+Time}
+\item 
+bool {\bfseries m\+Need\+New\+Action}
+\item 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Action}
+\item 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Tau}
+\item 
+double {\bfseries m\+View\+Dist\+Min}
+\item 
+double {\bfseries m\+View\+Dist\+Max}
+\item 
+int {\bfseries m\+Pos\+Dim}
+\item 
+double {\bfseries m\+Prev\+Action\+Time}
+\item 
+t\+Vector {\bfseries m\+Prev\+Action\+COM}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcGround}{c\+Ground}} $>$ {\bfseries m\+Ground}
+\item 
+c\+Circular\+Buffer$<$ double $>$ {\bfseries m\+Val\+Log}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+e\+Mode {\bfseries m\+Mode}
+\item 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcCtVelController_a5dcf21da61c3431f0d5faed8f319e2db}\label{classcCtVelController_a5dcf21da61c3431f0d5faed8f319e2db} 
+\index{cCtVelController@{cCtVelController}!ApplyAction@{ApplyAction}}
+\index{ApplyAction@{ApplyAction}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{ApplyAction()}{ApplyAction()}}
+{\footnotesize\ttfamily void c\+Ct\+Vel\+Controller\+::\+Apply\+Action (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+\Hypertarget{classcCtVelController_a12282dc7197fe93d90fbd55247643cc1}\label{classcCtVelController_a12282dc7197fe93d90fbd55247643cc1} 
+\index{cCtVelController@{cCtVelController}!BuildJointActionBounds@{BuildJointActionBounds}}
+\index{BuildJointActionBounds@{BuildJointActionBounds}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{BuildJointActionBounds()}{BuildJointActionBounds()}}
+{\footnotesize\ttfamily void c\+Ct\+Vel\+Controller\+::\+Build\+Joint\+Action\+Bounds (\begin{DoxyParamCaption}\item[{int}]{joint\+\_\+id,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+min,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+max }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+\Hypertarget{classcCtVelController_a3e2b58a39146114abe8647d9dbeeed3f}\label{classcCtVelController_a3e2b58a39146114abe8647d9dbeeed3f} 
+\index{cCtVelController@{cCtVelController}!BuildJointActionOffsetScale@{BuildJointActionOffsetScale}}
+\index{BuildJointActionOffsetScale@{BuildJointActionOffsetScale}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{BuildJointActionOffsetScale()}{BuildJointActionOffsetScale()}}
+{\footnotesize\ttfamily void c\+Ct\+Vel\+Controller\+::\+Build\+Joint\+Action\+Offset\+Scale (\begin{DoxyParamCaption}\item[{int}]{joint\+\_\+id,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+offset,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+scale }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+\Hypertarget{classcCtVelController_af48b3bfd7e4c0583de7b1849591b4e06}\label{classcCtVelController_af48b3bfd7e4c0583de7b1849591b4e06} 
+\index{cCtVelController@{cCtVelController}!GetCtrlParamSize@{GetCtrlParamSize}}
+\index{GetCtrlParamSize@{GetCtrlParamSize}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{GetCtrlParamSize()}{GetCtrlParamSize()}}
+{\footnotesize\ttfamily int c\+Ct\+Vel\+Controller\+::\+Get\+Ctrl\+Param\+Size (\begin{DoxyParamCaption}\item[{int}]{joint\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+\Hypertarget{classcCtVelController_af8f63633d836fc43c3fff8f21783d0a5}\label{classcCtVelController_af8f63633d836fc43c3fff8f21783d0a5} 
+\index{cCtVelController@{cCtVelController}!GetName@{GetName}}
+\index{GetName@{GetName}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string c\+Ct\+Vel\+Controller\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+\Hypertarget{classcCtVelController_a4589995099152d0beb52d0c7f1cf125d}\label{classcCtVelController_a4589995099152d0beb52d0c7f1cf125d} 
+\index{cCtVelController@{cCtVelController}!SetupPDControllers@{SetupPDControllers}}
+\index{SetupPDControllers@{SetupPDControllers}!cCtVelController@{cCtVelController}}
+\doxysubsubsection{\texorpdfstring{SetupPDControllers()}{SetupPDControllers()}}
+{\footnotesize\ttfamily void c\+Ct\+Vel\+Controller\+::\+Setup\+PDControllers (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{json,  }\item[{const t\+Vector \&}]{gravity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCtPDController}{c\+Ct\+PDController}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ct\+Vel\+Controller.\+h\item 
+Ct\+Vel\+Controller.\+cpp\end{DoxyCompactItemize}

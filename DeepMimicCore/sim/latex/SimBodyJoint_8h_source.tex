@@ -1,0 +1,117 @@
+\doxysection{Sim\+Body\+Joint.\+h}
+\hypertarget{SimBodyJoint_8h_source}{}\label{SimBodyJoint_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SimBodyLink.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SpAlg.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ for\ now\ joints\ are\ assumed\ to\ be\ hinge\ joints\ fixed\ along\ the\ z\ axis}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcSimBodyJoint_1_1tParams}{tParams}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcSimBodyJoint_1_1tParams}{tParams}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mID;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ tVector\ mLimLow;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ tVector\ mLimHigh;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mTorqueLimit;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mForceLimit;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ tVector\ mParentPos;\ \textcolor{comment}{//\ parent\ coords}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ tVector\ mChildPos;\ \textcolor{comment}{//\ child\ coords}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ tQuaternion\ mParentRot;\ \textcolor{comment}{//\ parent\ coords}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ tQuaternion\ mChildRot;\ \textcolor{comment}{//\ child\ coords}}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimBodyJoint}{\string~cSimBodyJoint}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(std::shared\_ptr<cWorld>\&\ world,\ \textcolor{keyword}{const}\ std::shared\_ptr<cMultiBody>\&\ multbody,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ parent,\ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ child,\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcSimBodyJoint_1_1tParams}{tParams}}\&\ params);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsValid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ cKinTree::eJointType\ GetType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcWorldRotation(tVector\&\ out\_axis,\ \textcolor{keywordtype}{double}\&\ out\_theta)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ CalcWorldRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ BuildWorldTrans()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsRoot()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddTau(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ cSpAlg::tSpVec\&\ GetTau()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTau();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearTau();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcWorldPos()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcWorldPos(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcWorldVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcWorldVel(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcWorldAngVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetTorqueLimit()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetForceLimit()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTorqueLimit(\textcolor{keywordtype}{double}\ lim);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetForceLimit(\textcolor{keywordtype}{double}\ lim);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetParentPos()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ in\ parent\ link's\ coordinates}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetChildPos()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ in\ child\ link's\ coordinates}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ BuildJointChildTrans()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ BuildJointParentTrans()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcAxisWorld()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetAxisRel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasParent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasChild()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ GetParent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ GetChild()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClampTotalTorque(tVector\&\ out\_torque)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClampTotalForce(tVector\&\ out\_force)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tVector\&\ GetLimLow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tVector\&\ GetLimHigh()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasJointLim()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetParamSize()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildPose(Eigen::VectorXd\&\ out\_pose)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildVel(Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPose(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetVel(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetTotalTorque()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetTotalForce()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00091\ \ \ \ \ cKinTree::eJointType\ mType;}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{structcSimBodyJoint_1_1tParams}{tParams}}\ mParams;}
+\DoxyCodeLine{00093\ \ \ \ \ std::shared\_ptr<cWorld>\ mWorld;}
+\DoxyCodeLine{00094\ \ \ \ \ std::shared\_ptr<cMultiBody>\ mMultBody;}
+\DoxyCodeLine{00095\ \ \ \ \ std::shared\_ptr<cSimBodyLink>\ mParent;}
+\DoxyCodeLine{00096\ \ \ \ \ std::shared\_ptr<cSimBodyLink>\ mChild;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ all\ torques\ and\ forces\ are\ in\ local\ coordinates}}
+\DoxyCodeLine{00099\ \ \ \ \ cSpAlg::tSpVec\ mTotalTau;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ cKinTree::eJointType\ FetchJointType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcParentLocalPos(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcChildLocalPos(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTotalTorque(\textcolor{keyword}{const}\ tVector\&\ torque);}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTotalForce(\textcolor{keyword}{const}\ tVector\&\ force);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTauRevolute();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTauPlanar();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTauPrismatic();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTauSpherical();}
+\DoxyCodeLine{00112\ \};}
+
+\end{DoxyCode}

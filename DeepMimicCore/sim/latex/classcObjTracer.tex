@@ -1,0 +1,103 @@
+\doxysection{c\+Obj\+Tracer Class Reference}
+\hypertarget{classcObjTracer}{}\label{classcObjTracer}\index{cObjTracer@{cObjTracer}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcObjTracer_1_1tParams}{t\+Params}}
+\item 
+struct \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcObjTracer_a5714874cfa2c455466a39c180e80fb36}\label{classcObjTracer_a5714874cfa2c455466a39c180e80fb36} 
+enum {\bfseries e\+Trace\+Type} \{ {\bfseries e\+Trace\+Pos}
+, {\bfseries e\+Trace\+COM}
+, {\bfseries e\+Trace\+Contact}
+, {\bfseries e\+Trce\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcObjTracer_a807742c9ea662105660aea4f0a175c42}\label{classcObjTracer_a807742c9ea662105660aea4f0a175c42} 
+virtual void {\bfseries Init} (double sample\+\_\+period)
+\item 
+\Hypertarget{classcObjTracer_aa927ca2571ac74bbd97c56859b96a254}\label{classcObjTracer_aa927ca2571ac74bbd97c56859b96a254} 
+virtual void {\bfseries Update} (double time\+\_\+step)
+\item 
+\Hypertarget{classcObjTracer_a2a012ff12b3b8d8df75c9f07758a80cb}\label{classcObjTracer_a2a012ff12b3b8d8df75c9f07758a80cb} 
+virtual void {\bfseries Reset} ()
+\item 
+\Hypertarget{classcObjTracer_a9cfa9ddba4ab174c1534e4a0b3db8277}\label{classcObjTracer_a9cfa9ddba4ab174c1534e4a0b3db8277} 
+virtual void {\bfseries Clear} ()
+\item 
+\Hypertarget{classcObjTracer_adc990c6ed40da90a3753bed41ce770c7}\label{classcObjTracer_adc990c6ed40da90a3753bed41ce770c7} 
+virtual int {\bfseries Add\+Trace} (const \mbox{\hyperlink{structcObjTracer_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcObjTracer_a1ab0a6d791c2febc89f7cbfa26943b94}\label{classcObjTracer_a1ab0a6d791c2febc89f7cbfa26943b94} 
+virtual int {\bfseries Get\+Num\+Traces} () const
+\item 
+\Hypertarget{classcObjTracer_afb00cc272c8467116f6f7c46a8a8c33a}\label{classcObjTracer_afb00cc272c8467116f6f7c46a8a8c33a} 
+virtual void {\bfseries Set\+Trace\+Col\+Idx} (int handle, int col\+\_\+idx)
+\item 
+\Hypertarget{classcObjTracer_a43763760c45e5de00589acd64e93cdf4}\label{classcObjTracer_a43763760c45e5de00589acd64e93cdf4} 
+virtual void {\bfseries Draw} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcObjTracer_aed934ea118cab7e537373e9b39ba7195}\label{classcObjTracer_aed934ea118cab7e537373e9b39ba7195} 
+virtual void {\bfseries Reset\+Timer} ()
+\item 
+\Hypertarget{classcObjTracer_ace01da066617807086691a25438d8b40}\label{classcObjTracer_ace01da066617807086691a25438d8b40} 
+virtual void {\bfseries Build\+Trace} (const \mbox{\hyperlink{structcObjTracer_1_1tParams}{t\+Params}} \&params, \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_af3a27622d3ba35addb01e677fa69cc10}\label{classcObjTracer_af3a27622d3ba35addb01e677fa69cc10} 
+virtual void {\bfseries Reset\+Trace} (\mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_a260e971628a584a1171b826fba3f249a}\label{classcObjTracer_a260e971628a584a1171b826fba3f249a} 
+virtual void {\bfseries Update\+Trace} (\mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_a52424a64c9ef5955537d8b325992390f}\label{classcObjTracer_a52424a64c9ef5955537d8b325992390f} 
+virtual void {\bfseries Update\+Trace\+Pos} (\mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_a657eec04356959ce21c21adbb046480b}\label{classcObjTracer_a657eec04356959ce21c21adbb046480b} 
+virtual void {\bfseries Update\+Trace\+COM} (\mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_a4abaef22d20620d61667003354496d69}\label{classcObjTracer_a4abaef22d20620d61667003354496d69} 
+virtual void {\bfseries Update\+Trace\+Contact} (\mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\item 
+\Hypertarget{classcObjTracer_a0020466ce82c85cadb2a2a4063fc9909}\label{classcObjTracer_a0020466ce82c85cadb2a2a4063fc9909} 
+virtual const \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \& {\bfseries Get\+Trace} (int handle) const
+\item 
+\Hypertarget{classcObjTracer_a87d35c78046f26f252601f8d541ffb31}\label{classcObjTracer_a87d35c78046f26f252601f8d541ffb31} 
+virtual \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \& {\bfseries Get\+Trace} (int handle)
+\item 
+\Hypertarget{classcObjTracer_a6735ff2593b2482ce1c83f0f448d3f38}\label{classcObjTracer_a6735ff2593b2482ce1c83f0f448d3f38} 
+virtual void {\bfseries Draw\+Trace} (const \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&trace) const
+\item 
+\Hypertarget{classcObjTracer_aa1822612f4e7e0a45e8d43e947eb01c4}\label{classcObjTracer_aa1822612f4e7e0a45e8d43e947eb01c4} 
+virtual void {\bfseries Draw\+Trace\+Pos} (const \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&trace) const
+\item 
+\Hypertarget{classcObjTracer_a781e2dbbc988811ca482f88b47a14567}\label{classcObjTracer_a781e2dbbc988811ca482f88b47a14567} 
+virtual void {\bfseries Draw\+Trace\+Contact} (const \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&trace) const
+\item 
+\Hypertarget{classcObjTracer_a516b60c5f55553fda0e80f3e5552cce9}\label{classcObjTracer_a516b60c5f55553fda0e80f3e5552cce9} 
+virtual void {\bfseries Set\+Trace\+Col\+Idx} (int idx, \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} \&out\+\_\+trace) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcObjTracer_acc87092edd897fd613cd7dfde6b778f9}\label{classcObjTracer_acc87092edd897fd613cd7dfde6b778f9} 
+c\+Timer {\bfseries m\+Timer}
+\item 
+\Hypertarget{classcObjTracer_ae81ccfc4b5f95dfc6a94a75988090a15}\label{classcObjTracer_ae81ccfc4b5f95dfc6a94a75988090a15} 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcObjTracer_1_1tTrace}{t\+Trace}} $>$ {\bfseries m\+Traces}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Obj\+Tracer.\+h\item 
+Obj\+Tracer.\+cpp\end{DoxyCompactItemize}

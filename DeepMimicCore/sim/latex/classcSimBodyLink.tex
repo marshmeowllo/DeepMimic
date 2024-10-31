@@ -1,0 +1,342 @@
+\doxysection{c\+Sim\+Body\+Link Class Reference}
+\hypertarget{classcSimBodyLink}{}\label{classcSimBodyLink}\index{cSimBodyLink@{cSimBodyLink}}
+
+
+Inheritance diagram for c\+Sim\+Body\+Link\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classcSimBodyLink__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Sim\+Body\+Link\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcSimBodyLink__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcSimBodyLink_1_1tParams}{t\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimBodyLink_a1d66e2e3029fbee418914168bd374092}\label{classcSimBodyLink_a1d66e2e3029fbee418914168bd374092} 
+virtual void {\bfseries Init} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ \&mult\+\_\+body, const \mbox{\hyperlink{structcSimBodyLink_1_1tParams}{t\+Params}} \&params)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimBodyLink_ae8edbf033ce9e9cee4fad37b1d5f4a24}{Get\+Size}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimBodyLink_aeeeab25a917ecc04069b843411910d66}{Get\+Linear\+Velocity}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimBodyLink_ac5f0c0487deec048eedf1c5f818db789}{Get\+Linear\+Velocity}} (const t\+Vector \&local\+\_\+pos) const override
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_aa2f34b05b13f40a0471f818bd1405724}{Set\+Linear\+Velocity}} (const t\+Vector \&vel) override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimBodyLink_a267020b80fa5603190de191e8bae14ef}{Get\+Angular\+Velocity}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_ada1a0c75e8dcbd725b73111638ad0cc2}{Set\+Angular\+Velocity}} (const t\+Vector \&vel) override
+\item 
+\Hypertarget{classcSimBodyLink_a35fb0156e71ad87b213b45082f0c22f5}\label{classcSimBodyLink_a35fb0156e71ad87b213b45082f0c22f5} 
+virtual double {\bfseries Get\+Mass} () const
+\item 
+\Hypertarget{classcSimBodyLink_a6f8c802432fadc622e89ad21e001968d}\label{classcSimBodyLink_a6f8c802432fadc622e89ad21e001968d} 
+virtual double {\bfseries Get\+Friction} () const
+\item 
+\Hypertarget{classcSimBodyLink_a5d3a646caf68c6e119f628f4127648a1}\label{classcSimBodyLink_a5d3a646caf68c6e119f628f4127648a1} 
+virtual void {\bfseries Set\+Friction} (double friction)
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_aedde818798a93f15847bb8cd04ea7470}{Apply\+Force}} (const t\+Vector \&force) override
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_a49ab3a690927f967869f1ea55ea8e95c}{Apply\+Force}} (const t\+Vector \&force, const t\+Vector \&local\+\_\+pos) override
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_aff46c8163a3e8e3320833a8e3bcedba7}{Apply\+Torque}} (const t\+Vector \&torque) override
+\item 
+virtual void \mbox{\hyperlink{classcSimBodyLink_a127f76e94f522c107734b02154df3fe5}{Clear\+Forces}} () override
+\item 
+virtual c\+Shape\+::e\+Shape \mbox{\hyperlink{classcSimBodyLink_a01c9f6b630e99e681bc16583ed045f42}{Get\+Shape}} () const override
+\item 
+\Hypertarget{classcSimBodyLink_a454d84ea49906a0e345f4fa32c8246f0}\label{classcSimBodyLink_a454d84ea49906a0e345f4fa32c8246f0} 
+virtual void {\bfseries Update\+Vel} (const t\+Vector \&lin\+\_\+vel, const t\+Vector \&ang\+\_\+vel)
+\item 
+\Hypertarget{classcSimBodyLink_a31acc92100572697e514a2504834671c}\label{classcSimBodyLink_a31acc92100572697e514a2504834671c} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ \& {\bfseries Get\+Mult\+Body} () const
+\item 
+\Hypertarget{classcSimBodyLink_aa61ddb0e874fe229a936385f8c0c5d3f}\label{classcSimBodyLink_aa61ddb0e874fe229a936385f8c0c5d3f} 
+virtual int {\bfseries Get\+Joint\+ID} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual t\+Vector {\bfseries Get\+Pos} () const
+\item 
+virtual void {\bfseries Set\+Pos} (const t\+Vector \&pos)
+\item 
+virtual void {\bfseries Get\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const
+\item 
+virtual t\+Quaternion {\bfseries Get\+Rotation} () const
+\item 
+virtual void {\bfseries Set\+Rotation} (const t\+Vector \&axis, double theta)
+\item 
+virtual void {\bfseries Set\+Rotation} (const t\+Quaternion \&q)
+\item 
+virtual t\+Matrix {\bfseries Get\+World\+Transform} () const
+\item 
+virtual t\+Matrix {\bfseries Get\+Local\+Transform} () const
+\item 
+virtual t\+Vector {\bfseries World\+To\+Local\+Pos} (const t\+Vector \&world\+\_\+pos) const
+\item 
+virtual t\+Vector {\bfseries Local\+To\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual t\+Matrix3 {\bfseries Get\+Local\+To\+World\+Rot\+Mat} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COM} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COMVel} () const
+\item 
+virtual void {\bfseries Register\+Contact} ()
+\item 
+virtual void {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual void {\bfseries Update\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& {\bfseries Get\+Contact\+Handle} () const
+\item 
+virtual bool {\bfseries Is\+In\+Contact} () const
+\item 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} () const
+\item 
+virtual short {\bfseries Get\+Col\+Group} () const
+\item 
+virtual void {\bfseries Set\+Col\+Group} (short col\+\_\+group)
+\item 
+virtual short {\bfseries Get\+Col\+Mask} () const
+\item 
+virtual void {\bfseries Set\+Col\+Mask} (short col\+\_\+mask)
+\item 
+virtual e\+Type {\bfseries Get\+Type} () const
+\item 
+virtual void {\bfseries Calc\+AABB} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\item 
+virtual const bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Shape} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimBodyLink_a2d04c3e0f6fe9c48c8d7dc053080220e}\label{classcSimBodyLink_a2d04c3e0f6fe9c48c8d7dc053080220e} 
+virtual void {\bfseries Init\+Size} (t\+Vector \&out\+\_\+size) const
+\item 
+\Hypertarget{classcSimBodyLink_a524d4bf4bee8b372d3923678337597bf}\label{classcSimBodyLink_a524d4bf4bee8b372d3923678337597bf} 
+virtual c\+Shape\+::e\+Shape {\bfseries Fetch\+Obj\+Shape} () const
+\item 
+\Hypertarget{classcSimBodyLink_a0914b04b2e0bdf91fd67d677cc28686e}\label{classcSimBodyLink_a0914b04b2e0bdf91fd67d677cc28686e} 
+virtual void {\bfseries Remove\+From\+World} ()
+\item 
+virtual const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimBodyLink_a52a3c09786b671762626b5cd5522d9d1}{Get\+Collision\+Object}} () const override
+\item 
+virtual bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimBodyLink_a8e6018c37608e84f4b07b147727872d3}{Get\+Collision\+Object}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& {\bfseries Get\+World} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimBodyLink_a82ad1621318a55e22a63be865209dcf9}\label{classcSimBodyLink_a82ad1621318a55e22a63be865209dcf9} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ {\bfseries m\+Mult\+Body}
+\item 
+\Hypertarget{classcSimBodyLink_a40ba3eb8da7e14c13d9464410c663bf0}\label{classcSimBodyLink_a40ba3eb8da7e14c13d9464410c663bf0} 
+std\+::unique\+\_\+ptr$<$ bt\+Multi\+Body\+Link\+Collider $>$ {\bfseries m\+Col\+Obj}
+\item 
+\Hypertarget{classcSimBodyLink_a919845f2619686cc394b9555de9f52c8}\label{classcSimBodyLink_a919845f2619686cc394b9555de9f52c8} 
+int {\bfseries m\+Joint\+ID}
+\item 
+\Hypertarget{classcSimBodyLink_aa30f3208d1d8de313c0457f8364c79d6}\label{classcSimBodyLink_aa30f3208d1d8de313c0457f8364c79d6} 
+double {\bfseries m\+Mass}
+\item 
+\Hypertarget{classcSimBodyLink_af2e601f11a94afade2442390b67ab075}\label{classcSimBodyLink_af2e601f11a94afade2442390b67ab075} 
+t\+Vector {\bfseries m\+Size}
+\item 
+\Hypertarget{classcSimBodyLink_a9eb3a9891bb00c0bf170f1888c0e067a}\label{classcSimBodyLink_a9eb3a9891bb00c0bf170f1888c0e067a} 
+c\+Shape\+::e\+Shape {\bfseries m\+Obj\+Shape}
+\item 
+\Hypertarget{classcSimBodyLink_ad7f60c29e345a35ad6488cfe64920d23}\label{classcSimBodyLink_ad7f60c29e345a35ad6488cfe64920d23} 
+t\+Vector {\bfseries m\+Lin\+Vel}
+\item 
+\Hypertarget{classcSimBodyLink_a565eca1ace9c86e6c021df9e046f07d9}\label{classcSimBodyLink_a565eca1ace9c86e6c021df9e046f07d9} 
+t\+Vector {\bfseries m\+Ang\+Vel}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Shape $>$ {\bfseries m\+Col\+Shape}
+\item 
+\mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries m\+Contact\+Handle}
+\item 
+bool {\bfseries m\+Enable\+Contact\+Fall}
+\item 
+e\+Type {\bfseries m\+Type}
+\item 
+short {\bfseries m\+Col\+Group}
+\item 
+short {\bfseries m\+Col\+Mask}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a7031e8c95243ce20c8163100e523d77c}\label{classcSimObj_a7031e8c95243ce20c8163100e523d77c} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Dynamic}
+, {\bfseries e\+Type\+Static}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcSimBodyLink_aedde818798a93f15847bb8cd04ea7470}\label{classcSimBodyLink_aedde818798a93f15847bb8cd04ea7470} 
+\index{cSimBodyLink@{cSimBodyLink}!ApplyForce@{ApplyForce}}
+\index{ApplyForce@{ApplyForce}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{ApplyForce()}{ApplyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Apply\+Force (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a49ab3a690927f967869f1ea55ea8e95c}\label{classcSimBodyLink_a49ab3a690927f967869f1ea55ea8e95c} 
+\index{cSimBodyLink@{cSimBodyLink}!ApplyForce@{ApplyForce}}
+\index{ApplyForce@{ApplyForce}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{ApplyForce()}{ApplyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Apply\+Force (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{force,  }\item[{const t\+Vector \&}]{local\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_aff46c8163a3e8e3320833a8e3bcedba7}\label{classcSimBodyLink_aff46c8163a3e8e3320833a8e3bcedba7} 
+\index{cSimBodyLink@{cSimBodyLink}!ApplyTorque@{ApplyTorque}}
+\index{ApplyTorque@{ApplyTorque}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{ApplyTorque()}{ApplyTorque()}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Apply\+Torque (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{torque }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a127f76e94f522c107734b02154df3fe5}\label{classcSimBodyLink_a127f76e94f522c107734b02154df3fe5} 
+\index{cSimBodyLink@{cSimBodyLink}!ClearForces@{ClearForces}}
+\index{ClearForces@{ClearForces}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{ClearForces()}{ClearForces()}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Clear\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a267020b80fa5603190de191e8bae14ef}\label{classcSimBodyLink_a267020b80fa5603190de191e8bae14ef} 
+\index{cSimBodyLink@{cSimBodyLink}!GetAngularVelocity@{GetAngularVelocity}}
+\index{GetAngularVelocity@{GetAngularVelocity}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetAngularVelocity()}{GetAngularVelocity()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Body\+Link\+::\+Get\+Angular\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a52a3c09786b671762626b5cd5522d9d1}\label{classcSimBodyLink_a52a3c09786b671762626b5cd5522d9d1} 
+\index{cSimBodyLink@{cSimBodyLink}!GetCollisionObject@{GetCollisionObject}}
+\index{GetCollisionObject@{GetCollisionObject}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetCollisionObject()}{GetCollisionObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} c\+Sim\+Body\+Link\+::\+Get\+Collision\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a8e6018c37608e84f4b07b147727872d3}\label{classcSimBodyLink_a8e6018c37608e84f4b07b147727872d3} 
+\index{cSimBodyLink@{cSimBodyLink}!GetCollisionObject@{GetCollisionObject}}
+\index{GetCollisionObject@{GetCollisionObject}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetCollisionObject()}{GetCollisionObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bt\+Collision\+Object \texorpdfstring{$\ast$}{*} c\+Sim\+Body\+Link\+::\+Get\+Collision\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_aeeeab25a917ecc04069b843411910d66}\label{classcSimBodyLink_aeeeab25a917ecc04069b843411910d66} 
+\index{cSimBodyLink@{cSimBodyLink}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Body\+Link\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_ac5f0c0487deec048eedf1c5f818db789}\label{classcSimBodyLink_ac5f0c0487deec048eedf1c5f818db789} 
+\index{cSimBodyLink@{cSimBodyLink}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Body\+Link\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{local\+\_\+pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_a01c9f6b630e99e681bc16583ed045f42}\label{classcSimBodyLink_a01c9f6b630e99e681bc16583ed045f42} 
+\index{cSimBodyLink@{cSimBodyLink}!GetShape@{GetShape}}
+\index{GetShape@{GetShape}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetShape()}{GetShape()}}
+{\footnotesize\ttfamily c\+Shape\+::e\+Shape c\+Sim\+Body\+Link\+::\+Get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_ae8edbf033ce9e9cee4fad37b1d5f4a24}\label{classcSimBodyLink_ae8edbf033ce9e9cee4fad37b1d5f4a24} 
+\index{cSimBodyLink@{cSimBodyLink}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Body\+Link\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_ada1a0c75e8dcbd725b73111638ad0cc2}\label{classcSimBodyLink_ada1a0c75e8dcbd725b73111638ad0cc2} 
+\index{cSimBodyLink@{cSimBodyLink}!SetAngularVelocity@{SetAngularVelocity}}
+\index{SetAngularVelocity@{SetAngularVelocity}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{SetAngularVelocity()}{SetAngularVelocity()}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Set\+Angular\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimBodyLink_aa2f34b05b13f40a0471f818bd1405724}\label{classcSimBodyLink_aa2f34b05b13f40a0471f818bd1405724} 
+\index{cSimBodyLink@{cSimBodyLink}!SetLinearVelocity@{SetLinearVelocity}}
+\index{SetLinearVelocity@{SetLinearVelocity}!cSimBodyLink@{cSimBodyLink}}
+\doxysubsubsection{\texorpdfstring{SetLinearVelocity()}{SetLinearVelocity()}}
+{\footnotesize\ttfamily void c\+Sim\+Body\+Link\+::\+Set\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sim\+Body\+Link.\+h\item 
+Sim\+Body\+Link.\+cpp\end{DoxyCompactItemize}

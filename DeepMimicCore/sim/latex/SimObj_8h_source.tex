@@ -1,0 +1,85 @@
+\doxysection{Sim\+Obj.\+h}
+\hypertarget{SimObj_8h_source}{}\label{SimObj_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}sim/World.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}anim/Shape.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimObj}{cSimObj}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{enum}\ eType}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ eTypeDynamic,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ eTypeStatic,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ eTypeMax}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimObj}{\string~cSimObj}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetPos()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPos(\textcolor{keyword}{const}\ tVector\&\ pos);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetRotation(tVector\&\ out\_axis,\ \textcolor{keywordtype}{double}\&\ out\_theta)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ GetRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tVector\&\ axis,\ \textcolor{keywordtype}{double}\ theta);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tQuaternion\&\ q);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetWorldTransform()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetLocalTransform()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ vel)\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetAngularVelocity()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetAngularVelocity(\textcolor{keyword}{const}\ tVector\&\ vel)\ =\ 0;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ WorldToLocalPos(\textcolor{keyword}{const}\ tVector\&\ world\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ LocalToWorldPos(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix3\ GetLocalToWorldRotMat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcCOM()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcCOMVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RegisterContact();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RegisterContact(\textcolor{keywordtype}{int}\ contact\_flags,\ \textcolor{keywordtype}{int}\ filter\_flags);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateContact(\textcolor{keywordtype}{int}\ contact\_flags,\ \textcolor{keywordtype}{int}\ filter\_flags);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\&\ GetContactHandle()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsInContact()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tEigenArr<cContactManager::tContactPt>\&\ GetContactPts()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force)\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force,\ \textcolor{keyword}{const}\ tVector\&\ local\_pos)\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTorque(\textcolor{keyword}{const}\ tVector\&\ torque)\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearForces()\ =\ 0;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetColGroup()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetColGroup(\textcolor{keywordtype}{short}\ col\_group);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetColMask()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetColMask(\textcolor{keywordtype}{short}\ col\_mask);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ eType\ GetType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ cShape::eShape\ GetShape()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSize()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcAABB(tVector\&\ out\_min,\ tVector\&\ out\_max)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ btCollisionShape*\ GetCollisionShape()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00066\ \ \ \ \ std::shared\_ptr<cWorld>\ mWorld;}
+\DoxyCodeLine{00067\ \ \ \ \ std::unique\_ptr<btCollisionShape>\ mColShape;}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\ mContactHandle;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ mEnableContactFall;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ eType\ mType;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{short}\ mColGroup;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{short}\ mColMask;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classcSimObj}{cSimObj}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ GetWorld()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ btCollisionObject*\ GetCollisionObject()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ btCollisionObject*\ GetCollisionObject()\ =\ 0;}
+\DoxyCodeLine{00080\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="cSimCharacter" name="cSimCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,183,145,208"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,108,97,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,145,83,181,78,183,60,147"/>
+<area shape="rect" id="Node000003" href="$classcSimObj.html" title=" " alt="" coords="121,108,197,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,145,100,184,96,180,136,141"/>
+<area shape="rect" id="Node000004" href="$structcContactManager_1_1tContactHandle.html" title=" " alt="" coords="60,5,259,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="162,59,162,108,157,108,157,59"/>
+</map>

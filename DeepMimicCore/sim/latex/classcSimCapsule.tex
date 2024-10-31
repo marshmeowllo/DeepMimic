@@ -1,0 +1,218 @@
+\doxysection{c\+Sim\+Capsule Class Reference}
+\hypertarget{classcSimCapsule}{}\label{classcSimCapsule}\index{cSimCapsule@{cSimCapsule}}
+
+
+Inheritance diagram for c\+Sim\+Capsule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classcSimCapsule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Sim\+Capsule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcSimCapsule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcSimCapsule_1_1tParams}{t\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimCapsule_a99cb7e26dcfe965235268a430ea02364}\label{classcSimCapsule_a99cb7e26dcfe965235268a430ea02364} 
+virtual void {\bfseries Init} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world, const \mbox{\hyperlink{structcSimCapsule_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcSimCapsule_ae18dfd895e91c2ec09da4229e2403c91}\label{classcSimCapsule_ae18dfd895e91c2ec09da4229e2403c91} 
+virtual double {\bfseries Get\+Height} () const
+\item 
+\Hypertarget{classcSimCapsule_a909dfce1db857b062977372c123c8e75}\label{classcSimCapsule_a909dfce1db857b062977372c123c8e75} 
+virtual double {\bfseries Get\+Radius} () const
+\item 
+virtual c\+Shape\+::e\+Shape \mbox{\hyperlink{classcSimCapsule_adeda9f38543131c586f67299be47d7de}{Get\+Shape}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCapsule_a498e70840db385f02206a7d3565ed051}{Get\+Size}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a0bfaec35073e508a540382afbf2e01ee}{Set\+Pos}} (const t\+Vector \&pos)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7e9ab664f0958e50aa0d65020e2f7b17}{Set\+Rotation}} (const t\+Vector \&axis, double theta)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7e1ad901ca8a66fc16c7fdd1a1d671e7}{Set\+Rotation}} (const t\+Quaternion \&q)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_a1acb5103a21e14739673302fa391eadb}{Get\+Linear\+Velocity}} () const
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_af8141a02fbd64ee0e84a7bdb38618952}{Get\+Linear\+Velocity}} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a11de36271a112b282b78ce2d8b0fb273}{Set\+Linear\+Velocity}} (const t\+Vector \&vel)
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimRigidBody_ab84ac43a82c48b6eec71d44b490bad3c}{Get\+Angular\+Velocity}} () const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a2b564d6287b31f1e678a6610d8846281}{Set\+Angular\+Velocity}} (const t\+Vector \&vel)
+\item 
+virtual void {\bfseries Set\+Damping} (double linear\+\_\+damping, double angular\+\_\+damping)
+\item 
+virtual double {\bfseries Get\+Mass} () const
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_ae79744916017d7d73691a88addf3abef}{Apply\+Force}} (const t\+Vector \&force)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_a7a2286de8d9fd06793aad0a014d35310}{Apply\+Force}} (const t\+Vector \&force, const t\+Vector \&local\+\_\+pos)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_ab93203415d1b15ca38795be6612f3846}{Apply\+Torque}} (const t\+Vector \&torque)
+\item 
+virtual void \mbox{\hyperlink{classcSimRigidBody_aeb8816b439a5f2a68ef87e6f34b31f5a}{Clear\+Forces}} ()
+\item 
+virtual void {\bfseries Set\+Kinematic\+Object} (bool is\+\_\+kin)
+\item 
+virtual bool {\bfseries Is\+Kinematic\+Object} () const
+\item 
+virtual void {\bfseries Disable\+Deactivation} ()
+\item 
+virtual void {\bfseries Constrain} (const t\+Vector \&linear\+\_\+factor, const t\+Vector \&angular\+\_\+factor)
+\item 
+virtual bool {\bfseries Has\+Sim\+Body} () const
+\item 
+virtual const std\+::unique\+\_\+ptr$<$ bt\+Rigid\+Body $>$ \& {\bfseries Get\+Sim\+Body} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual t\+Vector {\bfseries Get\+Pos} () const
+\item 
+virtual void {\bfseries Get\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const
+\item 
+virtual t\+Quaternion {\bfseries Get\+Rotation} () const
+\item 
+virtual t\+Matrix {\bfseries Get\+World\+Transform} () const
+\item 
+virtual t\+Matrix {\bfseries Get\+Local\+Transform} () const
+\item 
+virtual t\+Vector {\bfseries World\+To\+Local\+Pos} (const t\+Vector \&world\+\_\+pos) const
+\item 
+virtual t\+Vector {\bfseries Local\+To\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual t\+Matrix3 {\bfseries Get\+Local\+To\+World\+Rot\+Mat} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COM} () const
+\item 
+virtual t\+Vector {\bfseries Calc\+COMVel} () const
+\item 
+virtual void {\bfseries Register\+Contact} ()
+\item 
+virtual void {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual void {\bfseries Update\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& {\bfseries Get\+Contact\+Handle} () const
+\item 
+virtual bool {\bfseries Is\+In\+Contact} () const
+\item 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} () const
+\item 
+virtual short {\bfseries Get\+Col\+Group} () const
+\item 
+virtual void {\bfseries Set\+Col\+Group} (short col\+\_\+group)
+\item 
+virtual short {\bfseries Get\+Col\+Mask} () const
+\item 
+virtual void {\bfseries Set\+Col\+Mask} (short col\+\_\+mask)
+\item 
+virtual e\+Type {\bfseries Get\+Type} () const
+\item 
+virtual void {\bfseries Calc\+AABB} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\item 
+virtual const bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Shape} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a7031e8c95243ce20c8163100e523d77c}\label{classcSimObj_a7031e8c95243ce20c8163100e523d77c} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Dynamic}
+, {\bfseries e\+Type\+Static}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+virtual void {\bfseries Add\+To\+World} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+virtual void {\bfseries Remove\+From\+World} ()
+\item 
+virtual const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimRigidBody_a44d4f41b3d4230b7aaa567ff0643deb6}{Get\+Collision\+Object}} () const
+\item 
+virtual bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimRigidBody_a66e82387116c0b779e4b2118b876db9d}{Get\+Collision\+Object}} ()
+\item 
+virtual int {\bfseries Get\+Num\+Constraints} () const
+\item 
+virtual \mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{c\+World\+::t\+Constraint\+Handle}} {\bfseries Get\+Constraint} (int c) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& {\bfseries Get\+World} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimRigidBody}{c\+Sim\+Rigid\+Body}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Rigid\+Body $>$ {\bfseries m\+Sim\+Body}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Shape $>$ {\bfseries m\+Col\+Shape}
+\item 
+\mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries m\+Contact\+Handle}
+\item 
+bool {\bfseries m\+Enable\+Contact\+Fall}
+\item 
+e\+Type {\bfseries m\+Type}
+\item 
+short {\bfseries m\+Col\+Group}
+\item 
+short {\bfseries m\+Col\+Mask}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcSimCapsule_adeda9f38543131c586f67299be47d7de}\label{classcSimCapsule_adeda9f38543131c586f67299be47d7de} 
+\index{cSimCapsule@{cSimCapsule}!GetShape@{GetShape}}
+\index{GetShape@{GetShape}!cSimCapsule@{cSimCapsule}}
+\doxysubsubsection{\texorpdfstring{GetShape()}{GetShape()}}
+{\footnotesize\ttfamily c\+Shape\+::e\+Shape c\+Sim\+Capsule\+::\+Get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCapsule_a498e70840db385f02206a7d3565ed051}\label{classcSimCapsule_a498e70840db385f02206a7d3565ed051} 
+\index{cSimCapsule@{cSimCapsule}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!cSimCapsule@{cSimCapsule}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Capsule\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sim\+Capsule.\+h\item 
+Sim\+Capsule.\+cpp\end{DoxyCompactItemize}

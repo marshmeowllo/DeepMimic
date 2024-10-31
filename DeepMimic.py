@@ -14,7 +14,7 @@ import util.mpi_util as MPIUtil
 import util.util as Util
 
 # Dimensions of the window we are drawing into.
-win_width = 800
+win_width = 2400
 win_height = int(win_width * 9.0 / 16.0)
 reshaping = False
 
@@ -35,6 +35,7 @@ args = []
 world = None
 
 def build_arg_parser(args):
+    # load arg
     arg_parser = ArgParser()
     arg_parser.load_args(args)
 
@@ -301,6 +302,10 @@ def main():
     global args
 
     # Command line arguments
+    # sys.argv:
+    # ['DeepMimic.py', '--arg_file', 'args/run_humanoid3d_spinkick_args.txt']
+    
+    # python DeepMimic.py --arg_file args/train_humanoid3d_backflip_args.txt --vis
     args = sys.argv[1:]
 
     init_draw()

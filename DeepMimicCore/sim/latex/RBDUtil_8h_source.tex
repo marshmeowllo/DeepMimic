@@ -1,0 +1,90 @@
+\doxysection{RBDUtil.\+h}
+\hypertarget{RBDUtil_8h_source}{}\label{RBDUtil_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}RBDModel.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}anim/KinTree.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcRBDUtil}{cRBDUtil}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SolveInvDyna(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ acc,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SolveForDyna(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau,\ Eigen::VectorXd\&\ out\_acc);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SolveForDyna(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ total\_force,\ Eigen::VectorXd\&\ out\_acc);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildMassMat(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ out\_mass\_mat);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildMassMat(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ inertia\_buffer,\ Eigen::MatrixXd\&\ out\_mass\_mat);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildBiasForce(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::VectorXd\&\ out\_bias\_force);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CalcGravityForce(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::VectorXd\&\ out\_g\_force);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildEndEffectorJacobian(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keywordtype}{int}\ joint\_id,\ Eigen::MatrixXd\&\ out\_J);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildEndEffectorJacobian(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ joint\_id,\ Eigen::MatrixXd\&\ out\_J);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ MultJacobianEndEff(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ J,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildJacobian(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ out\_J);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ ExtractEndEffJacobian(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ J,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildCOMJacobian(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ out\_J);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildCOMJacobian(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ J,\ Eigen::MatrixXd\&\ out\_J);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildJacobianDot(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ out\_J\_dot);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCOMVelProdAcc(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCOMVelProdAccAux(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ Jd);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ CalcVelProdAcc(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ Jd,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ CalcJointWorldVel(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ CalcJointWorldVel(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ state,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ CalcWorldVel(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ CalcWorldVel(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ state,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel,\ \textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ CalcCoMPos(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ CalcCoMVel(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ CalcCoMVel(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CalcCoM(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ tVector\&\ out\_com,\ tVector\&\ out\_vel);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CalcCoM(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tVector\&\ out\_com,\ tVector\&\ out\_vel);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpTrans\ BuildParentChildTransform(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpTrans\ BuildChildParentTransform(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ extract\ a\ cSpAlg::tSpTrans\ from\ a\ matrix\ presentating\ a\ stack\ of\ transforms}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CalcWorldJointTransforms(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}\&\ model,\ Eigen::MatrixXd\&\ out\_trans\_arr);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsConstJointSubspace(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspace(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildMomentInertia(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspaceRoot(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspaceRevolute(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspacePrismatic(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspacePlanar(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspaceFixed(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ BuildJointSubspaceSpherical(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCj(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjRoot(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjRevolute(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjPrismatic(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjPlanar(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjFixed(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpVec\ BuildCjSpherical(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ q\_dot,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildMomentInertiaBox(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildMomentInertiaCapsule(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildMomentInertiaSphere(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildMomentInertiaCylinder(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ builds\ the\ spatial\ inertial\ matrix\ in\ the\ coordinate\ frame\ of\ the\ parent\ joint}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ cSpAlg::tSpMat\ BuildInertiaSpatialMat(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keywordtype}{int}\ part\_id);}
+\DoxyCodeLine{00085\ \};}
+
+\end{DoxyCode}

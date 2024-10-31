@@ -1,0 +1,175 @@
+\doxysection{c\+Char\+Controller Class Reference}
+\hypertarget{classcCharController}{}\label{classcCharController}\index{cCharController@{cCharController}}
+
+
+Inheritance diagram for c\+Char\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classcCharController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Char\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcCharController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcCharController_ad9384312094514d54c7e1fb7a0a29464}{Update}} (double time\+\_\+step)
+\item 
+\Hypertarget{classcCharController_ac9bdb3ac472f70937fe32bcf3f07d549}\label{classcCharController_ac9bdb3ac472f70937fe32bcf3f07d549} 
+virtual void {\bfseries Post\+Update} (double time\+\_\+step)
+\item 
+\Hypertarget{classcCharController_ac3f8ee96133f51c9b9d6d30c945836ca}\label{classcCharController_ac3f8ee96133f51c9b9d6d30c945836ca} 
+virtual bool {\bfseries Need\+New\+Action} () const
+\item 
+\Hypertarget{classcCharController_a439b69677c3f76b0f5b59ae9e6ce8179}\label{classcCharController_a439b69677c3f76b0f5b59ae9e6ce8179} 
+virtual void {\bfseries Apply\+Action} (const Eigen\+::\+Vector\+Xd \&action)
+\item 
+\Hypertarget{classcCharController_a8252d50a298bc45118bd2cb11c074672}\label{classcCharController_a8252d50a298bc45118bd2cb11c074672} 
+virtual void {\bfseries Record\+State} (Eigen\+::\+Vector\+Xd \&out\+\_\+state)
+\item 
+\Hypertarget{classcCharController_ac85ba7f2d7df0c94a24c7f23dd2e9e45}\label{classcCharController_ac85ba7f2d7df0c94a24c7f23dd2e9e45} 
+virtual void {\bfseries Record\+Action} (Eigen\+::\+Vector\+Xd \&out\+\_\+action) const
+\item 
+\Hypertarget{classcCharController_a55fa303a0f92a1e2d21d4639e2645501}\label{classcCharController_a55fa303a0f92a1e2d21d4639e2645501} 
+virtual e\+Action\+Space {\bfseries Get\+Action\+Space} () const =0
+\item 
+\Hypertarget{classcCharController_a08934dbfd94fb4446aed2e665969ea97}\label{classcCharController_a08934dbfd94fb4446aed2e665969ea97} 
+virtual int {\bfseries Get\+State\+Size} () const
+\item 
+\Hypertarget{classcCharController_afaaa7adffa94763042a1e4f7ce868d64}\label{classcCharController_afaaa7adffa94763042a1e4f7ce868d64} 
+virtual int {\bfseries Get\+Action\+Size} () const
+\item 
+\Hypertarget{classcCharController_af971d873c42c65b31aa2befac3a2d39c}\label{classcCharController_af971d873c42c65b31aa2befac3a2d39c} 
+virtual int {\bfseries Get\+Num\+Actions} () const
+\item 
+\Hypertarget{classcCharController_a2b34310286ac270dca2c99fe1c2dd9eb}\label{classcCharController_a2b34310286ac270dca2c99fe1c2dd9eb} 
+virtual void {\bfseries Handle\+Pose\+Reset} ()
+\item 
+\Hypertarget{classcCharController_a22f86c8dfaae33fe553358933bc1a4af}\label{classcCharController_a22f86c8dfaae33fe553358933bc1a4af} 
+virtual void {\bfseries Handle\+Vel\+Reset} ()
+\item 
+\Hypertarget{classcCharController_ae31cde5abacdffd185ebdb1dd4abf470}\label{classcCharController_ae31cde5abacdffd185ebdb1dd4abf470} 
+virtual void {\bfseries Build\+State\+Offset\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+\Hypertarget{classcCharController_a1c2022b8f2936041ad839dfdc46a84a2}\label{classcCharController_a1c2022b8f2936041ad839dfdc46a84a2} 
+virtual void {\bfseries Build\+Action\+Offset\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+\Hypertarget{classcCharController_a620b8b3176801e45114b72ec6e52af3e}\label{classcCharController_a620b8b3176801e45114b72ec6e52af3e} 
+virtual void {\bfseries Build\+Action\+Bounds} (Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max) const
+\item 
+\Hypertarget{classcCharController_ae62072ec881cba34bfe4a5a1e06eee52}\label{classcCharController_ae62072ec881cba34bfe4a5a1e06eee52} 
+virtual void {\bfseries Build\+State\+Norm\+Groups} (Eigen\+::\+Vector\+Xi \&out\+\_\+groups) const
+\item 
+\Hypertarget{classcCharController_a747183d8be7d048255f48747aee0830f}\label{classcCharController_a747183d8be7d048255f48747aee0830f} 
+virtual double {\bfseries Get\+Reward\+Min} () const
+\item 
+\Hypertarget{classcCharController_a1b9f8ec44fb532f02c458e1c8e85717b}\label{classcCharController_a1b9f8ec44fb532f02c458e1c8e85717b} 
+virtual double {\bfseries Get\+Reward\+Max} () const
+\item 
+\Hypertarget{classcCharController_a5ddc9456fdc93cebe57bd167e65b24de}\label{classcCharController_a5ddc9456fdc93cebe57bd167e65b24de} 
+virtual int {\bfseries Num\+Children} () const
+\item 
+\Hypertarget{classcCharController_a33c1d1096ceb04711a6a90a2b46b1bcb}\label{classcCharController_a33c1d1096ceb04711a6a90a2b46b1bcb} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Child} (int i) const
+\item 
+\Hypertarget{classcCharController_a95f3eb89e0039e1792ac61c9a557e376}\label{classcCharController_a95f3eb89e0039e1792ac61c9a557e376} 
+virtual std\+::string {\bfseries Get\+Name} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+virtual void {\bfseries Reset} ()
+\item 
+virtual void {\bfseries Clear} ()
+\item 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCharController_a9cd79915d1639a0c1f55dad2df811959}\label{classcCharController_a9cd79915d1639a0c1f55dad2df811959} 
+static const int {\bfseries g\+Norm\+Group\+Single} = 0
+\item 
+\Hypertarget{classcCharController_a1cebba3d22c46e1204fcbe6023775093}\label{classcCharController_a1cebba3d22c46e1204fcbe6023775093} 
+static const int {\bfseries g\+Norm\+Group\+None} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries Parse\+Params} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+e\+Mode {\bfseries m\+Mode}
+\item 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcCharController_ad9384312094514d54c7e1fb7a0a29464}\label{classcCharController_ad9384312094514d54c7e1fb7a0a29464} 
+\index{cCharController@{cCharController}!Update@{Update}}
+\index{Update@{Update}!cCharController@{cCharController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void c\+Char\+Controller\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcController}{c\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Char\+Controller.\+h\item 
+Char\+Controller.\+cpp\end{DoxyCompactItemize}

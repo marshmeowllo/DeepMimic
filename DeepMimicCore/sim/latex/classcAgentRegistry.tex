@@ -1,0 +1,41 @@
+\doxysection{c\+Agent\+Registry Class Reference}
+\hypertarget{classcAgentRegistry}{}\label{classcAgentRegistry}\index{cAgentRegistry@{cAgentRegistry}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcAgentRegistry_a7e9613eca5a055d8f682a32c6afb6d0c}\label{classcAgentRegistry_a7e9613eca5a055d8f682a32c6afb6d0c} 
+virtual void {\bfseries Clear} ()
+\item 
+\Hypertarget{classcAgentRegistry_a20ed41c1545cd0b383559c44a09f347e}\label{classcAgentRegistry_a20ed41c1545cd0b383559c44a09f347e} 
+virtual int {\bfseries Get\+Num\+Agents} () const
+\item 
+\Hypertarget{classcAgentRegistry_a6a1aefe12146c2d6979599b0d5f7f0d4}\label{classcAgentRegistry_a6a1aefe12146c2d6979599b0d5f7f0d4} 
+virtual int {\bfseries Add\+Agent} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \&agent, \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+\Hypertarget{classcAgentRegistry_a55f91c183bbb98d88508289844e1d7ea}\label{classcAgentRegistry_a55f91c183bbb98d88508289844e1d7ea} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Agent} (int id) const
+\item 
+\Hypertarget{classcAgentRegistry_a00dad46ce06132dd2b3d01f3e167d6d6}\label{classcAgentRegistry_a00dad46ce06132dd2b3d01f3e167d6d6} 
+virtual \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} (int id) const
+\item 
+\Hypertarget{classcAgentRegistry_a13ccaf0dd47e9ae1a2814b40cf9f59b1}\label{classcAgentRegistry_a13ccaf0dd47e9ae1a2814b40cf9f59b1} 
+virtual void {\bfseries Print\+Info} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcAgentRegistry_ae4d13eb18917f6a42a906d4440f709d2}\label{classcAgentRegistry_ae4d13eb18917f6a42a906d4440f709d2} 
+c\+Index\+Manager {\bfseries m\+IDManager}
+\item 
+\Hypertarget{classcAgentRegistry_a33fc542942a5556b204c45a48947bfa9}\label{classcAgentRegistry_a33fc542942a5556b204c45a48947bfa9} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ $>$ {\bfseries m\+Agents}
+\item 
+\Hypertarget{classcAgentRegistry_aae9a78342da3ed023e540ca4923cda84}\label{classcAgentRegistry_aae9a78342da3ed023e540ca4923cda84} 
+std\+::vector$<$ \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries m\+Chars}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Agent\+Registry.\+h\item 
+Agent\+Registry.\+cpp\end{DoxyCompactItemize}

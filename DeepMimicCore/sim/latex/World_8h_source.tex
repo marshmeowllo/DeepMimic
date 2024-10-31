@@ -1,0 +1,148 @@
+\doxysection{World.\+h}
+\hypertarget{World_8h_source}{}\label{World_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}btBulletDynamicsCommon.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}BulletDynamics/Featherstone/btMultiBodyDynamicsWorld.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sim/MultiBody.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}sim/ContactManager.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}sim/PerturbManager.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}anim/KinTree.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}util/MathUtil.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimObj}{cSimObj}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimJoint}{cSimJoint}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimBodyLink}{cSimBodyLink}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimBox}{cSimBox}};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimCapsule}{cSimCapsule}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimPlane}{cSimPlane}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimSphere}{cSimSphere}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcWorld}{cWorld}}\ :\ \textcolor{keyword}{public}\ std::enable\_shared\_from\_this<cWorld>}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{enum}\ eContactFlag}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ eContactFlagNone\ =\ 0,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ eContactFlagCharacter\ =\ 0x1,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ eContactFlagEnvironment\ =\ 0x1\ <<\ 1,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ eContactFlagObject\ =\ 0x1\ <<\ 2,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ eContactFlagAll\ =\ cContactManager::gFlagAll}
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcWorld_1_1tParams}{tParams}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcWorld_1_1tParams}{tParams}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mNumSubsteps;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mScale;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ tVector\ mGravity;}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{tConstraintHandle}}}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{tConstraintHandle}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsValid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ btTypedConstraint*\ mCons;}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcWorld_1_1tRayTestResult}{tRayTestResult}}}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcSimObj}{cSimObj}}*\ mObj;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ tVector\ mHitPos;}
+\DoxyCodeLine{00060\ \ \ \ \ \};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{typedef}\ tEigenArr<tRayTestResult>\ tRayTestResults;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{classcWorld}{cWorld}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcWorld}{\string~cWorld}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcWorld_1_1tParams}{tParams}}\&\ params);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{double}\ time\_elapsed);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddRigidBody(\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}\&\ obj);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveRigidBody(\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}\&\ obj);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddCollisionObject(btCollisionObject*\ col\_obj,\ \textcolor{keywordtype}{int}\ col\_filter\_group,\ \textcolor{keywordtype}{int}\ col\_filter\_mask);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveCollisionObject(btCollisionObject*\ col\_obj);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddCharacter(\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}\&\ sim\_char);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveCharacter(\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}\&\ sim\_char);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Constrain(\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}\&\ obj);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Constrain(\mbox{\hyperlink{classcSimRigidBody}{cSimRigidBody}}\&\ obj,\ \textcolor{keyword}{const}\ tVector\&\ linear\_factor,\ \textcolor{keyword}{const}\ tVector\&\ angular\_factor);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveConstraint(\mbox{\hyperlink{structcWorld_1_1tConstraintHandle}{tConstraintHandle}}\&\ handle);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddJoint(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimJoint}{cSimJoint}}\&\ joint);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveJoint(\mbox{\hyperlink{classcSimJoint}{cSimJoint}}\&\ joint);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetGravity(\textcolor{keyword}{const}\ tVector\&\ gravity);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\ RegisterContact(\textcolor{keywordtype}{int}\ contact\_flags,\ \textcolor{keywordtype}{int}\ filter\_flags);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateContact(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\&\ handle);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsInContact(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\&\ handle)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tEigenArr<cContactManager::tContactPt>\&\ GetContactPts(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\&\ handle)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classcContactManager}{cContactManager}}\&\ GetContactManager()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RayTest(\textcolor{keyword}{const}\ tVector\&\ beg,\ \textcolor{keyword}{const}\ tVector\&\ end,\ tRayTestResults\&\ results)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddPerturb(\textcolor{keyword}{const}\ \mbox{\hyperlink{structtPerturb}{tPerturb}}\&\ perturb);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classcPerturbManager}{cPerturbManager}}\&\ GetPerturbManager()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetGravity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetScale()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetTimeStep()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetDefaultLinearDamping(\textcolor{keywordtype}{double}\ damping);}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetDefaultLinearDamping()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetDefaultAngularDamping(\textcolor{keywordtype}{double}\ damping);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetDefaultAngularDamping()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ yuck,\ avoid\ using\ this}}
+\DoxyCodeLine{00104\ \ \ \ \ std::unique\_ptr<btMultiBodyDynamicsWorld>\&\ GetInternalWorld();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<btMultiBodyDynamicsWorld>\&\ GetInternalWorld()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ object\ interface}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{virtual}\ btBoxShape*\ BuildBoxShape(\textcolor{keyword}{const}\ tVector\&\ box\_sizee)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ btCapsuleShape*\ BuildCapsuleShape(\textcolor{keywordtype}{double}\ radius,\ \textcolor{keywordtype}{double}\ height)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{virtual}\ btStaticPlaneShape*\ BuildPlaneShape(\textcolor{keyword}{const}\ tVector\&\ normal,\ \textcolor{keyword}{const}\ tVector\&\ origin)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{virtual}\ btSphereShape*\ BuildSphereShape(\textcolor{keywordtype}{double}\ radius)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ btCylinderShape*\ BuildCylinderShape(\textcolor{keywordtype}{double}\ radius,\ \textcolor{keywordtype}{double}\ height)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSizeBox(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}\&\ obj)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSizeCapsule(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}\&\ obj)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSizePlane(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}\&\ obj)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSizeSphere(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}\&\ obj)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSizeCylinder(\textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}\&\ obj)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcWorld_1_1tConstraintEntry}{tConstraintEntry}}}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcSimObj}{cSimObj}}*\ mObj0;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcSimObj}{cSimObj}}*\ mObj1;}
+\DoxyCodeLine{00125\ \ \ \ \ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{structcWorld_1_1tParams}{tParams}}\ mParams;}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{double}\ mTimeStep;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{double}\ mDefaultLinearDamping;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{double}\ mDefaultAngularDamping;}
+\DoxyCodeLine{00131\ \ \ \ \ std::unique\_ptr<btMultiBodyDynamicsWorld>\ mSimWorld;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ std::unique\_ptr<btConstraintSolver>\ mSolver;}
+\DoxyCodeLine{00134\ \ \ \ \ std::unique\_ptr<btCollisionDispatcher>\ mCollisionDispatcher;}
+\DoxyCodeLine{00135\ \ \ \ \ std::unique\_ptr<btDefaultCollisionConfiguration>\ mCollisionConfig;}
+\DoxyCodeLine{00136\ \ \ \ \ std::unique\_ptr<btBroadphaseInterface>\ mBroadPhase;}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{classcContactManager}{cContactManager}}\ mContactManager;}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classcPerturbManager}{cPerturbManager}}\ mPerturbManager;}
+\DoxyCodeLine{00140\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumConstriants()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildConsFactor(tVector\&\ out\_linear\_factor,\ tVector\&\ out\_angular\_factor);}
+\DoxyCodeLine{00143\ \};}
+
+\end{DoxyCode}

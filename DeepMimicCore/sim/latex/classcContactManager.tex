@@ -1,0 +1,99 @@
+\doxysection{c\+Contact\+Manager Class Reference}
+\hypertarget{classcContactManager}{}\label{classcContactManager}\index{cContactManager@{cContactManager}}
+
+
+Collaboration diagram for c\+Contact\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcContactManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcContactManager_1_1tContactEntry}{t\+Contact\+Entry}}
+\item 
+struct \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}}
+\item 
+struct \mbox{\hyperlink{structcContactManager_1_1tContactPt}{t\+Contact\+Pt}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcContactManager_a1a56a35346449d046d9caa01af3191be}\label{classcContactManager_a1a56a35346449d046d9caa01af3191be} 
+{\bfseries c\+Contact\+Manager} (\mbox{\hyperlink{classcWorld}{c\+World}} \&world)
+\item 
+\Hypertarget{classcContactManager_a3985f69d833cdd871d7e71255185a236}\label{classcContactManager_a3985f69d833cdd871d7e71255185a236} 
+virtual void {\bfseries Init} ()
+\item 
+\Hypertarget{classcContactManager_a6b05ac646783298cc4f9b630dbd8261f}\label{classcContactManager_a6b05ac646783298cc4f9b630dbd8261f} 
+virtual void {\bfseries Reset} ()
+\item 
+\Hypertarget{classcContactManager_a12bc7849ab8e9d7c15644cbfe03414fd}\label{classcContactManager_a12bc7849ab8e9d7c15644cbfe03414fd} 
+virtual void {\bfseries Clear} ()
+\item 
+\Hypertarget{classcContactManager_af30a8dd04d32858fe5f4a705a37cc703}\label{classcContactManager_af30a8dd04d32858fe5f4a705a37cc703} 
+virtual void {\bfseries Update} ()
+\item 
+\Hypertarget{classcContactManager_a1cb314eca210bffe8540fc16c6871a8b}\label{classcContactManager_a1cb314eca210bffe8540fc16c6871a8b} 
+virtual \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}} {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+\Hypertarget{classcContactManager_ae10d706184faed8658bda1e4d6c7f904}\label{classcContactManager_ae10d706184faed8658bda1e4d6c7f904} 
+virtual void {\bfseries Update\+Contact} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \&handle)
+\item 
+\Hypertarget{classcContactManager_aca86adb495548c3804abe2d7e3a8b870}\label{classcContactManager_aca86adb495548c3804abe2d7e3a8b870} 
+virtual int {\bfseries Get\+Num\+Entries} () const
+\item 
+\Hypertarget{classcContactManager_aab5c8e33bc24b338ff9fb988d676f22c}\label{classcContactManager_aab5c8e33bc24b338ff9fb988d676f22c} 
+virtual bool {\bfseries Is\+In\+Contact} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}} \&handle) const
+\item 
+\Hypertarget{classcContactManager_a6644b52db85df7c432eb2b7f5468f675}\label{classcContactManager_a6644b52db85df7c432eb2b7f5468f675} 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}} \&handle) const
+\item 
+\Hypertarget{classcContactManager_a92d09a3b2545bd1d65fe38a10eb6a6d8}\label{classcContactManager_a92d09a3b2545bd1d65fe38a10eb6a6d8} 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} (int handle\+\_\+id) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcContactManager_a3505a9ac9535e030688d333494922b88}\label{classcContactManager_a3505a9ac9535e030688d333494922b88} 
+static const int {\bfseries g\+Invalid\+ID} = -\/1
+\item 
+\Hypertarget{classcContactManager_aa7b24d20b490c3f8b8d77adfcfb0abfc}\label{classcContactManager_aa7b24d20b490c3f8b8d77adfcfb0abfc} 
+static const short {\bfseries g\+Flag\+All} = -\/1
+\item 
+\Hypertarget{classcContactManager_a0b8e31bd39f249bb0a06b24e77b7cfaf}\label{classcContactManager_a0b8e31bd39f249bb0a06b24e77b7cfaf} 
+static const short {\bfseries g\+Flag\+None} = 0
+\item 
+\Hypertarget{classcContactManager_a527e78ef54357e85221fae03d70b69c9}\label{classcContactManager_a527e78ef54357e85221fae03d70b69c9} 
+static const short {\bfseries g\+Flag\+Ray\+Test} = 1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcContactManager_a9944a5a35616ff2c21e47132cf1c96c6}\label{classcContactManager_a9944a5a35616ff2c21e47132cf1c96c6} 
+virtual int {\bfseries Register\+New\+ID} ()
+\item 
+\Hypertarget{classcContactManager_ab142cabb6b61d753556e45e04bcd0dfd}\label{classcContactManager_ab142cabb6b61d753556e45e04bcd0dfd} 
+virtual void {\bfseries Clear\+Contacts} ()
+\item 
+\Hypertarget{classcContactManager_a587d0c779b1d093ced004782b10c83e8}\label{classcContactManager_a587d0c779b1d093ced004782b10c83e8} 
+virtual bool {\bfseries Is\+Valid\+Contact} (const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}} \&h0, const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{t\+Contact\+Handle}} \&h1) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcContactManager_a24b38c56be643ad459a0044aa7a8386b}\label{classcContactManager_a24b38c56be643ad459a0044aa7a8386b} 
+\mbox{\hyperlink{classcWorld}{c\+World}} \& {\bfseries m\+World}
+\item 
+\Hypertarget{classcContactManager_a2a3b1f2daffbc367a737e3600e38b34a}\label{classcContactManager_a2a3b1f2daffbc367a737e3600e38b34a} 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactEntry}{t\+Contact\+Entry}} $>$ {\bfseries m\+Contact\+Entries}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Contact\+Manager.\+h\item 
+Contact\+Manager.\+cpp\end{DoxyCompactItemize}

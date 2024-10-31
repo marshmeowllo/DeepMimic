@@ -1,0 +1,73 @@
+\doxysection{Sp\+Alg.\+h}
+\hypertarget{SpAlg_8h_source}{}\label{SpAlg_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}util/MathUtil.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ spatial\ algebra\ util}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSpAlg}{cSpAlg}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ gSpVecSize\ =\ 6;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ gSVTransRows\ =\ 3;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ gSVTransCols\ =\ 4;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{typedef}\ Eigen::Matrix<double,\ gSVTransRows,\ gSVTransCols>\ tSpTrans;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{typedef}\ Eigen::Matrix<double,\ gSpVecSize,\ 1>\ tSpVec;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{typedef}\ Eigen::Matrix<double,\ gSpVecSize,\ gSpVecSize>\ tSpMat;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordM(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tVector\&\ origin1);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ rows\ of\ R\ shoold\ be\ the\ basis\ for\ the\ coordinate\ frame\ centered\ ar\ origin}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordM(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tMatrix\&\ R0,\ \textcolor{keyword}{const}\ tVector\&\ origin1,\ \textcolor{keyword}{const}\ tMatrix\&\ R1);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ R\ is\ a\ rotation\ from\ coord\ frame\ 0\ to\ coord\ frame\ 1}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordM(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tVector\&\ origin1,\ \textcolor{keyword}{const}\ tMatrix\&\ R);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordF(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tVector\&\ origin1);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordF(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tMatrix\&\ R0,\ \textcolor{keyword}{const}\ tVector\&\ origin1,\ \textcolor{keyword}{const}\ tMatrix\&\ R1);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ConvertCoordF(\textcolor{keyword}{const}\ tSpVec\&\ m0,\ \textcolor{keyword}{const}\ tVector\&\ origin0,\ \textcolor{keyword}{const}\ tVector\&\ origin1,\ \textcolor{keyword}{const}\ tMatrix\&\ R);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ CrossM(\textcolor{keyword}{const}\ tSpVec\&\ sv,\ \textcolor{keyword}{const}\ tSpVec\&\ m);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ CrossMs(\textcolor{keyword}{const}\ tSpVec\&\ sv,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ ms);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ CrossF(\textcolor{keyword}{const}\ tSpVec\&\ sv,\ \textcolor{keyword}{const}\ tSpVec\&\ f);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ CrossFs(\textcolor{keyword}{const}\ tSpVec\&\ sv,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ fs);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Spatial\ Vector\ methods}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ BuildSV(\textcolor{keyword}{const}\ tVector\&\ v);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ BuildSV(\textcolor{keyword}{const}\ tVector\&\ o,\ \textcolor{keyword}{const}\ tVector\&\ v);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ GetOmega(\textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetOmega(\textcolor{keyword}{const}\ tVector\&\ o,\ tSpVec\&\ out\_sv);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ GetV(\textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetV(\textcolor{keyword}{const}\ tVector\&\ v,\ tSpVec\&\ out\_sv);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ tSpTrans\ methods}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ BuildTrans();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ BuildTrans(\textcolor{keyword}{const}\ tMatrix\&\ E,\ \textcolor{keyword}{const}\ tVector\&\ r);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ BuildTrans(\textcolor{keyword}{const}\ tVector\&\ r);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ MatToTrans(\textcolor{keyword}{const}\ tMatrix\&\ mat);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ tMatrix\ TransToMat(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ tSpMat\ BuildSpatialMatM(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ tSpMat\ BuildSpatialMatF(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ InvTrans(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ tMatrix\ GetRot(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetRot(\textcolor{keyword}{const}\ tMatrix\&\ E,\ tSpTrans\&\ out\_X);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ tVector\ GetRad(\textcolor{keyword}{const}\ tSpTrans\&\ X);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetRad(\textcolor{keyword}{const}\ tVector\&\ r,\ tSpTrans\&\ out\_X);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ApplyTransM(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ApplyTransF(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ ApplyTransM(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ sm);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ ApplyTransF(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ sm);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ApplyInvTransM(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ tSpVec\ ApplyInvTransF(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ tSpVec\&\ sv);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ ApplyInvTransM(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ sm);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ Eigen::MatrixXd\ ApplyInvTransF(\textcolor{keyword}{const}\ tSpTrans\&\ X,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ sm);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ CompTrans(\textcolor{keyword}{const}\ tSpTrans\&\ X0,\ \textcolor{keyword}{const}\ tSpTrans\&\ X1);}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ extract\ a\ tSpTrans\ from\ a\ matrix\ presentating\ a\ stack\ of\ transforms}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ tSpTrans\ GetTrans(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ trans\_arr,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00068\ \};}
+
+\end{DoxyCode}

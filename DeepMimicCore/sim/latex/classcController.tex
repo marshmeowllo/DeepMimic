@@ -1,0 +1,110 @@
+\doxysection{c\+Controller Class Reference}
+\hypertarget{classcController}{}\label{classcController}\index{cController@{cController}}
+
+
+Inheritance diagram for c\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_adeafb8c72b3f31204bcc51667bce5c60}\label{classcController_adeafb8c72b3f31204bcc51667bce5c60} 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+\Hypertarget{classcController_a30c388a7d7d6371f9ba4717df5332b09}\label{classcController_a30c388a7d7d6371f9ba4717df5332b09} 
+virtual void {\bfseries Reset} ()
+\item 
+\Hypertarget{classcController_a43cb8512a70637c4f650475838754a0a}\label{classcController_a43cb8512a70637c4f650475838754a0a} 
+virtual void {\bfseries Clear} ()
+\item 
+\Hypertarget{classcController_a951e8d4ff712c6879b57de3771a59f25}\label{classcController_a951e8d4ff712c6879b57de3771a59f25} 
+virtual void {\bfseries Update} (double time\+\_\+step)
+\item 
+\Hypertarget{classcController_a66869571942df12c4be9bef7796cc55b}\label{classcController_a66869571942df12c4be9bef7796cc55b} 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+\Hypertarget{classcController_a9d675974db12476814075e28d3ebf6be}\label{classcController_a9d675974db12476814075e28d3ebf6be} 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+\Hypertarget{classcController_af700f089fbf5475b3fae241cccffaceb}\label{classcController_af700f089fbf5475b3fae241cccffaceb} 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+\Hypertarget{classcController_a19cc78e3eb8e3af01656c4ffc2a5e1cb}\label{classcController_a19cc78e3eb8e3af01656c4ffc2a5e1cb} 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+\Hypertarget{classcController_ae5168d8f2fe855de15bfe48e91f5fe47}\label{classcController_ae5168d8f2fe855de15bfe48e91f5fe47} 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+\Hypertarget{classcController_a45a04408d47017c8924bd2c4f06719ac}\label{classcController_a45a04408d47017c8924bd2c4f06719ac} 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+\Hypertarget{classcController_ab934c0433ca7a973aa793b0168e89d65}\label{classcController_ab934c0433ca7a973aa793b0168e89d65} 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+\Hypertarget{classcController_ab259a1f57760deab80416037b199aae2}\label{classcController_ab259a1f57760deab80416037b199aae2} 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+\Hypertarget{classcController_a2831fbf2b71cfa0f7b325b064f0ee6c5}\label{classcController_a2831fbf2b71cfa0f7b325b064f0ee6c5} 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+\Hypertarget{classcController_a9bc0bb31b6d2848226b16767b8c456c5}\label{classcController_a9bc0bb31b6d2848226b16767b8c456c5} 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+\Hypertarget{classcController_a3569b10a5e5112950315f003242dbdd4}\label{classcController_a3569b10a5e5112950315f003242dbdd4} 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+\Hypertarget{classcController_ae445bc4c07ce9892f308dd733aec3e42}\label{classcController_ae445bc4c07ce9892f308dd733aec3e42} 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+\Hypertarget{classcController_a8d7c090124ffba0da4b9a06c4605249b}\label{classcController_a8d7c090124ffba0da4b9a06c4605249b} 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_ada254009afbbbd1f246c3953309723e7}\label{classcController_ada254009afbbbd1f246c3953309723e7} 
+virtual bool {\bfseries Parse\+Params} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_abdf56a0b96a83be0f03b659265d5d3e5}\label{classcController_abdf56a0b96a83be0f03b659265d5d3e5} 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+\Hypertarget{classcController_aabd13e4ef086c39a59f15bc4210ea374}\label{classcController_aabd13e4ef086c39a59f15bc4210ea374} 
+e\+Mode {\bfseries m\+Mode}
+\item 
+\Hypertarget{classcController_ab70908ff7df281e3d4e63acd8a5f168f}\label{classcController_ab70908ff7df281e3d4e63acd8a5f168f} 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Controller.\+h\item 
+Controller.\+cpp\end{DoxyCompactItemize}

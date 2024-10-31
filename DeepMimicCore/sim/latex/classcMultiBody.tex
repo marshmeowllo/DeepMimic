@@ -1,0 +1,46 @@
+\doxysection{c\+Multi\+Body Class Reference}
+\hypertarget{classcMultiBody}{}\label{classcMultiBody}\index{cMultiBody@{cMultiBody}}
+
+
+Inheritance diagram for c\+Multi\+Body\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classcMultiBody__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Multi\+Body\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classcMultiBody__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcMultiBody_a0a45a340f489e08c9dcba3fdadf6a14c}\label{classcMultiBody_a0a45a340f489e08c9dcba3fdadf6a14c} 
+{\bfseries c\+Multi\+Body} (int n\+\_\+links, bt\+Scalar mass, const bt\+Vector3 \&inertia, bool fixed\+Base, bool can\+Sleep, bool deprecated\+Multi\+Dof=true)
+\item 
+\Hypertarget{classcMultiBody_ac361b99551f4f39f58d00b6dd4eb8139}\label{classcMultiBody_ac361b99551f4f39f58d00b6dd4eb8139} 
+void {\bfseries comp\+Tree\+Link\+Velocities} (bt\+Vector3 \texorpdfstring{$\ast$}{*}omega, bt\+Vector3 \texorpdfstring{$\ast$}{*}vel) const
+\item 
+\Hypertarget{classcMultiBody_a9a010ae4d07c2d6ea799414a5e5b0279}\label{classcMultiBody_a9a010ae4d07c2d6ea799414a5e5b0279} 
+void {\bfseries setup\+Planar} (int i, bt\+Scalar mass, const bt\+Vector3 \&inertia, int parent, const bt\+Quaternion \&rot\+Parent\+To\+This, const bt\+Vector3 \&rotation\+Axis, const bt\+Vector3 \&parent\+Com\+To\+This\+Com\+Offset, bool disable\+Parent\+Collision)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcMultiBody_ace1c648be7d8edb7ae988ec6c25cc814}\label{classcMultiBody_ace1c648be7d8edb7ae988ec6c25cc814} 
+static void {\bfseries Spatial\+Transform} (const bt\+Matrix3x3 \&rotation\+\_\+matrix, const bt\+Vector3 \&displacement, const bt\+Vector3 \&top\+\_\+in, const bt\+Vector3 \&bottom\+\_\+in, bt\+Vector3 \&top\+\_\+out, bt\+Vector3 \&bottom\+\_\+out)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Multi\+Body.\+h\item 
+Multi\+Body.\+cpp\end{DoxyCompactItemize}

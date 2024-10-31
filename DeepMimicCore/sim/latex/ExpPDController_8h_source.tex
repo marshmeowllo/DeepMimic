@@ -1,0 +1,47 @@
+\doxysection{Exp\+PDController.\+h}
+\hypertarget{ExpPDController_8h_source}{}\label{ExpPDController_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/PDController.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\#define\ IMP\_PD\_CTRL\_PROFILER}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcExpPDController}{cExpPDController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcController}{cController}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classcExpPDController}{cExpPDController}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcExpPDController}{\string~cExpPDController}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}*\ character,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ pd\_params);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{double}\ time\_step);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateControlForce(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumJoints()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumDof()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetTargetTheta(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_theta)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTargetTheta(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ theta);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetTargetVel(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTargetVel(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ UseWorldCoord(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetUseWorldCoord(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keywordtype}{bool}\ use);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetKp(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keywordtype}{double}\ kp);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetKd(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keywordtype}{double}\ kd);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsValidPDCtrl(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcPDController}{cPDController}}\&\ GetPDCtrl(\textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classcPDController}{cPDController}}\&\ GetPDCtrl(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ tEigenArr<cPDController>\ mPDCtrls;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcControlForces(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyControlForces(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau);}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

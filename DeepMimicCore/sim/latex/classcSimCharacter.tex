@@ -1,0 +1,735 @@
+\doxysection{c\+Sim\+Character Class Reference}
+\hypertarget{classcSimCharacter}{}\label{classcSimCharacter}\index{cSimCharacter@{cSimCharacter}}
+
+
+Inheritance diagram for c\+Sim\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classcSimCharacter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Sim\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classcSimCharacter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcSimCharacter_1_1tParams}{t\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimCharacter_a268ec8e85dcc271e9bb20a8e0c44c124}\label{classcSimCharacter_a268ec8e85dcc271e9bb20a8e0c44c124} 
+virtual bool {\bfseries Init} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world, const \mbox{\hyperlink{structcSimCharacter_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcSimCharacter_a84eb61ebf2f7bb2b73971132d9ac4ff1}\label{classcSimCharacter_a84eb61ebf2f7bb2b73971132d9ac4ff1} 
+virtual void {\bfseries Clear} () override
+\item 
+\Hypertarget{classcSimCharacter_aeb0910b8a4f9013dbf09f27d51bf8656}\label{classcSimCharacter_aeb0910b8a4f9013dbf09f27d51bf8656} 
+virtual void {\bfseries Reset} () override
+\item 
+\Hypertarget{classcSimCharacter_a8971d547ac02637356450ab731711563}\label{classcSimCharacter_a8971d547ac02637356450ab731711563} 
+virtual void {\bfseries Update} (double time\+\_\+step) override
+\item 
+\Hypertarget{classcSimCharacter_a8c66097eb42b23db0bd0a8f156cf7871}\label{classcSimCharacter_a8c66097eb42b23db0bd0a8f156cf7871} 
+virtual void {\bfseries Post\+Update} (double time\+\_\+step)
+\item 
+\Hypertarget{classcSimCharacter_a7936972b8f074cd0ed6d9595e3f24e29}\label{classcSimCharacter_a7936972b8f074cd0ed6d9595e3f24e29} 
+virtual t\+Vector {\bfseries Get\+Root\+Pos} () const override
+\item 
+\Hypertarget{classcSimCharacter_a43822013816a6aa254e9309393bc36ba}\label{classcSimCharacter_a43822013816a6aa254e9309393bc36ba} 
+virtual void {\bfseries Get\+Root\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const override
+\item 
+\Hypertarget{classcSimCharacter_a2321a850e223e78acd6f1fae097f8b87}\label{classcSimCharacter_a2321a850e223e78acd6f1fae097f8b87} 
+virtual t\+Quaternion {\bfseries Get\+Root\+Rotation} () const override
+\item 
+\Hypertarget{classcSimCharacter_a4c4d8967671f6f0b31a84ca91a550d44}\label{classcSimCharacter_a4c4d8967671f6f0b31a84ca91a550d44} 
+virtual t\+Vector {\bfseries Get\+Root\+Vel} () const
+\item 
+\Hypertarget{classcSimCharacter_a7c90e184c49b9b0fbde8b0d6c924ec00}\label{classcSimCharacter_a7c90e184c49b9b0fbde8b0d6c924ec00} 
+virtual t\+Vector {\bfseries Get\+Root\+Ang\+Vel} () const
+\item 
+\Hypertarget{classcSimCharacter_a734e26ee2f55e4cdaa6323c7279ef5b4}\label{classcSimCharacter_a734e26ee2f55e4cdaa6323c7279ef5b4} 
+virtual const Eigen\+::\+Matrix\+Xd \& {\bfseries Get\+Body\+Defs} () const
+\item 
+\Hypertarget{classcSimCharacter_a048dde3c874601a63170aaf4de40ef47}\label{classcSimCharacter_a048dde3c874601a63170aaf4de40ef47} 
+virtual void {\bfseries Set\+Root\+Pos} (const t\+Vector \&pos) override
+\item 
+\Hypertarget{classcSimCharacter_a1a3707aa881b23e81ef49b86e04c9c76}\label{classcSimCharacter_a1a3707aa881b23e81ef49b86e04c9c76} 
+virtual void {\bfseries Set\+Root\+Rotation} (const t\+Vector \&axis, double theta)
+\item 
+\Hypertarget{classcSimCharacter_aa574efdd320d47e8e924247fc24ead0e}\label{classcSimCharacter_aa574efdd320d47e8e924247fc24ead0e} 
+virtual void {\bfseries Set\+Root\+Rotation} (const t\+Quaternion \&q) override
+\item 
+\Hypertarget{classcSimCharacter_a615ae95d65aaf5991be40b41a2f3a89d}\label{classcSimCharacter_a615ae95d65aaf5991be40b41a2f3a89d} 
+virtual void {\bfseries Set\+Root\+Transform} (const t\+Vector \&pos, const t\+Quaternion \&rot)
+\item 
+\Hypertarget{classcSimCharacter_a555b2fc883dbb87a3713048eae1a7d77}\label{classcSimCharacter_a555b2fc883dbb87a3713048eae1a7d77} 
+virtual void {\bfseries Set\+Root\+Vel} (const t\+Vector \&vel) override
+\item 
+\Hypertarget{classcSimCharacter_add15ded846949844734aae9849f17ef3}\label{classcSimCharacter_add15ded846949844734aae9849f17ef3} 
+virtual void {\bfseries Set\+Root\+Ang\+Vel} (const t\+Vector \&ang\+\_\+vel) override
+\item 
+\Hypertarget{classcSimCharacter_ae2d75a9f8ce6e293fef2f9493e663b4a}\label{classcSimCharacter_ae2d75a9f8ce6e293fef2f9493e663b4a} 
+virtual t\+Quaternion {\bfseries Calc\+Heading\+Rot} () const override
+\item 
+\Hypertarget{classcSimCharacter_aa89bcdac2f31c2cad0cfb8a697d80330}\label{classcSimCharacter_aa89bcdac2f31c2cad0cfb8a697d80330} 
+virtual int {\bfseries Get\+Num\+Body\+Parts} () const
+\item 
+\Hypertarget{classcSimCharacter_a08e00f9ca452a96464fe4430a5eec89f}\label{classcSimCharacter_a08e00f9ca452a96464fe4430a5eec89f} 
+virtual void {\bfseries Set\+Pose} (const Eigen\+::\+Vector\+Xd \&pose) override
+\item 
+\Hypertarget{classcSimCharacter_acce2780aaa4a4de6e5f4dfbcb6f35ecf}\label{classcSimCharacter_acce2780aaa4a4de6e5f4dfbcb6f35ecf} 
+virtual void {\bfseries Set\+Vel} (const Eigen\+::\+Vector\+Xd \&vel) override
+\item 
+\Hypertarget{classcSimCharacter_a9a748cc595052b7990e009c4a6e098bc}\label{classcSimCharacter_a9a748cc595052b7990e009c4a6e098bc} 
+virtual t\+Vector {\bfseries Calc\+Joint\+Pos} (int joint\+\_\+id) const override
+\item 
+\Hypertarget{classcSimCharacter_ab15c23d9ee0b1f6ac0f9988eb20e97c7}\label{classcSimCharacter_ab15c23d9ee0b1f6ac0f9988eb20e97c7} 
+virtual t\+Vector {\bfseries Calc\+Joint\+Vel} (int joint\+\_\+id) const override
+\item 
+\Hypertarget{classcSimCharacter_a9a88881cd26a6bac22e9b2551c41908e}\label{classcSimCharacter_a9a88881cd26a6bac22e9b2551c41908e} 
+virtual void {\bfseries Calc\+Joint\+World\+Rotation} (int joint\+\_\+id, t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const override
+\item 
+\Hypertarget{classcSimCharacter_a73f4ca2c6846f86a212d8854bacac936}\label{classcSimCharacter_a73f4ca2c6846f86a212d8854bacac936} 
+virtual t\+Quaternion {\bfseries Calc\+Joint\+World\+Rotation} (int joint\+\_\+id) const override
+\item 
+\Hypertarget{classcSimCharacter_aea67af800a926749fb6e811ae9288cfe}\label{classcSimCharacter_aea67af800a926749fb6e811ae9288cfe} 
+virtual t\+Matrix {\bfseries Build\+Joint\+World\+Trans} (int joint\+\_\+id) const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_ae9bf0b181a90addd04187a5ca19008fe}{Calc\+COM}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_af992d54be1eac59ac631b10f766ac700}{Calc\+COMVel}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a4abec3d921bd09b54d945e0803ce5c9a}{Calc\+AABB}} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_a7067287ab59c65b99c147306aa6f096f}{Get\+Size}} () const override
+\item 
+\Hypertarget{classcSimCharacter_aa0a30cfb05967fad8b59dd9adfa6f23a}\label{classcSimCharacter_aa0a30cfb05967fad8b59dd9adfa6f23a} 
+virtual const \mbox{\hyperlink{classcSimBodyJoint}{c\+Sim\+Body\+Joint}} \& {\bfseries Get\+Joint} (int joint\+\_\+id) const
+\item 
+\Hypertarget{classcSimCharacter_ac75a96a99991fe2317dc52bf486ca392}\label{classcSimCharacter_ac75a96a99991fe2317dc52bf486ca392} 
+virtual \mbox{\hyperlink{classcSimBodyJoint}{c\+Sim\+Body\+Joint}} \& {\bfseries Get\+Joint} (int joint\+\_\+id)
+\item 
+\Hypertarget{classcSimCharacter_aa57c20d16c43f380913c9d289cfe2a66}\label{classcSimCharacter_aa57c20d16c43f380913c9d289cfe2a66} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimBodyLink}{c\+Sim\+Body\+Link}} $>$ \& {\bfseries Get\+Body\+Part} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_a593e19d804910fa857081b2c3092b92a}\label{classcSimCharacter_a593e19d804910fa857081b2c3092b92a} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimBodyLink}{c\+Sim\+Body\+Link}} $>$ \& {\bfseries Get\+Body\+Part} (int idx)
+\item 
+\Hypertarget{classcSimCharacter_a54a4d737f362ce4293b2f7f71c37782d}\label{classcSimCharacter_a54a4d737f362ce4293b2f7f71c37782d} 
+virtual t\+Vector {\bfseries Get\+Body\+Part\+Pos} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_a3697f9f3d7eed26d18ba23b7de263d40}\label{classcSimCharacter_a3697f9f3d7eed26d18ba23b7de263d40} 
+virtual t\+Vector {\bfseries Get\+Body\+Part\+Vel} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_adf3fc67ff248452db5d22bc12e505748}\label{classcSimCharacter_adf3fc67ff248452db5d22bc12e505748} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimBodyLink}{c\+Sim\+Body\+Link}} $>$ \& {\bfseries Get\+Root\+Part} () const
+\item 
+\Hypertarget{classcSimCharacter_a1f198a2658802bc446f5b3688f386d8c}\label{classcSimCharacter_a1f198a2658802bc446f5b3688f386d8c} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimBodyLink}{c\+Sim\+Body\+Link}} $>$ {\bfseries Get\+Root\+Part} ()
+\item 
+\Hypertarget{classcSimCharacter_aae01c0d0c3b56a439480da7c4265afb8}\label{classcSimCharacter_aae01c0d0c3b56a439480da7c4265afb8} 
+virtual void {\bfseries Register\+Contacts} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_af22382a4751433464db45e99988783fc}{Update\+Contact}} (int contact\+\_\+flags, int filter\+\_\+flags) override
+\item 
+virtual bool \mbox{\hyperlink{classcSimCharacter_aadc7eea10e3382e9f058efa1cb301c94}{Is\+In\+Contact}} () const override
+\item 
+\Hypertarget{classcSimCharacter_a70a241a9f7206a6ccf7a6f6dbdc0fc7c}\label{classcSimCharacter_a70a241a9f7206a6ccf7a6f6dbdc0fc7c} 
+virtual bool {\bfseries Is\+In\+Contact} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_ab48f1e4311c0cb64e4614333e060ca55}\label{classcSimCharacter_ab48f1e4311c0cb64e4614333e060ca55} 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& {\bfseries Get\+Contact\+Pts} (int idx) const
+\item 
+virtual const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& \mbox{\hyperlink{classcSimCharacter_a0707f9151ccc69d954c6c658e483d443}{Get\+Contact\+Pts}} () const override
+\item 
+virtual const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& \mbox{\hyperlink{classcSimCharacter_ac4be43cc68d8e8b03e6d1994bbc5b109}{Get\+Contact\+Handle}} () const override
+\item 
+\Hypertarget{classcSimCharacter_a41ba6dcbc827be4937c2bb28f151813a}\label{classcSimCharacter_a41ba6dcbc827be4937c2bb28f151813a} 
+virtual bool {\bfseries Has\+Fallen} () const
+\item 
+\Hypertarget{classcSimCharacter_adee9cab6f5898e1149f10ee8542efe9f}\label{classcSimCharacter_adee9cab6f5898e1149f10ee8542efe9f} 
+virtual bool {\bfseries Has\+Stumbled} () const
+\item 
+\Hypertarget{classcSimCharacter_a54e25f65157ec999e9bc6161622ab9ee}\label{classcSimCharacter_a54e25f65157ec999e9bc6161622ab9ee} 
+virtual bool {\bfseries Has\+Vel\+Exploded} (double vel\+\_\+threshold=100.\+0) const
+\item 
+\Hypertarget{classcSimCharacter_af3b06c9e7a66f1f037d547455abee55f}\label{classcSimCharacter_af3b06c9e7a66f1f037d547455abee55f} 
+virtual bool {\bfseries Is\+Valid\+Body\+Part} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_ade95ec64b3c8ea3c797fa9ef3d695d29}\label{classcSimCharacter_ade95ec64b3c8ea3c797fa9ef3d695d29} 
+virtual bool {\bfseries Enable\+Body\+Part\+Fall\+Contact} (int idx) const
+\item 
+\Hypertarget{classcSimCharacter_a296050caa05a6857d042d830ea96202c}\label{classcSimCharacter_a296050caa05a6857d042d830ea96202c} 
+virtual void {\bfseries Set\+Body\+Part\+Fall\+Contact} (int idx, bool enable)
+\item 
+\Hypertarget{classcSimCharacter_a0d4ae4b0b2d75b7fce583668af3c619f}\label{classcSimCharacter_a0d4ae4b0b2d75b7fce583668af3c619f} 
+virtual void {\bfseries Set\+Controller} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ ctrl)
+\item 
+\Hypertarget{classcSimCharacter_a4f364d03aa8b5c54a2c4dbd057a23bbf}\label{classcSimCharacter_a4f364d03aa8b5c54a2c4dbd057a23bbf} 
+virtual void {\bfseries Remove\+Controller} ()
+\item 
+\Hypertarget{classcSimCharacter_a4508e026f28688cf704945dfe51050ce}\label{classcSimCharacter_a4508e026f28688cf704945dfe51050ce} 
+virtual bool {\bfseries Has\+Controller} () const
+\item 
+\Hypertarget{classcSimCharacter_a552435ac9278aa12c6ec93ccf2c0333a}\label{classcSimCharacter_a552435ac9278aa12c6ec93ccf2c0333a} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Controller} ()
+\item 
+\Hypertarget{classcSimCharacter_a86c64b1768f47a8cbaf82580341d13c3}\label{classcSimCharacter_a86c64b1768f47a8cbaf82580341d13c3} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Controller} () const
+\item 
+\Hypertarget{classcSimCharacter_a4c59c75ce51d0bd843b0e4836eeb26e2}\label{classcSimCharacter_a4c59c75ce51d0bd843b0e4836eeb26e2} 
+virtual void {\bfseries Enable\+Controller} (bool enable)
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a7cafdb3eb3ffa0dc4999a646554be05b}{Apply\+Force}} (const t\+Vector \&force) override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a5e1eb8953fecda67a4a9c10c27ffbc13}{Apply\+Force}} (const t\+Vector \&force, const t\+Vector \&local\+\_\+pos) override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a14e5bcd59818b16fd9647d895e78db6e}{Apply\+Torque}} (const t\+Vector \&torque) override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a9141b350aec48400baddd3cbb53b13f0}{Clear\+Forces}} () override
+\item 
+\Hypertarget{classcSimCharacter_a501a390bbce75b596b5dbca026a8c056}\label{classcSimCharacter_a501a390bbce75b596b5dbca026a8c056} 
+virtual void {\bfseries Apply\+Control\+Forces} (const Eigen\+::\+Vector\+Xd \&tau)
+\item 
+\Hypertarget{classcSimCharacter_ae44280afd1fba62caf4d75d40c948253}\label{classcSimCharacter_ae44280afd1fba62caf4d75d40c948253} 
+virtual void {\bfseries Play\+Possum} ()
+\item 
+\Hypertarget{classcSimCharacter_a53b0f1ca3bac61eed6cb787feabcfe49}\label{classcSimCharacter_a53b0f1ca3bac61eed6cb787feabcfe49} 
+virtual t\+Vector {\bfseries Get\+Part\+Color} (int part\+\_\+id) const
+\item 
+\Hypertarget{classcSimCharacter_a6c7dea34044560237e25659149a11e55}\label{classcSimCharacter_a6c7dea34044560237e25659149a11e55} 
+virtual double {\bfseries Calc\+Total\+Mass} () const
+\item 
+\Hypertarget{classcSimCharacter_a5a821a642f0f0ff0bf6401cf34b1f927}\label{classcSimCharacter_a5a821a642f0f0ff0bf6401cf34b1f927} 
+virtual void {\bfseries Set\+Linear\+Damping} (double damping)
+\item 
+\Hypertarget{classcSimCharacter_a39571c01dcf641c1db248dbc045097a6}\label{classcSimCharacter_a39571c01dcf641c1db248dbc045097a6} 
+virtual void {\bfseries Set\+Angular\+Damping} (double damping)
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& \mbox{\hyperlink{classcSimCharacter_a5f3f535de63ab1fe917a3d8d3787af1a}{Get\+World}} () const override
+\item 
+\Hypertarget{classcSimCharacter_acadcad6b5d3b0ffb22d4f2c2ebd207ed}\label{classcSimCharacter_acadcad6b5d3b0ffb22d4f2c2ebd207ed} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ \& {\bfseries Get\+Multi\+Body} () const
+\item 
+\Hypertarget{classcSimCharacter_a9576d8b3cc7b11d41f839faba6f8c449}\label{classcSimCharacter_a9576d8b3cc7b11d41f839faba6f8c449} 
+virtual const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Multi\+Body\+Joint\+Limit\+Constraint $>$ $>$ \& {\bfseries Get\+Constraints} () const
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_a4677a4a5382d6ad0e45a35f4818a615a}{Get\+Pos}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_aa5c5110c4ee9725edcfe8f6c540c52b7}{Set\+Pos}} (const t\+Vector \&pos) override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_ac594589bdf2755558f1e625fff7d64f0}{Get\+Rotation}} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const override
+\item 
+virtual t\+Quaternion \mbox{\hyperlink{classcSimCharacter_ad9eaf3268b8cf5f8ba00fcd2ea22aaf0}{Get\+Rotation}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a7d44ffa2eec70b65363a853d2d31994f}{Set\+Rotation}} (const t\+Vector \&axis, double theta) override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_aa526e8e77c211be8358853358a39b526}{Set\+Rotation}} (const t\+Quaternion \&q) override
+\item 
+virtual t\+Matrix \mbox{\hyperlink{classcSimCharacter_a1be3902a4538ad71aa23bbc3c5184081}{Get\+World\+Transform}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_ad33d2bab3f42da7d8989d7d022bfd1eb}{Get\+Linear\+Velocity}} () const override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_a6fdbc428f88b5d9e948f88f339e3b6cd}{Get\+Linear\+Velocity}} (const t\+Vector \&local\+\_\+pos) const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_ad04d537f112d8b49ed53d44b9523d24f}{Set\+Linear\+Velocity}} (const t\+Vector \&vel) override
+\item 
+virtual t\+Vector \mbox{\hyperlink{classcSimCharacter_a96bca209d307bf023253fcfb37bb8a7a}{Get\+Angular\+Velocity}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a4d94f8f3786b270e9bf07d66078dd12b}{Set\+Angular\+Velocity}} (const t\+Vector \&vel) override
+\item 
+virtual short \mbox{\hyperlink{classcSimCharacter_a57e42e2e8a1fc328a78fd75498c13a9e}{Get\+Col\+Group}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a2eb050f35aa360d6fac8feb93466edab}{Set\+Col\+Group}} (short col\+\_\+group) override
+\item 
+virtual short \mbox{\hyperlink{classcSimCharacter_aa27a8275fcf935377c273aa7a18518f2}{Get\+Col\+Mask}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcSimCharacter_a51d7fa291718ce39eca63c73e490d7b1}{Set\+Col\+Mask}} (short col\+\_\+mask) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual t\+Matrix {\bfseries Get\+Local\+Transform} () const
+\item 
+virtual t\+Vector {\bfseries World\+To\+Local\+Pos} (const t\+Vector \&world\+\_\+pos) const
+\item 
+virtual t\+Vector {\bfseries Local\+To\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+virtual t\+Matrix3 {\bfseries Get\+Local\+To\+World\+Rot\+Mat} () const
+\item 
+virtual void {\bfseries Register\+Contact} ()
+\item 
+virtual void {\bfseries Register\+Contact} (int contact\+\_\+flags, int filter\+\_\+flags)
+\item 
+virtual e\+Type {\bfseries Get\+Type} () const
+\item 
+virtual c\+Shape\+::e\+Shape {\bfseries Get\+Shape} () const
+\item 
+virtual const bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Get\+Collision\+Shape} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimCharacter_af84cbb564d21555bda24dc6549ec64af}\label{classcSimCharacter_af84cbb564d21555bda24dc6549ec64af} 
+virtual bool {\bfseries Load\+Body\+Defs} (const std\+::string \&char\+\_\+file, Eigen\+::\+Matrix\+Xd \&out\+\_\+body\+\_\+defs) const
+\item 
+\Hypertarget{classcSimCharacter_a3cca4d62a0b31a5da8268cebdd7ddc23}\label{classcSimCharacter_a3cca4d62a0b31a5da8268cebdd7ddc23} 
+virtual bool {\bfseries Build\+Sim\+Body} (const \mbox{\hyperlink{structcSimCharacter_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcSimCharacter_a6a66eac5718b437270cc835d42e56002}\label{classcSimCharacter_a6a66eac5718b437270cc835d42e56002} 
+virtual bool {\bfseries Build\+Multi\+Body} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ \&out\+\_\+body)
+\item 
+\Hypertarget{classcSimCharacter_a07a564dac2923914e6144dedb2cef8af}\label{classcSimCharacter_a07a564dac2923914e6144dedb2cef8af} 
+virtual bool {\bfseries Build\+Constraints} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ \&out\+\_\+body)
+\item 
+\Hypertarget{classcSimCharacter_a8cf96cfff147d946811052fa7a3a50b3}\label{classcSimCharacter_a8cf96cfff147d946811052fa7a3a50b3} 
+virtual bool {\bfseries Build\+Body\+Links} ()
+\item 
+\Hypertarget{classcSimCharacter_ac70dcbfe28a0e95e9310031a6614c6fe}\label{classcSimCharacter_ac70dcbfe28a0e95e9310031a6614c6fe} 
+virtual bt\+Collision\+Shape \texorpdfstring{$\ast$}{*} {\bfseries Build\+Collision\+Shape} (const c\+Shape\+::e\+Shape shape, const t\+Vector \&shape\+\_\+size)
+\item 
+\Hypertarget{classcSimCharacter_ac3026fc1dac59be3aa9ac534a82b7ade}\label{classcSimCharacter_ac3026fc1dac59be3aa9ac534a82b7ade} 
+virtual bool {\bfseries Build\+Joints} ()
+\item 
+\Hypertarget{classcSimCharacter_a803c19508685320b6392c1465b149300}\label{classcSimCharacter_a803c19508685320b6392c1465b149300} 
+virtual void {\bfseries Build\+Cons\+Factor} (int joint\+\_\+id, t\+Vector \&out\+\_\+linear\+\_\+factor, t\+Vector \&out\+\_\+angular\+\_\+factor) const
+\item 
+\Hypertarget{classcSimCharacter_a00ea460e4f6d81b2f5df0cfebb3d9784}\label{classcSimCharacter_a00ea460e4f6d81b2f5df0cfebb3d9784} 
+virtual void {\bfseries Build\+Root\+Cons\+Factor} (c\+Kin\+Tree\+::e\+Joint\+Type joint\+\_\+type, t\+Vector \&out\+\_\+linear\+\_\+factor, t\+Vector \&out\+\_\+angular\+\_\+factor) const
+\item 
+\Hypertarget{classcSimCharacter_aa6906ca829bc3745343a4682a4fe82a7}\label{classcSimCharacter_aa6906ca829bc3745343a4682a4fe82a7} 
+virtual bool {\bfseries Fixed\+Base} () const
+\item 
+\Hypertarget{classcSimCharacter_a9c9e4d8cb1811b175d0ac0407da7139b}\label{classcSimCharacter_a9c9e4d8cb1811b175d0ac0407da7139b} 
+virtual void {\bfseries Remove\+From\+World} ()
+\item 
+\Hypertarget{classcSimCharacter_a4ef45ad136c1ebc9637f48013fb1ff98}\label{classcSimCharacter_a4ef45ad136c1ebc9637f48013fb1ff98} 
+virtual void {\bfseries Clear\+Joint\+Torques} ()
+\item 
+\Hypertarget{classcSimCharacter_a55f4a7d0cc22a80a63546eb69663592b}\label{classcSimCharacter_a55f4a7d0cc22a80a63546eb69663592b} 
+virtual void {\bfseries Update\+Joints} ()
+\item 
+\Hypertarget{classcSimCharacter_a4c8b34da07a4d5e09f836ba559c057ba}\label{classcSimCharacter_a4c8b34da07a4d5e09f836ba559c057ba} 
+virtual void {\bfseries Update\+Link\+Pos} ()
+\item 
+\Hypertarget{classcSimCharacter_a6b921ea095db8fe0fae7c3e183946117}\label{classcSimCharacter_a6b921ea095db8fe0fae7c3e183946117} 
+virtual void {\bfseries Update\+Link\+Vel} ()
+\item 
+\Hypertarget{classcSimCharacter_a503cda68a63901a91e2d995a881146e9}\label{classcSimCharacter_a503cda68a63901a91e2d995a881146e9} 
+virtual short {\bfseries Get\+Part\+Col\+Group} (int part\+\_\+id) const
+\item 
+\Hypertarget{classcSimCharacter_ab93252738325432807813194996f0835}\label{classcSimCharacter_ab93252738325432807813194996f0835} 
+virtual short {\bfseries Get\+Part\+Col\+Mask} (int part\+\_\+id) const
+\item 
+\Hypertarget{classcSimCharacter_a898aa0ad7809c8df375286e16d315542}\label{classcSimCharacter_a898aa0ad7809c8df375286e16d315542} 
+virtual void {\bfseries Build\+Joint\+Pose} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimCharacter_a1ee1020bbe869275205b4952f8f95f07}\label{classcSimCharacter_a1ee1020bbe869275205b4952f8f95f07} 
+virtual void {\bfseries Build\+Joint\+Vel} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcSimCharacter_a01a4858503a34a2d620bdb02f7b1f6e6}\label{classcSimCharacter_a01a4858503a34a2d620bdb02f7b1f6e6} 
+virtual void {\bfseries Build\+Pose} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimCharacter_ab14a5d230226c677eeaff5d042bc0320}\label{classcSimCharacter_ab14a5d230226c677eeaff5d042bc0320} 
+virtual void {\bfseries Build\+Vel} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcSimCharacter_ad6b82beb94555610d66ad56e8c003cbd}\label{classcSimCharacter_ad6b82beb94555610d66ad56e8c003cbd} 
+virtual bool {\bfseries Check\+Fall\+Contact} () const
+\item 
+virtual const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimCharacter_a945baca6dc94a3b59bcf85f7e57e0977}{Get\+Collision\+Object}} () const override
+\item 
+virtual bt\+Collision\+Object \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcSimCharacter_af840dcaca80e59b652ff5f1b919f264b}{Get\+Collision\+Object}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimCharacter_a4af4c683d89b426e477ef70e00cb561f}\label{classcSimCharacter_a4af4c683d89b426e477ef70e00cb561f} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcMultiBody}{c\+Multi\+Body}} $>$ {\bfseries m\+Mult\+Body}
+\item 
+\Hypertarget{classcSimCharacter_a7a0512ab559228348127312db81327b5}\label{classcSimCharacter_a7a0512ab559228348127312db81327b5} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimBodyLink}{c\+Sim\+Body\+Link}} $>$ $>$ {\bfseries m\+Body\+Parts}
+\item 
+\Hypertarget{classcSimCharacter_a5486d6d3b4862f59f0b5fe001652b2a3}\label{classcSimCharacter_a5486d6d3b4862f59f0b5fe001652b2a3} 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{classcSimBodyJoint}{c\+Sim\+Body\+Joint}} $>$ {\bfseries m\+Joints}
+\item 
+\Hypertarget{classcSimCharacter_a7ab1fc7aa92b2268393db0fdcffc1392}\label{classcSimCharacter_a7ab1fc7aa92b2268393db0fdcffc1392} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Multi\+Body\+Joint\+Limit\+Constraint $>$ $>$ {\bfseries m\+Cons}
+\item 
+\Hypertarget{classcSimCharacter_ac13f176bf8bfd5ec8298d7f3a4f9faf3}\label{classcSimCharacter_ac13f176bf8bfd5ec8298d7f3a4f9faf3} 
+double {\bfseries m\+Friction}
+\item 
+\Hypertarget{classcSimCharacter_a26fdf3369bcd536eac6f9d0ec4dcdf09}\label{classcSimCharacter_a26fdf3369bcd536eac6f9d0ec4dcdf09} 
+Eigen\+::\+Matrix\+Xd {\bfseries m\+Body\+Defs}
+\item 
+\Hypertarget{classcSimCharacter_a2ecb6b630597a9d0373d559a3feccc70}\label{classcSimCharacter_a2ecb6b630597a9d0373d559a3feccc70} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ {\bfseries m\+Controller}
+\item 
+\Hypertarget{classcSimCharacter_a6e26ccf23274b4863425106f634ae625}\label{classcSimCharacter_a6e26ccf23274b4863425106f634ae625} 
+t\+Quaternion {\bfseries m\+Inv\+Root\+Attach\+Rot}
+\item 
+\Hypertarget{classcSimCharacter_acd81295fcf20a44326958aa8c8e071b0}\label{classcSimCharacter_acd81295fcf20a44326958aa8c8e071b0} 
+bt\+Aligned\+Object\+Array$<$ bt\+Vector3 $>$ {\bfseries m\+Vec\+Buffer0}
+\item 
+\Hypertarget{classcSimCharacter_abd529c0897a15dd20d3993e34ec16226}\label{classcSimCharacter_abd529c0897a15dd20d3993e34ec16226} 
+bt\+Aligned\+Object\+Array$<$ bt\+Vector3 $>$ {\bfseries m\+Vec\+Buffer1}
+\item 
+\Hypertarget{classcSimCharacter_acdaf63efdca3f47a214165d3f830c31d}\label{classcSimCharacter_acdaf63efdca3f47a214165d3f830c31d} 
+bt\+Aligned\+Object\+Array$<$ bt\+Quaternion $>$ {\bfseries m\+Rot\+Buffer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+std\+::unique\+\_\+ptr$<$ bt\+Collision\+Shape $>$ {\bfseries m\+Col\+Shape}
+\item 
+\mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} {\bfseries m\+Contact\+Handle}
+\item 
+bool {\bfseries m\+Enable\+Contact\+Fall}
+\item 
+e\+Type {\bfseries m\+Type}
+\item 
+short {\bfseries m\+Col\+Group}
+\item 
+short {\bfseries m\+Col\+Mask}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimObj_a7031e8c95243ce20c8163100e523d77c}\label{classcSimObj_a7031e8c95243ce20c8163100e523d77c} 
+enum {\bfseries e\+Type} \{ {\bfseries e\+Type\+Dynamic}
+, {\bfseries e\+Type\+Static}
+, {\bfseries e\+Type\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcSimCharacter_a7cafdb3eb3ffa0dc4999a646554be05b}\label{classcSimCharacter_a7cafdb3eb3ffa0dc4999a646554be05b} 
+\index{cSimCharacter@{cSimCharacter}!ApplyForce@{ApplyForce}}
+\index{ApplyForce@{ApplyForce}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{ApplyForce()}{ApplyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Apply\+Force (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a5e1eb8953fecda67a4a9c10c27ffbc13}\label{classcSimCharacter_a5e1eb8953fecda67a4a9c10c27ffbc13} 
+\index{cSimCharacter@{cSimCharacter}!ApplyForce@{ApplyForce}}
+\index{ApplyForce@{ApplyForce}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{ApplyForce()}{ApplyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Apply\+Force (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{force,  }\item[{const t\+Vector \&}]{local\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a14e5bcd59818b16fd9647d895e78db6e}\label{classcSimCharacter_a14e5bcd59818b16fd9647d895e78db6e} 
+\index{cSimCharacter@{cSimCharacter}!ApplyTorque@{ApplyTorque}}
+\index{ApplyTorque@{ApplyTorque}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{ApplyTorque()}{ApplyTorque()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Apply\+Torque (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{torque }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a4abec3d921bd09b54d945e0803ce5c9a}\label{classcSimCharacter_a4abec3d921bd09b54d945e0803ce5c9a} 
+\index{cSimCharacter@{cSimCharacter}!CalcAABB@{CalcAABB}}
+\index{CalcAABB@{CalcAABB}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{CalcAABB()}{CalcAABB()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Calc\+AABB (\begin{DoxyParamCaption}\item[{t\+Vector \&}]{out\+\_\+min,  }\item[{t\+Vector \&}]{out\+\_\+max }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ae9bf0b181a90addd04187a5ca19008fe}\label{classcSimCharacter_ae9bf0b181a90addd04187a5ca19008fe} 
+\index{cSimCharacter@{cSimCharacter}!CalcCOM@{CalcCOM}}
+\index{CalcCOM@{CalcCOM}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{CalcCOM()}{CalcCOM()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Calc\+COM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_af992d54be1eac59ac631b10f766ac700}\label{classcSimCharacter_af992d54be1eac59ac631b10f766ac700} 
+\index{cSimCharacter@{cSimCharacter}!CalcCOMVel@{CalcCOMVel}}
+\index{CalcCOMVel@{CalcCOMVel}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{CalcCOMVel()}{CalcCOMVel()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Calc\+COMVel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a9141b350aec48400baddd3cbb53b13f0}\label{classcSimCharacter_a9141b350aec48400baddd3cbb53b13f0} 
+\index{cSimCharacter@{cSimCharacter}!ClearForces@{ClearForces}}
+\index{ClearForces@{ClearForces}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{ClearForces()}{ClearForces()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Clear\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a96bca209d307bf023253fcfb37bb8a7a}\label{classcSimCharacter_a96bca209d307bf023253fcfb37bb8a7a} 
+\index{cSimCharacter@{cSimCharacter}!GetAngularVelocity@{GetAngularVelocity}}
+\index{GetAngularVelocity@{GetAngularVelocity}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetAngularVelocity()}{GetAngularVelocity()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Get\+Angular\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a57e42e2e8a1fc328a78fd75498c13a9e}\label{classcSimCharacter_a57e42e2e8a1fc328a78fd75498c13a9e} 
+\index{cSimCharacter@{cSimCharacter}!GetColGroup@{GetColGroup}}
+\index{GetColGroup@{GetColGroup}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetColGroup()}{GetColGroup()}}
+{\footnotesize\ttfamily short c\+Sim\+Character\+::\+Get\+Col\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a945baca6dc94a3b59bcf85f7e57e0977}\label{classcSimCharacter_a945baca6dc94a3b59bcf85f7e57e0977} 
+\index{cSimCharacter@{cSimCharacter}!GetCollisionObject@{GetCollisionObject}}
+\index{GetCollisionObject@{GetCollisionObject}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCollisionObject()}{GetCollisionObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const bt\+Collision\+Object \texorpdfstring{$\ast$}{*} c\+Sim\+Character\+::\+Get\+Collision\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_af840dcaca80e59b652ff5f1b919f264b}\label{classcSimCharacter_af840dcaca80e59b652ff5f1b919f264b} 
+\index{cSimCharacter@{cSimCharacter}!GetCollisionObject@{GetCollisionObject}}
+\index{GetCollisionObject@{GetCollisionObject}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCollisionObject()}{GetCollisionObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bt\+Collision\+Object \texorpdfstring{$\ast$}{*} c\+Sim\+Character\+::\+Get\+Collision\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_aa27a8275fcf935377c273aa7a18518f2}\label{classcSimCharacter_aa27a8275fcf935377c273aa7a18518f2} 
+\index{cSimCharacter@{cSimCharacter}!GetColMask@{GetColMask}}
+\index{GetColMask@{GetColMask}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetColMask()}{GetColMask()}}
+{\footnotesize\ttfamily short c\+Sim\+Character\+::\+Get\+Col\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ac4be43cc68d8e8b03e6d1994bbc5b109}\label{classcSimCharacter_ac4be43cc68d8e8b03e6d1994bbc5b109} 
+\index{cSimCharacter@{cSimCharacter}!GetContactHandle@{GetContactHandle}}
+\index{GetContactHandle@{GetContactHandle}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetContactHandle()}{GetContactHandle()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{c\+Contact\+Manager\+::t\+Contact\+Handle}} \& c\+Sim\+Character\+::\+Get\+Contact\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a0707f9151ccc69d954c6c658e483d443}\label{classcSimCharacter_a0707f9151ccc69d954c6c658e483d443} 
+\index{cSimCharacter@{cSimCharacter}!GetContactPts@{GetContactPts}}
+\index{GetContactPts@{GetContactPts}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetContactPts()}{GetContactPts()}}
+{\footnotesize\ttfamily const t\+Eigen\+Arr$<$ \mbox{\hyperlink{structcContactManager_1_1tContactPt}{c\+Contact\+Manager\+::t\+Contact\+Pt}} $>$ \& c\+Sim\+Character\+::\+Get\+Contact\+Pts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ad33d2bab3f42da7d8989d7d022bfd1eb}\label{classcSimCharacter_ad33d2bab3f42da7d8989d7d022bfd1eb} 
+\index{cSimCharacter@{cSimCharacter}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a6fdbc428f88b5d9e948f88f339e3b6cd}\label{classcSimCharacter_a6fdbc428f88b5d9e948f88f339e3b6cd} 
+\index{cSimCharacter@{cSimCharacter}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{local\+\_\+pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a4677a4a5382d6ad0e45a35f4818a615a}\label{classcSimCharacter_a4677a4a5382d6ad0e45a35f4818a615a} 
+\index{cSimCharacter@{cSimCharacter}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ad9eaf3268b8cf5f8ba00fcd2ea22aaf0}\label{classcSimCharacter_ad9eaf3268b8cf5f8ba00fcd2ea22aaf0} 
+\index{cSimCharacter@{cSimCharacter}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily t\+Quaternion c\+Sim\+Character\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ac594589bdf2755558f1e625fff7d64f0}\label{classcSimCharacter_ac594589bdf2755558f1e625fff7d64f0} 
+\index{cSimCharacter@{cSimCharacter}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Get\+Rotation (\begin{DoxyParamCaption}\item[{t\+Vector \&}]{out\+\_\+axis,  }\item[{double \&}]{out\+\_\+theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a7067287ab59c65b99c147306aa6f096f}\label{classcSimCharacter_a7067287ab59c65b99c147306aa6f096f} 
+\index{cSimCharacter@{cSimCharacter}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily t\+Vector c\+Sim\+Character\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a5f3f535de63ab1fe917a3d8d3787af1a}\label{classcSimCharacter_a5f3f535de63ab1fe917a3d8d3787af1a} 
+\index{cSimCharacter@{cSimCharacter}!GetWorld@{GetWorld}}
+\index{GetWorld@{GetWorld}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetWorld()}{GetWorld()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \& c\+Sim\+Character\+::\+Get\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a1be3902a4538ad71aa23bbc3c5184081}\label{classcSimCharacter_a1be3902a4538ad71aa23bbc3c5184081} 
+\index{cSimCharacter@{cSimCharacter}!GetWorldTransform@{GetWorldTransform}}
+\index{GetWorldTransform@{GetWorldTransform}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{GetWorldTransform()}{GetWorldTransform()}}
+{\footnotesize\ttfamily t\+Matrix c\+Sim\+Character\+::\+Get\+World\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_aadc7eea10e3382e9f058efa1cb301c94}\label{classcSimCharacter_aadc7eea10e3382e9f058efa1cb301c94} 
+\index{cSimCharacter@{cSimCharacter}!IsInContact@{IsInContact}}
+\index{IsInContact@{IsInContact}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{IsInContact()}{IsInContact()}}
+{\footnotesize\ttfamily bool c\+Sim\+Character\+::\+Is\+In\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a4d94f8f3786b270e9bf07d66078dd12b}\label{classcSimCharacter_a4d94f8f3786b270e9bf07d66078dd12b} 
+\index{cSimCharacter@{cSimCharacter}!SetAngularVelocity@{SetAngularVelocity}}
+\index{SetAngularVelocity@{SetAngularVelocity}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetAngularVelocity()}{SetAngularVelocity()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Angular\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a2eb050f35aa360d6fac8feb93466edab}\label{classcSimCharacter_a2eb050f35aa360d6fac8feb93466edab} 
+\index{cSimCharacter@{cSimCharacter}!SetColGroup@{SetColGroup}}
+\index{SetColGroup@{SetColGroup}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetColGroup()}{SetColGroup()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Col\+Group (\begin{DoxyParamCaption}\item[{short}]{col\+\_\+group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a51d7fa291718ce39eca63c73e490d7b1}\label{classcSimCharacter_a51d7fa291718ce39eca63c73e490d7b1} 
+\index{cSimCharacter@{cSimCharacter}!SetColMask@{SetColMask}}
+\index{SetColMask@{SetColMask}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetColMask()}{SetColMask()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Col\+Mask (\begin{DoxyParamCaption}\item[{short}]{col\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_ad04d537f112d8b49ed53d44b9523d24f}\label{classcSimCharacter_ad04d537f112d8b49ed53d44b9523d24f} 
+\index{cSimCharacter@{cSimCharacter}!SetLinearVelocity@{SetLinearVelocity}}
+\index{SetLinearVelocity@{SetLinearVelocity}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetLinearVelocity()}{SetLinearVelocity()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_aa5c5110c4ee9725edcfe8f6c540c52b7}\label{classcSimCharacter_aa5c5110c4ee9725edcfe8f6c540c52b7} 
+\index{cSimCharacter@{cSimCharacter}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Pos (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_aa526e8e77c211be8358853358a39b526}\label{classcSimCharacter_aa526e8e77c211be8358853358a39b526} 
+\index{cSimCharacter@{cSimCharacter}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{const t\+Quaternion \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_a7d44ffa2eec70b65363a853d2d31994f}\label{classcSimCharacter_a7d44ffa2eec70b65363a853d2d31994f} 
+\index{cSimCharacter@{cSimCharacter}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{const t\+Vector \&}]{axis,  }\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+\Hypertarget{classcSimCharacter_af22382a4751433464db45e99988783fc}\label{classcSimCharacter_af22382a4751433464db45e99988783fc} 
+\index{cSimCharacter@{cSimCharacter}!UpdateContact@{UpdateContact}}
+\index{UpdateContact@{UpdateContact}!cSimCharacter@{cSimCharacter}}
+\doxysubsubsection{\texorpdfstring{UpdateContact()}{UpdateContact()}}
+{\footnotesize\ttfamily void c\+Sim\+Character\+::\+Update\+Contact (\begin{DoxyParamCaption}\item[{int}]{contact\+\_\+flags,  }\item[{int}]{filter\+\_\+flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sim\+Character.\+h\item 
+Sim\+Character.\+cpp\end{DoxyCompactItemize}

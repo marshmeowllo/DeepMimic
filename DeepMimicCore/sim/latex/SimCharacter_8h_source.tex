@@ -1,0 +1,197 @@
+\doxysection{Sim\+Character.\+h}
+\hypertarget{SimCharacter_8h_source}{}\label{SimCharacter_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/World.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}sim/SimBodyLink.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}sim/SimBodyJoint.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}sim/CharController.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}sim/SimObj.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}anim/Character.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}MultiBody.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}BulletDynamics/Featherstone/btMultiBodyLinkCollider.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}BulletDynamics/Featherstone/btMultiBodyJointLimitConstraint.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ cCharacter,\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimObj}{cSimObj}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcSimCharacter_1_1tParams}{tParams}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcSimCharacter_1_1tParams}{tParams}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mID;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ mCharFile;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ mStateFile;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ tVector\ mInitPos;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mLoadDrawShapes;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mEnableContactFall;}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classcSimCharacter}{cSimCharacter}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimCharacter}{\string~cSimCharacter}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ Init(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcSimCharacter_1_1tParams}{tParams}}\&\ params);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Clear()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reset()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{double}\ time\_step)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PostUpdate(\textcolor{keywordtype}{double}\ time\_step);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetRootPos()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetRootRotation(tVector\&\ out\_axis,\ \textcolor{keywordtype}{double}\&\ out\_theta)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ GetRootRotation()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetRootVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetRootAngVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ GetBodyDefs()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootPos(\textcolor{keyword}{const}\ tVector\&\ pos)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootRotation(\textcolor{keyword}{const}\ tVector\&\ axis,\ \textcolor{keywordtype}{double}\ theta);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootRotation(\textcolor{keyword}{const}\ tQuaternion\&\ q)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootTransform(\textcolor{keyword}{const}\ tVector\&\ pos,\ \textcolor{keyword}{const}\ tQuaternion\&\ rot);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootVel(\textcolor{keyword}{const}\ tVector\&\ vel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRootAngVel(\textcolor{keyword}{const}\ tVector\&\ ang\_vel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ CalcHeadingRot()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumBodyParts()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPose(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetVel(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcJointPos(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcJointVel(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcJointWorldRotation(\textcolor{keywordtype}{int}\ joint\_id,\ tVector\&\ out\_axis,\ \textcolor{keywordtype}{double}\&\ out\_theta)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ CalcJointWorldRotation(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ BuildJointWorldTrans(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcCOM()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcCOMVel()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CalcAABB(tVector\&\ out\_min,\ tVector\&\ out\_max)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetSize()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}\&\ GetJoint(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcSimBodyJoint}{cSimBodyJoint}}\&\ GetJoint(\textcolor{keywordtype}{int}\ joint\_id);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ GetBodyPart(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<cSimBodyLink>\&\ GetBodyPart(\textcolor{keywordtype}{int}\ idx);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetBodyPartPos(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetBodyPartVel(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cSimBodyLink>\&\ GetRootPart()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<cSimBodyLink>\ GetRootPart();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RegisterContacts(\textcolor{keywordtype}{int}\ contact\_flags,\ \textcolor{keywordtype}{int}\ filter\_flags);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateContact(\textcolor{keywordtype}{int}\ contact\_flags,\ \textcolor{keywordtype}{int}\ filter\_flags)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsInContact()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsInContact(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tEigenArr<cContactManager::tContactPt>\&\ GetContactPts(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tEigenArr<cContactManager::tContactPt>\&\ GetContactPts()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcContactManager_1_1tContactHandle}{cContactManager::tContactHandle}}\&\ GetContactHandle()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasFallen()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasStumbled()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasVelExploded(\textcolor{keywordtype}{double}\ vel\_threshold\ =\ 100.0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsValidBodyPart(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ EnableBodyPartFallContact(\textcolor{keywordtype}{int}\ idx)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetBodyPartFallContact(\textcolor{keywordtype}{int}\ idx,\ \textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetController(std::shared\_ptr<cCharController>\ ctrl);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveController();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ HasController()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cCharController>\&\ GetController();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cCharController>\&\ GetController()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EnableController(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyForce(\textcolor{keyword}{const}\ tVector\&\ force,\ \textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyTorque(\textcolor{keyword}{const}\ tVector\&\ torque)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearForces()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyControlForces(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ tau);}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PlayPossum();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetPartColor(\textcolor{keywordtype}{int}\ part\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ CalcTotalMass()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetLinearDamping(\textcolor{keywordtype}{double}\ damping);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetAngularDamping(\textcolor{keywordtype}{double}\ damping);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ GetWorld()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::shared\_ptr<cMultiBody>\&\ GetMultiBody()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<btMultiBodyJointLimitConstraint>>\&\ GetConstraints()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ cSimObj\ Interface}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetPos()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPos(\textcolor{keyword}{const}\ tVector\&\ pos)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GetRotation(tVector\&\ out\_axis,\ \textcolor{keywordtype}{double}\&\ out\_theta)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{virtual}\ tQuaternion\ GetRotation()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tVector\&\ axis,\ \textcolor{keywordtype}{double}\ theta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ tQuaternion\&\ q)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetWorldTransform()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ local\_pos)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetLinearVelocity(\textcolor{keyword}{const}\ tVector\&\ vel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ GetAngularVelocity()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetAngularVelocity(\textcolor{keyword}{const}\ tVector\&\ vel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetColGroup()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetColGroup(\textcolor{keywordtype}{short}\ col\_group)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetColMask()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetColMask(\textcolor{keywordtype}{short}\ col\_mask)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00144\ \ \ \ \ std::shared\_ptr<cMultiBody>\ mMultBody;}
+\DoxyCodeLine{00145\ \ \ \ \ std::vector<std::shared\_ptr<cSimBodyLink>>\ mBodyParts;}
+\DoxyCodeLine{00146\ \ \ \ \ tEigenArr<cSimBodyJoint>\ mJoints;}
+\DoxyCodeLine{00147\ \ \ \ \ std::vector<std::shared\_ptr<btMultiBodyJointLimitConstraint>>\ mCons;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{double}\ mFriction;}
+\DoxyCodeLine{00150\ \ \ \ \ Eigen::MatrixXd\ mBodyDefs;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ std::shared\_ptr<cCharController>\ mController;}
+\DoxyCodeLine{00153\ \ \ \ \ tQuaternion\ mInvRootAttachRot;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ scratch\ buffers\ for\ intermediate\ computation}}
+\DoxyCodeLine{00156\ \ \ \ \ btAlignedObjectArray<btVector3>\ mVecBuffer0;}
+\DoxyCodeLine{00157\ \ \ \ \ btAlignedObjectArray<btVector3>\ mVecBuffer1;}
+\DoxyCodeLine{00158\ \ \ \ \ btAlignedObjectArray<btQuaternion>\ mRotBuffer;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ LoadBodyDefs(\textcolor{keyword}{const}\ std::string\&\ char\_file,\ Eigen::MatrixXd\&\ out\_body\_defs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ BuildSimBody(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcSimCharacter_1_1tParams}{tParams}}\&\ params);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ BuildMultiBody(std::shared\_ptr<cMultiBody>\&\ out\_body);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ BuildConstraints(std::shared\_ptr<cMultiBody>\&\ out\_body);}
+\DoxyCodeLine{00165\ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ BuildBodyLinks();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{virtual}\ btCollisionShape*\ BuildCollisionShape(\textcolor{keyword}{const}\ cShape::eShape\ shape,\ \textcolor{keyword}{const}\ tVector\&\ shape\_size);}
+\DoxyCodeLine{00168\ \ \ \ \ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ BuildJoints();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildConsFactor(\textcolor{keywordtype}{int}\ joint\_id,\ tVector\&\ out\_linear\_factor,\ tVector\&\ out\_angular\_factor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildRootConsFactor(cKinTree::eJointType\ joint\_type,\ tVector\&\ out\_linear\_factor,\ tVector\&\ out\_angular\_factor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ FixedBase()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RemoveFromWorld();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ClearJointTorques();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateJoints();}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateLinkPos();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateLinkVel();}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetPartColGroup(\textcolor{keywordtype}{int}\ part\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{short}\ GetPartColMask(\textcolor{keywordtype}{int}\ part\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointPose(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_pose)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointVel(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildPose(Eigen::VectorXd\&\ out\_pose)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildVel(Eigen::VectorXd\&\ out\_vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CheckFallContact()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ btCollisionObject*\ GetCollisionObject()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{virtual}\ btCollisionObject*\ GetCollisionObject()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00192\ \};}
+
+\end{DoxyCode}

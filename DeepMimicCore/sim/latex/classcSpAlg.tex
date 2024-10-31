@@ -1,0 +1,149 @@
+\doxysection{c\+Sp\+Alg Class Reference}
+\hypertarget{classcSpAlg}{}\label{classcSpAlg}\index{cSpAlg@{cSpAlg}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSpAlg_a3fe72813ceb0d9f20871815fc344a044}\label{classcSpAlg_a3fe72813ceb0d9f20871815fc344a044} 
+typedef Eigen\+::\+Matrix$<$ double, g\+SVTrans\+Rows, g\+SVTrans\+Cols $>$ {\bfseries t\+Sp\+Trans}
+\item 
+\Hypertarget{classcSpAlg_ace8a15dd971e1e95f198c12c7ee581d7}\label{classcSpAlg_ace8a15dd971e1e95f198c12c7ee581d7} 
+typedef Eigen\+::\+Matrix$<$ double, g\+Sp\+Vec\+Size, 1 $>$ {\bfseries t\+Sp\+Vec}
+\item 
+\Hypertarget{classcSpAlg_ad0ebfea23c9b73ec353e1df235306678}\label{classcSpAlg_ad0ebfea23c9b73ec353e1df235306678} 
+typedef Eigen\+::\+Matrix$<$ double, g\+Sp\+Vec\+Size, g\+Sp\+Vec\+Size $>$ {\bfseries t\+Sp\+Mat}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSpAlg_ae1cc19efdecb0b8b0b3b0d4187ec0bdd}\label{classcSpAlg_ae1cc19efdecb0b8b0b3b0d4187ec0bdd} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordM} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Vector \&origin1)
+\item 
+\Hypertarget{classcSpAlg_a3118c56849c2e79b8c0e7bd6ea82fb13}\label{classcSpAlg_a3118c56849c2e79b8c0e7bd6ea82fb13} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordM} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Matrix \&R0, const t\+Vector \&origin1, const t\+Matrix \&R1)
+\item 
+\Hypertarget{classcSpAlg_adfcd914ba7b599fc6e85759d902093f9}\label{classcSpAlg_adfcd914ba7b599fc6e85759d902093f9} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordM} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Vector \&origin1, const t\+Matrix \&R)
+\item 
+\Hypertarget{classcSpAlg_abfe0b73116b9ae5e139cf8bfdd1a6572}\label{classcSpAlg_abfe0b73116b9ae5e139cf8bfdd1a6572} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordF} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Vector \&origin1)
+\item 
+\Hypertarget{classcSpAlg_a51a758cc22821274c07868568a183f27}\label{classcSpAlg_a51a758cc22821274c07868568a183f27} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordF} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Matrix \&R0, const t\+Vector \&origin1, const t\+Matrix \&R1)
+\item 
+\Hypertarget{classcSpAlg_a4921aec99e6c113d6b33196bf2a831fc}\label{classcSpAlg_a4921aec99e6c113d6b33196bf2a831fc} 
+static t\+Sp\+Vec {\bfseries Convert\+CoordF} (const t\+Sp\+Vec \&m0, const t\+Vector \&origin0, const t\+Vector \&origin1, const t\+Matrix \&R)
+\item 
+\Hypertarget{classcSpAlg_ac30fee20da482ddea5b75d1040f048da}\label{classcSpAlg_ac30fee20da482ddea5b75d1040f048da} 
+static t\+Sp\+Vec {\bfseries CrossM} (const t\+Sp\+Vec \&sv, const t\+Sp\+Vec \&m)
+\item 
+\Hypertarget{classcSpAlg_a8de4b37bcc147101c4cde912965064be}\label{classcSpAlg_a8de4b37bcc147101c4cde912965064be} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Cross\+Ms} (const t\+Sp\+Vec \&sv, const Eigen\+::\+Matrix\+Xd \&ms)
+\item 
+\Hypertarget{classcSpAlg_a24b0f9008ccb839adb2972a7c7c5fa8c}\label{classcSpAlg_a24b0f9008ccb839adb2972a7c7c5fa8c} 
+static t\+Sp\+Vec {\bfseries CrossF} (const t\+Sp\+Vec \&sv, const t\+Sp\+Vec \&f)
+\item 
+\Hypertarget{classcSpAlg_ab63eb6268d8bccdbfda273a77d1a7140}\label{classcSpAlg_ab63eb6268d8bccdbfda273a77d1a7140} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Cross\+Fs} (const t\+Sp\+Vec \&sv, const Eigen\+::\+Matrix\+Xd \&fs)
+\item 
+\Hypertarget{classcSpAlg_a5d8935f5eb6a88eb591a19ec414c1953}\label{classcSpAlg_a5d8935f5eb6a88eb591a19ec414c1953} 
+static t\+Sp\+Vec {\bfseries Build\+SV} (const t\+Vector \&v)
+\item 
+\Hypertarget{classcSpAlg_a43262ae61c528677f802ec9307ba4941}\label{classcSpAlg_a43262ae61c528677f802ec9307ba4941} 
+static t\+Sp\+Vec {\bfseries Build\+SV} (const t\+Vector \&o, const t\+Vector \&v)
+\item 
+\Hypertarget{classcSpAlg_a1f6d2eed1bc8bee53540c8c027cea7f9}\label{classcSpAlg_a1f6d2eed1bc8bee53540c8c027cea7f9} 
+static t\+Vector {\bfseries Get\+Omega} (const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_afd9eedbb993c799acd13592dd4094135}\label{classcSpAlg_afd9eedbb993c799acd13592dd4094135} 
+static void {\bfseries Set\+Omega} (const t\+Vector \&o, t\+Sp\+Vec \&out\+\_\+sv)
+\item 
+\Hypertarget{classcSpAlg_a3c44fc96b8e8b13f6a208f05bc3db8d4}\label{classcSpAlg_a3c44fc96b8e8b13f6a208f05bc3db8d4} 
+static t\+Vector {\bfseries GetV} (const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_a2aec2530f56f4309e2979796f25d9ec2}\label{classcSpAlg_a2aec2530f56f4309e2979796f25d9ec2} 
+static void {\bfseries SetV} (const t\+Vector \&v, t\+Sp\+Vec \&out\+\_\+sv)
+\item 
+\Hypertarget{classcSpAlg_a657259da411a21199b25d83a3a8c55c2}\label{classcSpAlg_a657259da411a21199b25d83a3a8c55c2} 
+static t\+Sp\+Trans {\bfseries Build\+Trans} ()
+\item 
+\Hypertarget{classcSpAlg_ad1920825dafc5e49504e3eb8c76ff7dd}\label{classcSpAlg_ad1920825dafc5e49504e3eb8c76ff7dd} 
+static t\+Sp\+Trans {\bfseries Build\+Trans} (const t\+Matrix \&E, const t\+Vector \&r)
+\item 
+\Hypertarget{classcSpAlg_a2e6f2b92fdb8175eeea9714fbeeb8c3d}\label{classcSpAlg_a2e6f2b92fdb8175eeea9714fbeeb8c3d} 
+static t\+Sp\+Trans {\bfseries Build\+Trans} (const t\+Vector \&r)
+\item 
+\Hypertarget{classcSpAlg_a32389e7ba628f0a3ca2d22bfc2c114c2}\label{classcSpAlg_a32389e7ba628f0a3ca2d22bfc2c114c2} 
+static t\+Sp\+Trans {\bfseries Mat\+To\+Trans} (const t\+Matrix \&mat)
+\item 
+\Hypertarget{classcSpAlg_ae7917d94b584f240bc2cc71d885043fe}\label{classcSpAlg_ae7917d94b584f240bc2cc71d885043fe} 
+static t\+Matrix {\bfseries Trans\+To\+Mat} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a4c8a11956c9c54fbb44c75c1fa964b23}\label{classcSpAlg_a4c8a11956c9c54fbb44c75c1fa964b23} 
+static t\+Sp\+Mat {\bfseries Build\+Spatial\+MatM} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a02b57a145e63dbd60e38017112dfbc48}\label{classcSpAlg_a02b57a145e63dbd60e38017112dfbc48} 
+static t\+Sp\+Mat {\bfseries Build\+Spatial\+MatF} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a4e45a6062fb70ee99f80f1054da1b51c}\label{classcSpAlg_a4e45a6062fb70ee99f80f1054da1b51c} 
+static t\+Sp\+Trans {\bfseries Inv\+Trans} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a3c3fa40ec253c0bdf9cc2278da8656f6}\label{classcSpAlg_a3c3fa40ec253c0bdf9cc2278da8656f6} 
+static t\+Matrix {\bfseries Get\+Rot} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a86b574f17378398d738354cdaf230b8e}\label{classcSpAlg_a86b574f17378398d738354cdaf230b8e} 
+static void {\bfseries Set\+Rot} (const t\+Matrix \&E, t\+Sp\+Trans \&out\+\_\+X)
+\item 
+\Hypertarget{classcSpAlg_af10329ae21e62779de182b68aec7b437}\label{classcSpAlg_af10329ae21e62779de182b68aec7b437} 
+static t\+Vector {\bfseries Get\+Rad} (const t\+Sp\+Trans \&X)
+\item 
+\Hypertarget{classcSpAlg_a1953224939ec378afd7c0dc1cbc78432}\label{classcSpAlg_a1953224939ec378afd7c0dc1cbc78432} 
+static void {\bfseries Set\+Rad} (const t\+Vector \&r, t\+Sp\+Trans \&out\+\_\+X)
+\item 
+\Hypertarget{classcSpAlg_a665293137b4c80b2dc7cefdb4846a441}\label{classcSpAlg_a665293137b4c80b2dc7cefdb4846a441} 
+static t\+Sp\+Vec {\bfseries Apply\+TransM} (const t\+Sp\+Trans \&X, const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_a2eac0e29676ab3d3304eb88054c8ebe3}\label{classcSpAlg_a2eac0e29676ab3d3304eb88054c8ebe3} 
+static t\+Sp\+Vec {\bfseries Apply\+TransF} (const t\+Sp\+Trans \&X, const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_affb63b4c85b54caa9d8f2b424f9df6fe}\label{classcSpAlg_affb63b4c85b54caa9d8f2b424f9df6fe} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Apply\+TransM} (const t\+Sp\+Trans \&X, const Eigen\+::\+Matrix\+Xd \&sm)
+\item 
+\Hypertarget{classcSpAlg_a41e8d985d15a61958188f1069759cac9}\label{classcSpAlg_a41e8d985d15a61958188f1069759cac9} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Apply\+TransF} (const t\+Sp\+Trans \&X, const Eigen\+::\+Matrix\+Xd \&sm)
+\item 
+\Hypertarget{classcSpAlg_ac69fc761c394f3293492af01291afb37}\label{classcSpAlg_ac69fc761c394f3293492af01291afb37} 
+static t\+Sp\+Vec {\bfseries Apply\+Inv\+TransM} (const t\+Sp\+Trans \&X, const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_ad3393a930828881b0a5f733a43dd66e2}\label{classcSpAlg_ad3393a930828881b0a5f733a43dd66e2} 
+static t\+Sp\+Vec {\bfseries Apply\+Inv\+TransF} (const t\+Sp\+Trans \&X, const t\+Sp\+Vec \&sv)
+\item 
+\Hypertarget{classcSpAlg_a354c79988ac70e5d8b307963006b3062}\label{classcSpAlg_a354c79988ac70e5d8b307963006b3062} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Apply\+Inv\+TransM} (const t\+Sp\+Trans \&X, const Eigen\+::\+Matrix\+Xd \&sm)
+\item 
+\Hypertarget{classcSpAlg_a0a18aa973f69f35ed8c8737dae718be8}\label{classcSpAlg_a0a18aa973f69f35ed8c8737dae718be8} 
+static Eigen\+::\+Matrix\+Xd {\bfseries Apply\+Inv\+TransF} (const t\+Sp\+Trans \&X, const Eigen\+::\+Matrix\+Xd \&sm)
+\item 
+\Hypertarget{classcSpAlg_af9b312afa4d28cf0089a06b1ba622fc3}\label{classcSpAlg_af9b312afa4d28cf0089a06b1ba622fc3} 
+static t\+Sp\+Trans {\bfseries Comp\+Trans} (const t\+Sp\+Trans \&X0, const t\+Sp\+Trans \&X1)
+\item 
+\Hypertarget{classcSpAlg_a8e94bb73f5ef29ba51ca38ecbb230580}\label{classcSpAlg_a8e94bb73f5ef29ba51ca38ecbb230580} 
+static t\+Sp\+Trans {\bfseries Get\+Trans} (const Eigen\+::\+Matrix\+Xd \&trans\+\_\+arr, int j)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSpAlg_a0b4a1644edfbe66fd4b7dfc2302b96d8}\label{classcSpAlg_a0b4a1644edfbe66fd4b7dfc2302b96d8} 
+static const int {\bfseries g\+Sp\+Vec\+Size} = 6
+\item 
+\Hypertarget{classcSpAlg_a4526f85ff8ba49e93beedba362c5395f}\label{classcSpAlg_a4526f85ff8ba49e93beedba362c5395f} 
+static const int {\bfseries g\+SVTrans\+Rows} = 3
+\item 
+\Hypertarget{classcSpAlg_a42102541c7b1854e6ef68e3aa905c4c4}\label{classcSpAlg_a42102541c7b1854e6ef68e3aa905c4c4} 
+static const int {\bfseries g\+SVTrans\+Cols} = 4
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sp\+Alg.\+h\item 
+Sp\+Alg.\+cpp\end{DoxyCompactItemize}

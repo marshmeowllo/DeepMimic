@@ -1,0 +1,21 @@
+\doxysection{Ground\+Builder.\+h}
+\hypertarget{GroundBuilder_8h_source}{}\label{GroundBuilder_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/Ground.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcGroundBuilder}{cGroundBuilder}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ParseParamsJson(\textcolor{keyword}{const}\ std::string\&\ param\_file,\ \mbox{\hyperlink{structcGround_1_1tParams}{cGround::tParams}}\&\ out\_params);}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildGround(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcGround_1_1tParams}{cGround::tParams}}\&\ params,\ std::shared\_ptr<cGround>\&\ out\_ground);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ParseParamsJason(cGround::eType\ type,\ \textcolor{keyword}{const}\ Json::Value\&\ json,\ Eigen::VectorXd\&\ out\_params);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BuildGroundPlane(\textcolor{keyword}{const}\ std::shared\_ptr<cWorld>\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structcGround_1_1tParams}{cGround::tParams}}\&\ params,\ std::shared\_ptr<cGround>\&\ out\_ground);}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

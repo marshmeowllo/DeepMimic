@@ -1,0 +1,186 @@
+\doxysection{c\+Exp\+PDController Class Reference}
+\hypertarget{classcExpPDController}{}\label{classcExpPDController}\index{cExpPDController@{cExpPDController}}
+
+
+Inheritance diagram for c\+Exp\+PDController\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classcExpPDController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Exp\+PDController\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcExpPDController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcExpPDController_a3aac3bb46f672354b1b4991bc5cbb297}\label{classcExpPDController_a3aac3bb46f672354b1b4991bc5cbb297} 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const Eigen\+::\+Matrix\+Xd \&pd\+\_\+params)
+\item 
+virtual void \mbox{\hyperlink{classcExpPDController_a3538dd685f8eebfbfb7788854a8c4835}{Reset}} ()
+\item 
+virtual void \mbox{\hyperlink{classcExpPDController_a6bd8dcb65f38a5916af23cd29d9f9642}{Clear}} ()
+\item 
+virtual void \mbox{\hyperlink{classcExpPDController_a82436261295d0a3082a276bfbc2e7ff8}{Update}} (double time\+\_\+step)
+\item 
+\Hypertarget{classcExpPDController_a6b4a1188fd67fed8f631f6ce415c4736}\label{classcExpPDController_a6b4a1188fd67fed8f631f6ce415c4736} 
+virtual void {\bfseries Update\+Control\+Force} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+\Hypertarget{classcExpPDController_a9912a016a544b802a995f2dd7ee78851}\label{classcExpPDController_a9912a016a544b802a995f2dd7ee78851} 
+virtual int {\bfseries Get\+Num\+Joints} () const
+\item 
+\Hypertarget{classcExpPDController_a3d48af867e3c33544d5bfd6cece8ea8f}\label{classcExpPDController_a3d48af867e3c33544d5bfd6cece8ea8f} 
+virtual int {\bfseries Get\+Num\+Dof} () const
+\item 
+\Hypertarget{classcExpPDController_ad48233e9721ad4c9a72121ce013c553f}\label{classcExpPDController_ad48233e9721ad4c9a72121ce013c553f} 
+virtual void {\bfseries Get\+Target\+Theta} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+theta) const
+\item 
+\Hypertarget{classcExpPDController_ad407d0037eadcf9f3664c10c686b80df}\label{classcExpPDController_ad407d0037eadcf9f3664c10c686b80df} 
+virtual void {\bfseries Set\+Target\+Theta} (int joint\+\_\+id, const Eigen\+::\+Vector\+Xd \&theta)
+\item 
+\Hypertarget{classcExpPDController_a64b2e8cd137c709b7dcbce5a5c8b0604}\label{classcExpPDController_a64b2e8cd137c709b7dcbce5a5c8b0604} 
+virtual void {\bfseries Get\+Target\+Vel} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcExpPDController_a1bb77909133ea92e57d25f166cce68f6}\label{classcExpPDController_a1bb77909133ea92e57d25f166cce68f6} 
+virtual void {\bfseries Set\+Target\+Vel} (int joint\+\_\+id, const Eigen\+::\+Vector\+Xd \&vel)
+\item 
+\Hypertarget{classcExpPDController_ac4d43114fc68227223dd7d8380e9d4b3}\label{classcExpPDController_ac4d43114fc68227223dd7d8380e9d4b3} 
+virtual bool {\bfseries Use\+World\+Coord} (int joint\+\_\+id) const
+\item 
+\Hypertarget{classcExpPDController_ac42410a75d69f98935e12260a3d0d213}\label{classcExpPDController_ac42410a75d69f98935e12260a3d0d213} 
+virtual void {\bfseries Set\+Use\+World\+Coord} (int joint\+\_\+id, bool use)
+\item 
+\Hypertarget{classcExpPDController_ad0c191bd9b4edb057ec53f9767742325}\label{classcExpPDController_ad0c191bd9b4edb057ec53f9767742325} 
+virtual void {\bfseries Set\+Kp} (int joint\+\_\+id, double kp)
+\item 
+\Hypertarget{classcExpPDController_a0607aca7fed32642cec634a3e9ab0fd8}\label{classcExpPDController_a0607aca7fed32642cec634a3e9ab0fd8} 
+virtual void {\bfseries Set\+Kd} (int joint\+\_\+id, double kd)
+\item 
+\Hypertarget{classcExpPDController_a142eb69c9783bc81e05ffdc0c441dcc7}\label{classcExpPDController_a142eb69c9783bc81e05ffdc0c441dcc7} 
+virtual bool {\bfseries Is\+Valid\+PDCtrl} (int joint\+\_\+id) const
+\item 
+\Hypertarget{classcExpPDController_aa994bedd1c9328776e726273d190ef56}\label{classcExpPDController_aa994bedd1c9328776e726273d190ef56} 
+virtual \mbox{\hyperlink{classcPDController}{c\+PDController}} \& {\bfseries Get\+PDCtrl} (int joint\+\_\+id)
+\item 
+\Hypertarget{classcExpPDController_a5a922a0f35ad27f7d3ef52e17c65f509}\label{classcExpPDController_a5a922a0f35ad27f7d3ef52e17c65f509} 
+virtual const \mbox{\hyperlink{classcPDController}{c\+PDController}} \& {\bfseries Get\+PDCtrl} (int joint\+\_\+id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcExpPDController_ab89c0bc19d88877c69b48c32a2afe9e2}\label{classcExpPDController_ab89c0bc19d88877c69b48c32a2afe9e2} 
+virtual void {\bfseries Calc\+Control\+Forces} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+\Hypertarget{classcExpPDController_ae7c4527b7fa9555732d7a09c45a2b9da}\label{classcExpPDController_ae7c4527b7fa9555732d7a09c45a2b9da} 
+virtual void {\bfseries Apply\+Control\+Forces} (const Eigen\+::\+Vector\+Xd \&tau)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries Parse\+Params} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcExpPDController_a8d86c696ac6dfc384de1dc585f6aae3f}\label{classcExpPDController_a8d86c696ac6dfc384de1dc585f6aae3f} 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{classcPDController}{c\+PDController}} $>$ {\bfseries m\+PDCtrls}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+e\+Mode {\bfseries m\+Mode}
+\item 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcExpPDController_a6bd8dcb65f38a5916af23cd29d9f9642}\label{classcExpPDController_a6bd8dcb65f38a5916af23cd29d9f9642} 
+\index{cExpPDController@{cExpPDController}!Clear@{Clear}}
+\index{Clear@{Clear}!cExpPDController@{cExpPDController}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void c\+Exp\+PDController\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcController}{c\+Controller}}.
+
+\Hypertarget{classcExpPDController_a3538dd685f8eebfbfb7788854a8c4835}\label{classcExpPDController_a3538dd685f8eebfbfb7788854a8c4835} 
+\index{cExpPDController@{cExpPDController}!Reset@{Reset}}
+\index{Reset@{Reset}!cExpPDController@{cExpPDController}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void c\+Exp\+PDController\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcController}{c\+Controller}}.
+
+\Hypertarget{classcExpPDController_a82436261295d0a3082a276bfbc2e7ff8}\label{classcExpPDController_a82436261295d0a3082a276bfbc2e7ff8} 
+\index{cExpPDController@{cExpPDController}!Update@{Update}}
+\index{Update@{Update}!cExpPDController@{cExpPDController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void c\+Exp\+PDController\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcController}{c\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Exp\+PDController.\+h\item 
+Exp\+PDController.\+cpp\end{DoxyCompactItemize}

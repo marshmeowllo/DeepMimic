@@ -15,12 +15,13 @@ of motion skills from mocap data.
 
 ## Dependencies
 
-```bash
-sudo apt install libgl1-mesa-dev libx11-dev libxrandr-dev libxi-dev
-sudo apt install mesa-utils
-sudo apt install clang
-sudo apt install cmake
-```
+``sudo apt install libgl1-mesa-dev libx11-dev libxrandr-dev libxi-dev``
+
+``sudo apt install mesa-utils``
+
+``sudo apt install clang``
+
+``sudo apt install cmake``
 
 C++:
 

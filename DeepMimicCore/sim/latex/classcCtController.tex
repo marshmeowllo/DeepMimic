@@ -1,0 +1,530 @@
+\doxysection{c\+Ct\+Controller Class Reference}
+\hypertarget{classcCtController}{}\label{classcCtController}\index{cCtController@{cCtController}}
+
+
+Inheritance diagram for c\+Ct\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classcCtController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Ct\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcCtController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtController_addb655cad5139503a2b4a59c7e9d16ed}\label{classcCtController_addb655cad5139503a2b4a59c7e9d16ed} 
+virtual void {\bfseries Set\+Update\+Rate} (double rate)
+\item 
+\Hypertarget{classcCtController_a41cb76afa9594631297d47452a38fd8c}\label{classcCtController_a41cb76afa9594631297d47452a38fd8c} 
+virtual double {\bfseries Get\+Update\+Rate} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ab96a2ef7f43c0fbd0824ae5a0ee84d92}{Update\+Calc\+Tau}} (double timestep, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+\Hypertarget{classcCtController_a8e79f9bf67d79b9d346daee9fa470d1a}\label{classcCtController_a8e79f9bf67d79b9d346daee9fa470d1a} 
+virtual double {\bfseries Get\+Cycle\+Period} () const
+\item 
+\Hypertarget{classcCtController_a2656241bb4dfd565c29328e72dd673f7}\label{classcCtController_a2656241bb4dfd565c29328e72dd673f7} 
+virtual void {\bfseries Set\+Cycle\+Period} (double period)
+\item 
+\Hypertarget{classcCtController_aab9a90e44859c1bc9ebd042cd76c7b04}\label{classcCtController_aab9a90e44859c1bc9ebd042cd76c7b04} 
+virtual void {\bfseries Set\+Init\+Time} (double time)
+\item 
+\Hypertarget{classcCtController_a90930e2db3a4ff77b1a987c3e0f14c01}\label{classcCtController_a90930e2db3a4ff77b1a987c3e0f14c01} 
+virtual double {\bfseries Get\+Phase} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_acf8ace170c0b403bfbe4e1cb47d40038}{Get\+State\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a7333caae2fa7a33082dae8eaa32e2a25}{Get\+Action\+Size}} () const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ac61be6284453233129b31c3edb55f9c5}{Build\+State\+Offset\+Scale}} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ab96786775c14e9b00adc55412d333b9f}{Build\+Action\+Bounds}} (Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a9de4b4509192075c239845c63ec305e6}{Build\+Action\+Offset\+Scale}} (Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_ae81e93efa6df52657b149828fba06213}{Build\+State\+Norm\+Groups}} (Eigen\+::\+Vector\+Xi \&out\+\_\+groups) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a3add308061c76bcd016e0b972d51c72d}{Record\+State}} (Eigen\+::\+Vector\+Xd \&out\+\_\+state)
+\item 
+virtual std\+::string \mbox{\hyperlink{classcCtController_a2564da8b0e19463b8247ebee969fb67a}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const std\+::string \&param\+\_\+file)
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_a81e3eab5909f58a8ea392fad2eb5f585}{Reset}} ()
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_a67135171340634c65b1c2395cb5dc060}{Clear}} ()
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_ad3645072b817da8f199e060f0492aa6a}{Update}} (double timestep)
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_af04d9ac7f697c4c6ca0048dbd0ae63a0}{Post\+Update}} (double timestep)
+\item 
+virtual void {\bfseries Update\+Apply\+Tau} (const Eigen\+::\+Vector\+Xd \&tau)
+\item 
+virtual void {\bfseries Set\+Ground} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcGround}{c\+Ground}} $>$ ground)
+\item 
+virtual bool \mbox{\hyperlink{classcDeepMimicCharController_a0f9e7a9af8a6a0471754f839c9f6f412}{Need\+New\+Action}} () const
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_ac974ff5245d2b5d35d4f4d9be9c7064b}{Apply\+Action}} (const Eigen\+::\+Vector\+Xd \&action)
+\item 
+virtual void \mbox{\hyperlink{classcDeepMimicCharController_a808be0ab586cf3588b4a05dc64870045}{Record\+Action}} (Eigen\+::\+Vector\+Xd \&out\+\_\+action) const
+\item 
+virtual e\+Action\+Space \mbox{\hyperlink{classcDeepMimicCharController_ab88c1dba20d9b07930ffbe3e8f8ae495}{Get\+Action\+Space}} () const
+\item 
+virtual double \mbox{\hyperlink{classcDeepMimicCharController_a75693515001a53c43445d5dc27e2e1e6}{Get\+Reward\+Min}} () const
+\item 
+virtual double \mbox{\hyperlink{classcDeepMimicCharController_af80d52e124a80c689f087a80276b21cc}{Get\+Reward\+Max}} () const
+\item 
+virtual void {\bfseries Set\+View\+Dist\+Min} (double dist)
+\item 
+virtual void {\bfseries Set\+View\+Dist\+Max} (double dist)
+\item 
+virtual double {\bfseries Get\+View\+Dist\+Min} () const
+\item 
+virtual double {\bfseries Get\+View\+Dist\+Max} () const
+\item 
+virtual void {\bfseries Get\+View\+Bound} (t\+Vector \&out\+\_\+min, t\+Vector \&out\+\_\+max) const
+\item 
+virtual double {\bfseries Get\+Prev\+Action\+Time} () const
+\item 
+virtual const t\+Vector \& {\bfseries Get\+Prev\+Action\+COM} () const
+\item 
+virtual double {\bfseries Get\+Time} () const
+\item 
+virtual const Eigen\+::\+Vector\+Xd \& {\bfseries Get\+Tau} () const
+\item 
+virtual const c\+Circular\+Buffer$<$ double $>$ \& {\bfseries Get\+Val\+Log} () const
+\item 
+virtual void {\bfseries Log\+Val} (double val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries Get\+Num\+Actions} () const
+\item 
+virtual void {\bfseries Handle\+Pose\+Reset} ()
+\item 
+virtual void {\bfseries Handle\+Vel\+Reset} ()
+\item 
+virtual int {\bfseries Num\+Children} () const
+\item 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}} $>$ \& {\bfseries Get\+Child} (int i) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcCtController_aaf338d3dce07380adeb2bb11922fc84a}{Reset\+Params}} ()
+\item 
+\Hypertarget{classcCtController_a6ab25d9b8cd55276efaae754b9cc1c6d}\label{classcCtController_a6ab25d9b8cd55276efaae754b9cc1c6d} 
+virtual int {\bfseries Get\+Pos\+Feature\+Dim} () const
+\item 
+\Hypertarget{classcCtController_a1fb234a6bc9450106ff022c0ece84e16}\label{classcCtController_a1fb234a6bc9450106ff022c0ece84e16} 
+virtual int {\bfseries Get\+Rot\+Feature\+Dim} () const
+\item 
+\Hypertarget{classcCtController_a33fbee9d77c495edb5205c227f7090f8}\label{classcCtController_a33fbee9d77c495edb5205c227f7090f8} 
+virtual int {\bfseries Get\+Vel\+Feature\+Dim} () const
+\item 
+\Hypertarget{classcCtController_a687adb9c34f3ed93c496041512ec8c43}\label{classcCtController_a687adb9c34f3ed93c496041512ec8c43} 
+virtual int {\bfseries Get\+Ang\+Vel\+Feature\+Dim} () const
+\item 
+virtual bool \mbox{\hyperlink{classcCtController_a1ce84a55036a1d0e9d2b2c99d8600012}{Parse\+Params}} (const Json\+::\+Value \&json)
+\item 
+virtual void \mbox{\hyperlink{classcCtController_aa34772d1b0c2e6b0908f84fef690b65b}{Init\+Resources}} ()
+\item 
+\Hypertarget{classcCtController_a1dc0fd9df8249e0be26c43561b9f977d}\label{classcCtController_a1dc0fd9df8249e0be26c43561b9f977d} 
+virtual void {\bfseries Build\+Ctrl\+Param\+Offset} (Eigen\+::\+Vector\+Xi \&out\+\_\+offset) const
+\item 
+\Hypertarget{classcCtController_a669300910288b43fdf4cc641a5912bd6}\label{classcCtController_a669300910288b43fdf4cc641a5912bd6} 
+virtual void {\bfseries Update\+Build\+Tau} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+virtual bool \mbox{\hyperlink{classcCtController_ace12dadeaf5372b917d3e4bcfcabb684}{Check\+Need\+New\+Action}} (double timestep) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a98caf16b0fef7c0523231deb0314c8be}{New\+Action\+Update}} ()
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a00120745a9b64465843a7b504ddbcf82}{Get\+State\+Pose\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a6db4c635dd1a03dbbf89a2e29731859d}{Get\+State\+Vel\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classcCtController_a4ee75fa388511da675e5e8680ec57afa}{Get\+State\+Pose\+Offset}} () const
+\item 
+\Hypertarget{classcCtController_af0b04a91b65d078e9e49cd37e2f9e627}\label{classcCtController_af0b04a91b65d078e9e49cd37e2f9e627} 
+virtual int {\bfseries Get\+State\+Phase\+Size} () const
+\item 
+\Hypertarget{classcCtController_a9f1cdf3911123b3902a641517b43e9b2}\label{classcCtController_a9f1cdf3911123b3902a641517b43e9b2} 
+virtual int {\bfseries Get\+State\+Phase\+Offset} () const
+\item 
+\Hypertarget{classcCtController_a64b7a2297542f288f974fb9ff437bb1c}\label{classcCtController_a64b7a2297542f288f974fb9ff437bb1c} 
+virtual int {\bfseries Get\+Action\+Ctrl\+Offset} () const
+\item 
+\Hypertarget{classcCtController_a8832be5ca0d3e0d1116d0117093d6a2f}\label{classcCtController_a8832be5ca0d3e0d1116d0117093d6a2f} 
+virtual int {\bfseries Get\+Action\+Ctrl\+Size} () const
+\item 
+\Hypertarget{classcCtController_aa3726ed85255fddf30e81ea9dedba082}\label{classcCtController_aa3726ed85255fddf30e81ea9dedba082} 
+virtual int {\bfseries Get\+Ctrl\+Param\+Offset} (int joint\+\_\+id) const
+\item 
+\Hypertarget{classcCtController_a88c9fcb4ff5431a9bdb92d0d44180e62}\label{classcCtController_a88c9fcb4ff5431a9bdb92d0d44180e62} 
+virtual int {\bfseries Get\+Ctrl\+Param\+Size} (int joint\+\_\+id) const
+\item 
+\Hypertarget{classcCtController_a92b18b16bd9f9636da1c50120a5bb9e8}\label{classcCtController_a92b18b16bd9f9636da1c50120a5bb9e8} 
+virtual void {\bfseries Build\+State\+Phase\+Offset\+Scale} (Eigen\+::\+Vector\+Xd \&phase\+\_\+offset, Eigen\+::\+Vector\+Xd \&phase\+\_\+scale) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a696c4c6d34d0500a6ff83fc359ec680c}{Build\+State\+Pose}} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+virtual void \mbox{\hyperlink{classcCtController_a7493cf02844e1fe4519b939d963df0c9}{Build\+State\+Vel}} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcCtController_a9d70c43925d330d22676617254f84290}\label{classcCtController_a9d70c43925d330d22676617254f84290} 
+virtual void {\bfseries Build\+State\+Phase} (Eigen\+::\+Vector\+Xd \&out\+\_\+phase) const
+\item 
+\Hypertarget{classcCtController_adef9a4dcc98c4f33f635643628ea281e}\label{classcCtController_adef9a4dcc98c4f33f635643628ea281e} 
+virtual void {\bfseries Build\+Joint\+Action\+Bounds} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+min, Eigen\+::\+Vector\+Xd \&out\+\_\+max) const
+\item 
+\Hypertarget{classcCtController_af8e6f2e63bf24010a53cca534e24e58f}\label{classcCtController_af8e6f2e63bf24010a53cca534e24e58f} 
+virtual void {\bfseries Build\+Joint\+Action\+Offset\+Scale} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+offset, Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+\Hypertarget{classcCtController_aa84338f3307bc7c2dc128c35b9ddf8f2}\label{classcCtController_aa84338f3307bc7c2dc128c35b9ddf8f2} 
+virtual int {\bfseries Retarget\+Joint\+ID} (int joint\+\_\+id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init\+Action} ()
+\item 
+virtual void {\bfseries Init\+Tau} ()
+\item 
+virtual int {\bfseries Get\+Pos\+Dim} () const
+\item 
+virtual void {\bfseries Handle\+New\+Action} ()
+\item 
+virtual void {\bfseries Post\+Process\+Action} (Eigen\+::\+Vector\+Xd \&out\+\_\+action) const
+\item 
+virtual bool {\bfseries Has\+Ground} () const
+\item 
+virtual double {\bfseries Sample\+Ground\+Height} (const t\+Vector \&pos) const
+\item 
+virtual int {\bfseries Get\+State\+Vel\+Offset} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcCtController_a16849bc0a2f7d39d0b6516ba2a7cb6c3}\label{classcCtController_a16849bc0a2f7d39d0b6516ba2a7cb6c3} 
+double {\bfseries m\+Update\+Rate}
+\item 
+\Hypertarget{classcCtController_ab81f04a3714b56dea18c01feac5053dd}\label{classcCtController_ab81f04a3714b56dea18c01feac5053dd} 
+double {\bfseries m\+Cycle\+Period}
+\item 
+\Hypertarget{classcCtController_a16ec6dacafbc2da63187abbffe7fccda}\label{classcCtController_a16ec6dacafbc2da63187abbffe7fccda} 
+bool {\bfseries m\+Enable\+Phase\+Input}
+\item 
+\Hypertarget{classcCtController_a9f7d79d7686202742b62cdf6c48f6d77}\label{classcCtController_a9f7d79d7686202742b62cdf6c48f6d77} 
+bool {\bfseries m\+Record\+World\+Root\+Pos}
+\item 
+\Hypertarget{classcCtController_ad8f3d37e3e47d6eca477489c08d600f1}\label{classcCtController_ad8f3d37e3e47d6eca477489c08d600f1} 
+bool {\bfseries m\+Record\+World\+Root\+Rot}
+\item 
+\Hypertarget{classcCtController_ade3adce4714344683974ebe32ed81c19}\label{classcCtController_ade3adce4714344683974ebe32ed81c19} 
+double {\bfseries m\+Phase\+Offset}
+\item 
+\Hypertarget{classcCtController_a9ee5fea1baaca2186fef33c2ce08e383}\label{classcCtController_a9ee5fea1baaca2186fef33c2ce08e383} 
+double {\bfseries m\+Init\+Time\+Offset}
+\item 
+\Hypertarget{classcCtController_a6a5595f6ff49115753f0552a281d282c}\label{classcCtController_a6a5595f6ff49115753f0552a281d282c} 
+int {\bfseries m\+Action\+Size}
+\item 
+\Hypertarget{classcCtController_a4c402a7358a82be5ba4d226f7a583ce2}\label{classcCtController_a4c402a7358a82be5ba4d226f7a583ce2} 
+Eigen\+::\+Vector\+Xi {\bfseries m\+Ctrl\+Param\+Offset}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries m\+Time}
+\item 
+bool {\bfseries m\+Need\+New\+Action}
+\item 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Action}
+\item 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Tau}
+\item 
+double {\bfseries m\+View\+Dist\+Min}
+\item 
+double {\bfseries m\+View\+Dist\+Max}
+\item 
+int {\bfseries m\+Pos\+Dim}
+\item 
+double {\bfseries m\+Prev\+Action\+Time}
+\item 
+t\+Vector {\bfseries m\+Prev\+Action\+COM}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcGround}{c\+Ground}} $>$ {\bfseries m\+Ground}
+\item 
+c\+Circular\+Buffer$<$ double $>$ {\bfseries m\+Val\+Log}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+e\+Mode {\bfseries m\+Mode}
+\item 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries g\+Norm\+Group\+Single} = 0
+\item 
+static const int {\bfseries g\+Norm\+Group\+None} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcCtController_ab96786775c14e9b00adc55412d333b9f}\label{classcCtController_ab96786775c14e9b00adc55412d333b9f} 
+\index{cCtController@{cCtController}!BuildActionBounds@{BuildActionBounds}}
+\index{BuildActionBounds@{BuildActionBounds}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildActionBounds()}{BuildActionBounds()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+Action\+Bounds (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+min,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+max }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a9de4b4509192075c239845c63ec305e6}\label{classcCtController_a9de4b4509192075c239845c63ec305e6} 
+\index{cCtController@{cCtController}!BuildActionOffsetScale@{BuildActionOffsetScale}}
+\index{BuildActionOffsetScale@{BuildActionOffsetScale}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildActionOffsetScale()}{BuildActionOffsetScale()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+Action\+Offset\+Scale (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+offset,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+scale }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_ae81e93efa6df52657b149828fba06213}\label{classcCtController_ae81e93efa6df52657b149828fba06213} 
+\index{cCtController@{cCtController}!BuildStateNormGroups@{BuildStateNormGroups}}
+\index{BuildStateNormGroups@{BuildStateNormGroups}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildStateNormGroups()}{BuildStateNormGroups()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+State\+Norm\+Groups (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xi \&}]{out\+\_\+groups }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_ac61be6284453233129b31c3edb55f9c5}\label{classcCtController_ac61be6284453233129b31c3edb55f9c5} 
+\index{cCtController@{cCtController}!BuildStateOffsetScale@{BuildStateOffsetScale}}
+\index{BuildStateOffsetScale@{BuildStateOffsetScale}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildStateOffsetScale()}{BuildStateOffsetScale()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+State\+Offset\+Scale (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+offset,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+scale }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a696c4c6d34d0500a6ff83fc359ec680c}\label{classcCtController_a696c4c6d34d0500a6ff83fc359ec680c} 
+\index{cCtController@{cCtController}!BuildStatePose@{BuildStatePose}}
+\index{BuildStatePose@{BuildStatePose}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildStatePose()}{BuildStatePose()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+State\+Pose (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+pose }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a7493cf02844e1fe4519b939d963df0c9}\label{classcCtController_a7493cf02844e1fe4519b939d963df0c9} 
+\index{cCtController@{cCtController}!BuildStateVel@{BuildStateVel}}
+\index{BuildStateVel@{BuildStateVel}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{BuildStateVel()}{BuildStateVel()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Build\+State\+Vel (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+vel }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_ace12dadeaf5372b917d3e4bcfcabb684}\label{classcCtController_ace12dadeaf5372b917d3e4bcfcabb684} 
+\index{cCtController@{cCtController}!CheckNeedNewAction@{CheckNeedNewAction}}
+\index{CheckNeedNewAction@{CheckNeedNewAction}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{CheckNeedNewAction()}{CheckNeedNewAction()}}
+{\footnotesize\ttfamily bool c\+Ct\+Controller\+::\+Check\+Need\+New\+Action (\begin{DoxyParamCaption}\item[{double}]{timestep }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a7333caae2fa7a33082dae8eaa32e2a25}\label{classcCtController_a7333caae2fa7a33082dae8eaa32e2a25} 
+\index{cCtController@{cCtController}!GetActionSize@{GetActionSize}}
+\index{GetActionSize@{GetActionSize}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetActionSize()}{GetActionSize()}}
+{\footnotesize\ttfamily int c\+Ct\+Controller\+::\+Get\+Action\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a2564da8b0e19463b8247ebee969fb67a}\label{classcCtController_a2564da8b0e19463b8247ebee969fb67a} 
+\index{cCtController@{cCtController}!GetName@{GetName}}
+\index{GetName@{GetName}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string c\+Ct\+Controller\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcCharController}{c\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a4ee75fa388511da675e5e8680ec57afa}\label{classcCtController_a4ee75fa388511da675e5e8680ec57afa} 
+\index{cCtController@{cCtController}!GetStatePoseOffset@{GetStatePoseOffset}}
+\index{GetStatePoseOffset@{GetStatePoseOffset}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetStatePoseOffset()}{GetStatePoseOffset()}}
+{\footnotesize\ttfamily int c\+Ct\+Controller\+::\+Get\+State\+Pose\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a00120745a9b64465843a7b504ddbcf82}\label{classcCtController_a00120745a9b64465843a7b504ddbcf82} 
+\index{cCtController@{cCtController}!GetStatePoseSize@{GetStatePoseSize}}
+\index{GetStatePoseSize@{GetStatePoseSize}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetStatePoseSize()}{GetStatePoseSize()}}
+{\footnotesize\ttfamily int c\+Ct\+Controller\+::\+Get\+State\+Pose\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_acf8ace170c0b403bfbe4e1cb47d40038}\label{classcCtController_acf8ace170c0b403bfbe4e1cb47d40038} 
+\index{cCtController@{cCtController}!GetStateSize@{GetStateSize}}
+\index{GetStateSize@{GetStateSize}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetStateSize()}{GetStateSize()}}
+{\footnotesize\ttfamily int c\+Ct\+Controller\+::\+Get\+State\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a6db4c635dd1a03dbbf89a2e29731859d}\label{classcCtController_a6db4c635dd1a03dbbf89a2e29731859d} 
+\index{cCtController@{cCtController}!GetStateVelSize@{GetStateVelSize}}
+\index{GetStateVelSize@{GetStateVelSize}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{GetStateVelSize()}{GetStateVelSize()}}
+{\footnotesize\ttfamily int c\+Ct\+Controller\+::\+Get\+State\+Vel\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_aa34772d1b0c2e6b0908f84fef690b65b}\label{classcCtController_aa34772d1b0c2e6b0908f84fef690b65b} 
+\index{cCtController@{cCtController}!InitResources@{InitResources}}
+\index{InitResources@{InitResources}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{InitResources()}{InitResources()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Init\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a98caf16b0fef7c0523231deb0314c8be}\label{classcCtController_a98caf16b0fef7c0523231deb0314c8be} 
+\index{cCtController@{cCtController}!NewActionUpdate@{NewActionUpdate}}
+\index{NewActionUpdate@{NewActionUpdate}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{NewActionUpdate()}{NewActionUpdate()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+New\+Action\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a1ce84a55036a1d0e9d2b2c99d8600012}\label{classcCtController_a1ce84a55036a1d0e9d2b2c99d8600012} 
+\index{cCtController@{cCtController}!ParseParams@{ParseParams}}
+\index{ParseParams@{ParseParams}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{ParseParams()}{ParseParams()}}
+{\footnotesize\ttfamily bool c\+Ct\+Controller\+::\+Parse\+Params (\begin{DoxyParamCaption}\item[{const Json\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_a3add308061c76bcd016e0b972d51c72d}\label{classcCtController_a3add308061c76bcd016e0b972d51c72d} 
+\index{cCtController@{cCtController}!RecordState@{RecordState}}
+\index{RecordState@{RecordState}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{RecordState()}{RecordState()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Record\+State (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_aaf338d3dce07380adeb2bb11922fc84a}\label{classcCtController_aaf338d3dce07380adeb2bb11922fc84a} 
+\index{cCtController@{cCtController}!ResetParams@{ResetParams}}
+\index{ResetParams@{ResetParams}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{ResetParams()}{ResetParams()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Reset\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+\Hypertarget{classcCtController_ab96a2ef7f43c0fbd0824ae5a0ee84d92}\label{classcCtController_ab96a2ef7f43c0fbd0824ae5a0ee84d92} 
+\index{cCtController@{cCtController}!UpdateCalcTau@{UpdateCalcTau}}
+\index{UpdateCalcTau@{UpdateCalcTau}!cCtController@{cCtController}}
+\doxysubsubsection{\texorpdfstring{UpdateCalcTau()}{UpdateCalcTau()}}
+{\footnotesize\ttfamily void c\+Ct\+Controller\+::\+Update\+Calc\+Tau (\begin{DoxyParamCaption}\item[{double}]{timestep,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+tau }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcDeepMimicCharController}{c\+Deep\+Mimic\+Char\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ct\+Controller.\+h\item 
+Ct\+Controller.\+cpp\end{DoxyCompactItemize}

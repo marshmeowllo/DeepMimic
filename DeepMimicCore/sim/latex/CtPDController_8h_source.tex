@@ -1,0 +1,45 @@
+\doxysection{Ct\+PDController.\+h}
+\hypertarget{CtPDController_8h_source}{}\label{CtPDController_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sim/CtController.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}sim/ImpPDController.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcCtPDController}{cCtPDController}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcCtController}{cCtController}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00010\ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classcCtPDController}{cCtPDController}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcCtPDController}{\string~cCtPDController}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Clear();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetGravity(\textcolor{keyword}{const}\ tVector\&\ gravity);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ GetName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classcImpPDController}{cImpPDController}}\ mPDCtrl;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ tVector\ mGravity;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ ParseParams(\textcolor{keyword}{const}\ Json::Value\&\ json);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCtrlParamSize(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ GetMaxPDExpVal()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateBuildTau(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetupPDControllers(\textcolor{keyword}{const}\ Json::Value\&\ json,\ \textcolor{keyword}{const}\ tVector\&\ gravity);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdatePDCtrls(\textcolor{keywordtype}{double}\ time\_step,\ Eigen::VectorXd\&\ out\_tau);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ApplyAction(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ action);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointActionBounds(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_min,\ Eigen::VectorXd\&\ out\_max)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BuildJointActionOffsetScale(\textcolor{keywordtype}{int}\ joint\_id,\ Eigen::VectorXd\&\ out\_offset,\ Eigen::VectorXd\&\ out\_scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ConvertActionToTargetPose(\textcolor{keywordtype}{int}\ joint\_id,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ action\_params,\ Eigen::VectorXd\&\ out\_theta)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ cKinTree::eJointType\ GetJointType(\textcolor{keywordtype}{int}\ joint\_id)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPDTargets(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ targets);}
+\DoxyCodeLine{00040\ \};}
+
+\end{DoxyCode}

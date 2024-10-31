@@ -1,0 +1,284 @@
+\doxysection{c\+Sim\+Joint Class Reference}
+\hypertarget{classcSimJoint}{}\label{classcSimJoint}\index{cSimJoint@{cSimJoint}}
+
+
+Collaboration diagram for c\+Sim\+Joint\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classcSimJoint__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcSimJoint_1_1tParams}{t\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimJoint_a695ba6ad0b72907f88a5e9973e6d307a}\label{classcSimJoint_a695ba6ad0b72907f88a5e9973e6d307a} 
+virtual void {\bfseries Init} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ \&parent\+\_\+link, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ \&child\+\_\+link, const \mbox{\hyperlink{structcSimJoint_1_1tParams}{t\+Params}} \&params)
+\item 
+\Hypertarget{classcSimJoint_a674b9f841111f4ba5088c550c56536b0}\label{classcSimJoint_a674b9f841111f4ba5088c550c56536b0} 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+\Hypertarget{classcSimJoint_a199ee5ec7fb710c688cd874f7fb051ee}\label{classcSimJoint_a199ee5ec7fb710c688cd874f7fb051ee} 
+virtual int {\bfseries Get\+ID} () const
+\item 
+\Hypertarget{classcSimJoint_a41b8677844eb4974df177ad871b3b5a3}\label{classcSimJoint_a41b8677844eb4974df177ad871b3b5a3} 
+virtual void {\bfseries Set\+ID} (int id)
+\item 
+\Hypertarget{classcSimJoint_a4b26fdef1048fcd9c9711a648c13ca1f}\label{classcSimJoint_a4b26fdef1048fcd9c9711a648c13ca1f} 
+virtual c\+Kin\+Tree\+::e\+Joint\+Type {\bfseries Get\+Type} () const
+\item 
+\Hypertarget{classcSimJoint_aa016a7e4f93057834b02acf9fd62dc08}\label{classcSimJoint_aa016a7e4f93057834b02acf9fd62dc08} 
+virtual void {\bfseries Calc\+World\+Rotation} (t\+Vector \&out\+\_\+axis, double \&out\+\_\+theta) const
+\item 
+\Hypertarget{classcSimJoint_adc3e64326d8fb19f434c9d104e51095b}\label{classcSimJoint_adc3e64326d8fb19f434c9d104e51095b} 
+virtual t\+Quaternion {\bfseries Calc\+World\+Rotation} () const
+\item 
+\Hypertarget{classcSimJoint_af84d3879a4bcbd31fadabdd822067f73}\label{classcSimJoint_af84d3879a4bcbd31fadabdd822067f73} 
+virtual t\+Matrix {\bfseries Build\+World\+Trans} () const
+\item 
+\Hypertarget{classcSimJoint_ac2001064cc1e05c46fa6b898fa95e32b}\label{classcSimJoint_ac2001064cc1e05c46fa6b898fa95e32b} 
+virtual void {\bfseries Add\+Tau} (const Eigen\+::\+Vector\+Xd \&tau)
+\item 
+\Hypertarget{classcSimJoint_abc1bb1f495ff19635ccd979280b98c46}\label{classcSimJoint_abc1bb1f495ff19635ccd979280b98c46} 
+virtual const c\+Sp\+Alg\+::t\+Sp\+Vec \& {\bfseries Get\+Tau} () const
+\item 
+\Hypertarget{classcSimJoint_a83b7a43aba439ff5f2c90696b86ae663}\label{classcSimJoint_a83b7a43aba439ff5f2c90696b86ae663} 
+virtual void {\bfseries Apply\+Tau} ()
+\item 
+\Hypertarget{classcSimJoint_a72caf0d260074f41861c6d50738c655b}\label{classcSimJoint_a72caf0d260074f41861c6d50738c655b} 
+virtual void {\bfseries Clear\+Tau} ()
+\item 
+\Hypertarget{classcSimJoint_aaba80899156fdc9c081233e3b6210039}\label{classcSimJoint_aaba80899156fdc9c081233e3b6210039} 
+virtual t\+Vector {\bfseries Calc\+World\+Pos} () const
+\item 
+\Hypertarget{classcSimJoint_ae206f8d2c6246507192a7d561078b120}\label{classcSimJoint_ae206f8d2c6246507192a7d561078b120} 
+virtual t\+Vector {\bfseries Calc\+World\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+\Hypertarget{classcSimJoint_a0efd463b21a43f07181e8537b9a93264}\label{classcSimJoint_a0efd463b21a43f07181e8537b9a93264} 
+virtual t\+Vector {\bfseries Calc\+World\+Vel} () const
+\item 
+\Hypertarget{classcSimJoint_ab59c7655a9f21b4eceb7718af40408e9}\label{classcSimJoint_ab59c7655a9f21b4eceb7718af40408e9} 
+virtual t\+Vector {\bfseries Calc\+World\+Vel} (const t\+Vector \&local\+\_\+pos) const
+\item 
+\Hypertarget{classcSimJoint_a7cee1bf38150d7582898b28d3ab8e04c}\label{classcSimJoint_a7cee1bf38150d7582898b28d3ab8e04c} 
+virtual t\+Vector {\bfseries Calc\+World\+Ang\+Vel} () const
+\item 
+\Hypertarget{classcSimJoint_a138eb67ca9534ed8f3a861bdd4865c46}\label{classcSimJoint_a138eb67ca9534ed8f3a861bdd4865c46} 
+virtual double {\bfseries Get\+Torque\+Limit} () const
+\item 
+\Hypertarget{classcSimJoint_a88fa5248b20518d70c8c30cb80e2c706}\label{classcSimJoint_a88fa5248b20518d70c8c30cb80e2c706} 
+virtual double {\bfseries Get\+Force\+Limit} () const
+\item 
+\Hypertarget{classcSimJoint_a393b093d116101cbdd92f8d04908af46}\label{classcSimJoint_a393b093d116101cbdd92f8d04908af46} 
+virtual void {\bfseries Set\+Torque\+Limit} (double lim)
+\item 
+\Hypertarget{classcSimJoint_afb81cf5bb5619f3ddd31643c7b01f062}\label{classcSimJoint_afb81cf5bb5619f3ddd31643c7b01f062} 
+virtual void {\bfseries Set\+Force\+Limit} (double lim)
+\item 
+\Hypertarget{classcSimJoint_a0a6d80ab34fde67e22fbe6cf5a79b42d}\label{classcSimJoint_a0a6d80ab34fde67e22fbe6cf5a79b42d} 
+virtual const t\+Vector \& {\bfseries Get\+Parent\+Pos} () const
+\item 
+\Hypertarget{classcSimJoint_a782fc698f3d3d5d50d1d09a6e88e5b2b}\label{classcSimJoint_a782fc698f3d3d5d50d1d09a6e88e5b2b} 
+virtual const t\+Vector \& {\bfseries Get\+Child\+Pos} () const
+\item 
+\Hypertarget{classcSimJoint_a5deda522c66f16c9aa11fdd80ab642d7}\label{classcSimJoint_a5deda522c66f16c9aa11fdd80ab642d7} 
+virtual const t\+Quaternion \& {\bfseries Get\+Parent\+Rot} () const
+\item 
+\Hypertarget{classcSimJoint_a559e5c8b1c908581b08ec2ca725612aa}\label{classcSimJoint_a559e5c8b1c908581b08ec2ca725612aa} 
+virtual const t\+Quaternion \& {\bfseries Get\+Child\+Rot} () const
+\item 
+\Hypertarget{classcSimJoint_aeca7bfa2654a84a5cb3335a4e3183705}\label{classcSimJoint_aeca7bfa2654a84a5cb3335a4e3183705} 
+virtual t\+Matrix {\bfseries Build\+Joint\+Child\+Trans} () const
+\item 
+\Hypertarget{classcSimJoint_aa07c6dc91e5d4499d4b91af5ffea5cd1}\label{classcSimJoint_aa07c6dc91e5d4499d4b91af5ffea5cd1} 
+virtual t\+Matrix {\bfseries Build\+Joint\+Parent\+Trans} () const
+\item 
+\Hypertarget{classcSimJoint_ac93926144507f9fc0af9ab9146add918}\label{classcSimJoint_ac93926144507f9fc0af9ab9146add918} 
+virtual t\+Vector {\bfseries Calc\+Axis\+World} () const
+\item 
+\Hypertarget{classcSimJoint_a58ad1358d14cd56494e328fc6a652963}\label{classcSimJoint_a58ad1358d14cd56494e328fc6a652963} 
+virtual t\+Vector {\bfseries Get\+Axis\+Rel} () const
+\item 
+\Hypertarget{classcSimJoint_a20b61e516dbcd716cc5fef7522bd7d9c}\label{classcSimJoint_a20b61e516dbcd716cc5fef7522bd7d9c} 
+virtual bool {\bfseries Has\+Parent} () const
+\item 
+\Hypertarget{classcSimJoint_acc56c9ae7bfa81c76ab92928535e2030}\label{classcSimJoint_acc56c9ae7bfa81c76ab92928535e2030} 
+virtual bool {\bfseries Has\+Child} () const
+\item 
+\Hypertarget{classcSimJoint_aeb46f2cabf605633feaa0763231c9b39}\label{classcSimJoint_aeb46f2cabf605633feaa0763231c9b39} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ \& {\bfseries Get\+Parent} () const
+\item 
+\Hypertarget{classcSimJoint_a369d47d7128cc9cc18a4bfcac92fe013}\label{classcSimJoint_a369d47d7128cc9cc18a4bfcac92fe013} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ \& {\bfseries Get\+Child} () const
+\item 
+\Hypertarget{classcSimJoint_a31f60390aa7b174a555fb4776f39e3a4}\label{classcSimJoint_a31f60390aa7b174a555fb4776f39e3a4} 
+virtual void {\bfseries Clamp\+Total\+Torque} (t\+Vector \&out\+\_\+torque) const
+\item 
+\Hypertarget{classcSimJoint_a6abfa8e80784377d4d3bf48e480622d0}\label{classcSimJoint_a6abfa8e80784377d4d3bf48e480622d0} 
+virtual void {\bfseries Clamp\+Total\+Force} (t\+Vector \&out\+\_\+force) const
+\item 
+\Hypertarget{classcSimJoint_a7f6abe0355ee1fe64439c2f1d21c40ef}\label{classcSimJoint_a7f6abe0355ee1fe64439c2f1d21c40ef} 
+virtual const t\+Vector \& {\bfseries Get\+Lim\+Low} () const
+\item 
+\Hypertarget{classcSimJoint_a651aa9c7a3f7a0a7f387e15a47f037b5}\label{classcSimJoint_a651aa9c7a3f7a0a7f387e15a47f037b5} 
+virtual const t\+Vector \& {\bfseries Get\+Lim\+High} () const
+\item 
+\Hypertarget{classcSimJoint_a3124892a2fc5300363857753b1cd276d}\label{classcSimJoint_a3124892a2fc5300363857753b1cd276d} 
+virtual bool {\bfseries Has\+Joint\+Lim} () const
+\item 
+\Hypertarget{classcSimJoint_a673160b61ab7b67fd2124da0ba767faa}\label{classcSimJoint_a673160b61ab7b67fd2124da0ba767faa} 
+virtual bool {\bfseries Enable\+Adjacent\+Collision} () const
+\item 
+\Hypertarget{classcSimJoint_af16adf0e4f5a53862cd0cb98a6fb29c9}\label{classcSimJoint_af16adf0e4f5a53862cd0cb98a6fb29c9} 
+virtual int {\bfseries Get\+Param\+Size} () const
+\item 
+\Hypertarget{classcSimJoint_aaafe3e9b815e05962fe3180300232f8f}\label{classcSimJoint_aaafe3e9b815e05962fe3180300232f8f} 
+virtual void {\bfseries Build\+Pose} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a294f4ac71659063c169deed6d4e17252}\label{classcSimJoint_a294f4ac71659063c169deed6d4e17252} 
+virtual void {\bfseries Build\+Vel} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcSimJoint_a9ad925566798fc88e2ed7132043a3058}\label{classcSimJoint_a9ad925566798fc88e2ed7132043a3058} 
+virtual bool {\bfseries Has\+Mult\+Body} () const
+\item 
+\Hypertarget{classcSimJoint_af1264424c2cbbe28e009cb4e2f0df427}\label{classcSimJoint_af1264424c2cbbe28e009cb4e2f0df427} 
+virtual void {\bfseries Bind} ()
+\item 
+\Hypertarget{classcSimJoint_a698ceb49c926cf5dd26491b8bfb5d1f4}\label{classcSimJoint_a698ceb49c926cf5dd26491b8bfb5d1f4} 
+virtual void {\bfseries Unbind} ()
+\item 
+\Hypertarget{classcSimJoint_abedf9749436d224a3209aaa4f09af366}\label{classcSimJoint_abedf9749436d224a3209aaa4f09af366} 
+virtual t\+Vector {\bfseries Get\+Total\+Torque} () const
+\item 
+\Hypertarget{classcSimJoint_a5f02aa8e69a17d65b2e622bfedf3bcb6}\label{classcSimJoint_a5f02aa8e69a17d65b2e622bfedf3bcb6} 
+virtual t\+Vector {\bfseries Get\+Total\+Force} () const
+\item 
+\Hypertarget{classcSimJoint_a7426f84ae6e6349de9836bfc38eed418}\label{classcSimJoint_a7426f84ae6e6349de9836bfc38eed418} 
+virtual const std\+::shared\+\_\+ptr$<$ bt\+Typed\+Constraint $>$ \& {\bfseries Get\+Cons} () const
+\item 
+\Hypertarget{classcSimJoint_add5b6f480266a0daa354092e2282ac74}\label{classcSimJoint_add5b6f480266a0daa354092e2282ac74} 
+virtual const std\+::shared\+\_\+ptr$<$ bt\+Multi\+Body\+Constraint $>$ \& {\bfseries Get\+Mult\+Body\+Cons} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimJoint_a2d12dec9c40e466ec55d501e722f8f84}\label{classcSimJoint_a2d12dec9c40e466ec55d501e722f8f84} 
+virtual void {\bfseries Remove\+From\+World} ()
+\item 
+\Hypertarget{classcSimJoint_ae29709c0a6efcbbd3f39312aa1a1d117}\label{classcSimJoint_ae29709c0a6efcbbd3f39312aa1a1d117} 
+virtual t\+Vector {\bfseries Calc\+Parent\+Local\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+\Hypertarget{classcSimJoint_a2a8b230420f1748c1a9737af0d97a382}\label{classcSimJoint_a2a8b230420f1748c1a9737af0d97a382} 
+virtual t\+Vector {\bfseries Calc\+Child\+Local\+Pos} (const t\+Vector \&local\+\_\+pos) const
+\item 
+\Hypertarget{classcSimJoint_a217a50fa5db37eccfe8af7c5ef8e1527}\label{classcSimJoint_a217a50fa5db37eccfe8af7c5ef8e1527} 
+virtual double {\bfseries Get\+Prismatic\+Offset} () const
+\item 
+\Hypertarget{classcSimJoint_a373a79c70887e9a2ef0d968bb0125ba9}\label{classcSimJoint_a373a79c70887e9a2ef0d968bb0125ba9} 
+virtual void {\bfseries Build\+Constraint} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_a06779b0c544cbfb9519b0dedc3b11ba0}\label{classcSimJoint_a06779b0c544cbfb9519b0dedc3b11ba0} 
+virtual void {\bfseries Build\+Constraint\+Revolute} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_a4a52189f04eec9a0bff02235f5afc695}\label{classcSimJoint_a4a52189f04eec9a0bff02235f5afc695} 
+virtual void {\bfseries Build\+Constraint\+Planar} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_a2b37865551ee1d5df319ac46e6029a03}\label{classcSimJoint_a2b37865551ee1d5df319ac46e6029a03} 
+virtual void {\bfseries Build\+Constraint\+Prismatic} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_abe781d16660833b9950d5e4f6a0d48cf}\label{classcSimJoint_abe781d16660833b9950d5e4f6a0d48cf} 
+virtual void {\bfseries Build\+Constraint\+Fixed} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_a69a62463c3aed0fb26cf319a03a208d2}\label{classcSimJoint_a69a62463c3aed0fb26cf319a03a208d2} 
+virtual void {\bfseries Build\+Constraint\+Spherical} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ \&world)
+\item 
+\Hypertarget{classcSimJoint_a90771be6cc02d86f613f13c9646007c1}\label{classcSimJoint_a90771be6cc02d86f613f13c9646007c1} 
+virtual void {\bfseries Build\+Pose\+Revolute} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a798f2c7c5796ee926816de73fbaffcf0}\label{classcSimJoint_a798f2c7c5796ee926816de73fbaffcf0} 
+virtual void {\bfseries Build\+Pose\+Planar} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a89f1a7a328669ec810ff708758334b86}\label{classcSimJoint_a89f1a7a328669ec810ff708758334b86} 
+virtual void {\bfseries Build\+Pose\+Pristmatic} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_adb8b9f25a9802bcae165a85cb8aca0fd}\label{classcSimJoint_adb8b9f25a9802bcae165a85cb8aca0fd} 
+virtual void {\bfseries Build\+Pose\+Fixed} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a775e66858435fad674c89ea45a56604f}\label{classcSimJoint_a775e66858435fad674c89ea45a56604f} 
+virtual void {\bfseries Build\+Pose\+Spherical} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_ab9eb5bbbe97fe5e2fcfbc16681221686}\label{classcSimJoint_ab9eb5bbbe97fe5e2fcfbc16681221686} 
+virtual void {\bfseries Build\+Vel\+Revolute} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_af2b2bcab789b02ec46a3462df3c5bc07}\label{classcSimJoint_af2b2bcab789b02ec46a3462df3c5bc07} 
+virtual void {\bfseries Build\+Vel\+Planar} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a85432651847f32c5962e2d23ce85c7f9}\label{classcSimJoint_a85432651847f32c5962e2d23ce85c7f9} 
+virtual void {\bfseries Build\+Vel\+Pristmatic} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_afd32644e90e23260e27ad7f812eb6771}\label{classcSimJoint_afd32644e90e23260e27ad7f812eb6771} 
+virtual void {\bfseries Build\+Vel\+Fixed} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcSimJoint_a2c988346971d61dddb827171c30605d7}\label{classcSimJoint_a2c988346971d61dddb827171c30605d7} 
+virtual void {\bfseries Build\+Vel\+Spherical} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+\Hypertarget{classcSimJoint_a0e79e229f1487ab6535f17f557756c5a}\label{classcSimJoint_a0e79e229f1487ab6535f17f557756c5a} 
+virtual void {\bfseries Set\+Total\+Torque} (const t\+Vector \&torque)
+\item 
+\Hypertarget{classcSimJoint_a68cb396fb8cf63f9c1d7075d5fc0f401}\label{classcSimJoint_a68cb396fb8cf63f9c1d7075d5fc0f401} 
+virtual void {\bfseries Set\+Total\+Force} (const t\+Vector \&force)
+\item 
+\Hypertarget{classcSimJoint_a69ccf3f056791f85e7c76436c2e7af35}\label{classcSimJoint_a69ccf3f056791f85e7c76436c2e7af35} 
+virtual void {\bfseries Apply\+Torque} ()
+\item 
+\Hypertarget{classcSimJoint_a98999f1d79a883736b56ffeb797b307a}\label{classcSimJoint_a98999f1d79a883736b56ffeb797b307a} 
+virtual void {\bfseries Apply\+Force} ()
+\item 
+\Hypertarget{classcSimJoint_a4b39db4c5db48f3348cc17c7896fef7b}\label{classcSimJoint_a4b39db4c5db48f3348cc17c7896fef7b} 
+virtual t\+Vector {\bfseries Calc\+Local\+Ang\+Vel} () const
+\item 
+\Hypertarget{classcSimJoint_a96bfa8b54cf0298a9e1b0da075929229}\label{classcSimJoint_a96bfa8b54cf0298a9e1b0da075929229} 
+virtual t\+Vector {\bfseries Calc\+Local\+Lin\+Vel} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcSimJoint_a292003e75fb7ee51e751d0d464f147af}\label{classcSimJoint_a292003e75fb7ee51e751d0d464f147af} 
+\mbox{\hyperlink{structcSimJoint_1_1tParams}{t\+Params}} {\bfseries m\+Params}
+\item 
+\Hypertarget{classcSimJoint_af1c6ccc3147939ab87bbc6bede3db3e0}\label{classcSimJoint_af1c6ccc3147939ab87bbc6bede3db3e0} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcWorld}{c\+World}} $>$ {\bfseries m\+World}
+\item 
+\Hypertarget{classcSimJoint_a1d49d9ed7b2c1fc60df844a1c2f4d01f}\label{classcSimJoint_a1d49d9ed7b2c1fc60df844a1c2f4d01f} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ {\bfseries m\+Parent}
+\item 
+\Hypertarget{classcSimJoint_a853930567eb9db34eaec8525f445dbac}\label{classcSimJoint_a853930567eb9db34eaec8525f445dbac} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcSimObj}{c\+Sim\+Obj}} $>$ {\bfseries m\+Child}
+\item 
+\Hypertarget{classcSimJoint_a88bc565999bafe0a4deea4e59ab54625}\label{classcSimJoint_a88bc565999bafe0a4deea4e59ab54625} 
+c\+Sp\+Alg\+::t\+Sp\+Vec {\bfseries m\+Total\+Tau}
+\item 
+\Hypertarget{classcSimJoint_ae9a392a4fe7a93b5153bf0e6703110fa}\label{classcSimJoint_ae9a392a4fe7a93b5153bf0e6703110fa} 
+t\+Quaternion {\bfseries m\+Joint2\+Parent\+Quat}
+\item 
+\Hypertarget{classcSimJoint_a877c62ff74f507aa28380e4486085b4b}\label{classcSimJoint_a877c62ff74f507aa28380e4486085b4b} 
+t\+Quaternion {\bfseries m\+Joint2\+Child\+Quat}
+\item 
+\Hypertarget{classcSimJoint_a4c267c66826e0565907e8374861cfba2}\label{classcSimJoint_a4c267c66826e0565907e8374861cfba2} 
+std\+::shared\+\_\+ptr$<$ bt\+Typed\+Constraint $>$ {\bfseries m\+Cons}
+\item 
+\Hypertarget{classcSimJoint_a00fbc6e357da425900b8e30af1559639}\label{classcSimJoint_a00fbc6e357da425900b8e30af1559639} 
+std\+::shared\+\_\+ptr$<$ bt\+Multi\+Body\+Constraint $>$ {\bfseries m\+Mult\+Body\+Cons}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sim\+Joint.\+h\item 
+Sim\+Joint.\+cpp\end{DoxyCompactItemize}

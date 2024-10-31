@@ -1,0 +1,41 @@
+\doxysection{Multi\+Body.\+h}
+\hypertarget{MultiBody_8h_source}{}\label{MultiBody_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BulletDynamics/Featherstone/btMultiBody.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcMultiBody}{cMultiBody}}\ :\ \textcolor{keyword}{public}\ btMultiBody}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classcMultiBody}{cMultiBody}}(\textcolor{keywordtype}{int}\ n\_links,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOT\ including\ the\ base}}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ btScalar\ mass,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ mass\ of\ base}}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&inertia,\ \ \ \ \textcolor{comment}{//\ inertia\ of\ base,\ in\ base\ frame;\ assumed\ diagonal}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ fixedBase,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ whether\ the\ base\ is\ fixed\ (true)\ or\ can\ move\ (false)}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ canSleep,\ \textcolor{keywordtype}{bool}\ deprecatedMultiDof=\textcolor{keyword}{true});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcMultiBody}{\string~cMultiBody}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ compTreeLinkVelocities(btVector3\ *omega,\ btVector3\ *vel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ setupPlanar(\textcolor{keywordtype}{int}\ i,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btScalar\ mass,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&inertia,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ parent,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btQuaternion\ \&rotParentToThis,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&rotationAxis,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&parentComToThisComOffset,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ disableParentCollision);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SpatialTransform(\textcolor{keyword}{const}\ btMatrix3x3\ \&rotation\_matrix,\ \ \textcolor{comment}{//\ rotates\ vectors\ in\ 'from'\ frame\ to\ vectors\ in\ 'to'\ frame}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&displacement,\ \ \ \ \ \textcolor{comment}{//\ vector\ from\ origin\ of\ 'from'\ frame\ to\ origin\ of\ 'to'\ frame,\ in\ 'to'\ coordinates}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&top\_in,\ \ \ \ \ \ \ \textcolor{comment}{//\ top\ part\ of\ input\ vector}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ btVector3\ \&bottom\_in,\ \ \ \ \textcolor{comment}{//\ bottom\ part\ of\ input\ vector}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btVector3\ \&top\_out,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ top\ part\ of\ output\ vector}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btVector3\ \&bottom\_out);\ \ \ \ \ \ \textcolor{comment}{//\ bottom\ part\ of\ output\ vector}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

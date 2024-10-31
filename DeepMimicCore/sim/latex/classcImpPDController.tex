@@ -1,0 +1,236 @@
+\doxysection{c\+Imp\+PDController Class Reference}
+\hypertarget{classcImpPDController}{}\label{classcImpPDController}\index{cImpPDController@{cImpPDController}}
+
+
+Inheritance diagram for c\+Imp\+PDController\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classcImpPDController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c\+Imp\+PDController\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcImpPDController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcImpPDController_ad4d672ed8cf9983c9452ab6154142d2e}\label{classcImpPDController_ad4d672ed8cf9983c9452ab6154142d2e} 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const Eigen\+::\+Matrix\+Xd \&pd\+\_\+params, const t\+Vector \&gravity)
+\item 
+\Hypertarget{classcImpPDController_a3088ee721f685b485cc6084907c292a5}\label{classcImpPDController_a3088ee721f685b485cc6084907c292a5} 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} $>$ \&model, const Eigen\+::\+Matrix\+Xd \&pd\+\_\+params, const t\+Vector \&gravity)
+\item 
+virtual void \mbox{\hyperlink{classcImpPDController_a684d369a065888208e1dd0bf6fdbbf27}{Clear}} ()
+\item 
+virtual void \mbox{\hyperlink{classcImpPDController_a1720b102b3336b93c5d09d6740492eec}{Update\+Control\+Force}} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+virtual void \mbox{\hyperlink{classcImpPDController_ac9d4947f4abbe2fb515b75edb172d399}{Set\+Kp}} (int joint\+\_\+id, double kp)
+\item 
+virtual void \mbox{\hyperlink{classcImpPDController_abdf19fa6e6caba31f0fff68574a018a7}{Set\+Kd}} (int joint\+\_\+id, double kd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character, const Eigen\+::\+Matrix\+Xd \&pd\+\_\+params)
+\item 
+virtual void \mbox{\hyperlink{classcExpPDController_a3538dd685f8eebfbfb7788854a8c4835}{Reset}} ()
+\item 
+virtual void \mbox{\hyperlink{classcExpPDController_a82436261295d0a3082a276bfbc2e7ff8}{Update}} (double time\+\_\+step)
+\item 
+virtual int {\bfseries Get\+Num\+Joints} () const
+\item 
+virtual int {\bfseries Get\+Num\+Dof} () const
+\item 
+virtual void {\bfseries Get\+Target\+Theta} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+theta) const
+\item 
+virtual void {\bfseries Set\+Target\+Theta} (int joint\+\_\+id, const Eigen\+::\+Vector\+Xd \&theta)
+\item 
+virtual void {\bfseries Get\+Target\+Vel} (int joint\+\_\+id, Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\item 
+virtual void {\bfseries Set\+Target\+Vel} (int joint\+\_\+id, const Eigen\+::\+Vector\+Xd \&vel)
+\item 
+virtual bool {\bfseries Use\+World\+Coord} (int joint\+\_\+id) const
+\item 
+virtual void {\bfseries Set\+Use\+World\+Coord} (int joint\+\_\+id, bool use)
+\item 
+virtual bool {\bfseries Is\+Valid\+PDCtrl} (int joint\+\_\+id) const
+\item 
+virtual \mbox{\hyperlink{classcPDController}{c\+PDController}} \& {\bfseries Get\+PDCtrl} (int joint\+\_\+id)
+\item 
+virtual const \mbox{\hyperlink{classcPDController}{c\+PDController}} \& {\bfseries Get\+PDCtrl} (int joint\+\_\+id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Init} (\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*}character)
+\item 
+virtual bool {\bfseries Is\+Valid} () const
+\item 
+virtual bool {\bfseries Load\+Params} (const std\+::string \&param\+\_\+file)
+\item 
+virtual int {\bfseries Get\+Num\+Opt\+Params} () const
+\item 
+virtual void {\bfseries Build\+Opt\+Params} (Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params)
+\item 
+virtual void {\bfseries Set\+Opt\+Params} (const Eigen\+::\+Vector\+Xd \&params, Eigen\+::\+Vector\+Xd \&out\+\_\+params) const
+\item 
+virtual void {\bfseries Fetch\+Opt\+Param\+Scale} (Eigen\+::\+Vector\+Xd \&out\+\_\+scale) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (const std\+::string \&file, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Output\+Opt\+Params} (FILE \texorpdfstring{$\ast$}{*}f, const Eigen\+::\+Vector\+Xd \&params) const
+\item 
+virtual void {\bfseries Set\+Active} (bool active)
+\item 
+virtual bool {\bfseries Is\+Active} () const
+\item 
+virtual void {\bfseries Set\+Mode} (e\+Mode mode)
+\item 
+virtual const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Char} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcImpPDController_aaa207c8eb8722eff0802365fd07f0557}\label{classcImpPDController_aaa207c8eb8722eff0802365fd07f0557} 
+virtual void {\bfseries Init\+Gains} ()
+\item 
+\Hypertarget{classcImpPDController_a73b01af32d2922b045ba3e7244f6b72b}\label{classcImpPDController_a73b01af32d2922b045ba3e7244f6b72b} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} $>$ {\bfseries Build\+RBDModel} (const \mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \&character, const t\+Vector \&gravity) const
+\item 
+\Hypertarget{classcImpPDController_a3f15d66827172b5feaf86d779ee4d283}\label{classcImpPDController_a3f15d66827172b5feaf86d779ee4d283} 
+virtual void {\bfseries Update\+RBDModel} ()
+\item 
+virtual void \mbox{\hyperlink{classcImpPDController_ad842a2f1c8e4fcc041e5e5c92251711f}{Calc\+Control\+Forces}} (double time\+\_\+step, Eigen\+::\+Vector\+Xd \&out\+\_\+tau)
+\item 
+\Hypertarget{classcImpPDController_ab0cbdb157d74f97bdd3a97560de89e3c}\label{classcImpPDController_ab0cbdb157d74f97bdd3a97560de89e3c} 
+virtual void {\bfseries Build\+Target\+Pose} (Eigen\+::\+Vector\+Xd \&out\+\_\+pose) const
+\item 
+\Hypertarget{classcImpPDController_ae30d4c5197d61d667283ae5b883aa271}\label{classcImpPDController_ae30d4c5197d61d667283ae5b883aa271} 
+virtual void {\bfseries Build\+Target\+Vel} (Eigen\+::\+Vector\+Xd \&out\+\_\+vel) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Apply\+Control\+Forces} (const Eigen\+::\+Vector\+Xd \&tau)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries Parse\+Params} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcImpPDController_a74fb720441c475c429ce9c8d73703dc4}\label{classcImpPDController_a74fb720441c475c429ce9c8d73703dc4} 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Kp}
+\item 
+\Hypertarget{classcImpPDController_ad38cadc2c6b6dceaf57f1a6e3ac735fe}\label{classcImpPDController_ad38cadc2c6b6dceaf57f1a6e3ac735fe} 
+Eigen\+::\+Vector\+Xd {\bfseries m\+Kd}
+\item 
+\Hypertarget{classcImpPDController_a3130ef47d82011e36544c16a3b3787d5}\label{classcImpPDController_a3130ef47d82011e36544c16a3b3787d5} 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{classcPDController}{c\+PDController}} $>$ {\bfseries m\+PDCtrls}
+\item 
+\Hypertarget{classcImpPDController_a7251930468917e7e1760488129b0fffa}\label{classcImpPDController_a7251930468917e7e1760488129b0fffa} 
+t\+Vector {\bfseries m\+Gravity}
+\item 
+\Hypertarget{classcImpPDController_a8f5b5030ec4acde1d4ef354315a0aa40}\label{classcImpPDController_a8f5b5030ec4acde1d4ef354315a0aa40} 
+bool {\bfseries m\+Extern\+RBDModel}
+\item 
+\Hypertarget{classcImpPDController_a40ef432f59a1416c18d2435317f998e7}\label{classcImpPDController_a40ef432f59a1416c18d2435317f998e7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcRBDModel}{c\+RBDModel}} $>$ {\bfseries m\+RBDModel}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}}
+\begin{DoxyCompactItemize}
+\item 
+t\+Eigen\+Arr$<$ \mbox{\hyperlink{classcPDController}{c\+PDController}} $>$ {\bfseries m\+PDCtrls}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcSimCharacter}{c\+Sim\+Character}} \texorpdfstring{$\ast$}{*} {\bfseries m\+Char}
+\item 
+e\+Mode {\bfseries m\+Mode}
+\item 
+bool {\bfseries m\+Valid}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classcController}{c\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcController_a4f1273b9179f3333f0c49bd19169b73c}\label{classcController_a4f1273b9179f3333f0c49bd19169b73c} 
+enum {\bfseries e\+Mode} \{ {\bfseries e\+Mode\+Active}
+, {\bfseries e\+Mode\+Inactive}
+, {\bfseries e\+Mode\+Passive}
+, {\bfseries e\+Mode\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcImpPDController_ad842a2f1c8e4fcc041e5e5c92251711f}\label{classcImpPDController_ad842a2f1c8e4fcc041e5e5c92251711f} 
+\index{cImpPDController@{cImpPDController}!CalcControlForces@{CalcControlForces}}
+\index{CalcControlForces@{CalcControlForces}!cImpPDController@{cImpPDController}}
+\doxysubsubsection{\texorpdfstring{CalcControlForces()}{CalcControlForces()}}
+{\footnotesize\ttfamily void c\+Imp\+PDController\+::\+Calc\+Control\+Forces (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+step,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+tau }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}.
+
+\Hypertarget{classcImpPDController_a684d369a065888208e1dd0bf6fdbbf27}\label{classcImpPDController_a684d369a065888208e1dd0bf6fdbbf27} 
+\index{cImpPDController@{cImpPDController}!Clear@{Clear}}
+\index{Clear@{Clear}!cImpPDController@{cImpPDController}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void c\+Imp\+PDController\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}.
+
+\Hypertarget{classcImpPDController_abdf19fa6e6caba31f0fff68574a018a7}\label{classcImpPDController_abdf19fa6e6caba31f0fff68574a018a7} 
+\index{cImpPDController@{cImpPDController}!SetKd@{SetKd}}
+\index{SetKd@{SetKd}!cImpPDController@{cImpPDController}}
+\doxysubsubsection{\texorpdfstring{SetKd()}{SetKd()}}
+{\footnotesize\ttfamily void c\+Imp\+PDController\+::\+Set\+Kd (\begin{DoxyParamCaption}\item[{int}]{joint\+\_\+id,  }\item[{double}]{kd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}.
+
+\Hypertarget{classcImpPDController_ac9d4947f4abbe2fb515b75edb172d399}\label{classcImpPDController_ac9d4947f4abbe2fb515b75edb172d399} 
+\index{cImpPDController@{cImpPDController}!SetKp@{SetKp}}
+\index{SetKp@{SetKp}!cImpPDController@{cImpPDController}}
+\doxysubsubsection{\texorpdfstring{SetKp()}{SetKp()}}
+{\footnotesize\ttfamily void c\+Imp\+PDController\+::\+Set\+Kp (\begin{DoxyParamCaption}\item[{int}]{joint\+\_\+id,  }\item[{double}]{kp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}.
+
+\Hypertarget{classcImpPDController_a1720b102b3336b93c5d09d6740492eec}\label{classcImpPDController_a1720b102b3336b93c5d09d6740492eec} 
+\index{cImpPDController@{cImpPDController}!UpdateControlForce@{UpdateControlForce}}
+\index{UpdateControlForce@{UpdateControlForce}!cImpPDController@{cImpPDController}}
+\doxysubsubsection{\texorpdfstring{UpdateControlForce()}{UpdateControlForce()}}
+{\footnotesize\ttfamily void c\+Imp\+PDController\+::\+Update\+Control\+Force (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+step,  }\item[{Eigen\+::\+Vector\+Xd \&}]{out\+\_\+tau }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcExpPDController}{c\+Exp\+PDController}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Imp\+PDController.\+h\item 
+Imp\+PDController.\+cpp\end{DoxyCompactItemize}

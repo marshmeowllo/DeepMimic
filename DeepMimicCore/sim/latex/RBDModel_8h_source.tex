@@ -1,0 +1,74 @@
+\doxysection{RBDModel.\+h}
+\hypertarget{RBDModel_8h_source}{}\label{RBDModel_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SpAlg.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}util/MathUtil.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ this\ class\ is\ mostly\ to\ help\ with\ efficiency\ by\ precomputing\ some\ useful}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ quantities\ for\ RBD\ calculations}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcRBDModel}{cRBDModel}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classcRBDModel}{cRBDModel}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classcRBDModel}{\string~cRBDModel}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ joint\_mat,\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ body\_defs,\ \textcolor{keyword}{const}\ tVector\&\ gravity);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose,\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumDof()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetNumJoints()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ tVector\&\ GetGravity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ GetJointMat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ GetBodyDefs()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ GetPose()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ GetVel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetParent(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::MatrixXd\&\ GetMassMat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::VectorXd\&\ GetBiasForce()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ Eigen::MatrixXd\&\ GetInertiaBuffer();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetChildParentMat(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetParentChildMat(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ cSpAlg::tSpTrans\ GetSpChildParentTrans(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ cSpAlg::tSpTrans\ GetSpParentChildTrans(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetWorldJointMat(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ tMatrix\ GetJointWorldMat(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ cSpAlg::tSpTrans\ GetSpWorldJointTrans(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ cSpAlg::tSpTrans\ GetSpJointWorldTrans(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ Eigen::Block<const\ Eigen::MatrixXd>\ GetJointSubspace(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ tVector\ CalcJointWorldPos(\textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ tVector\ mGravity;}
+\DoxyCodeLine{00047\ \ \ \ \ Eigen::MatrixXd\ mJointMat;}
+\DoxyCodeLine{00048\ \ \ \ \ Eigen::MatrixXd\ mBodyDefs;}
+\DoxyCodeLine{00049\ \ \ \ \ Eigen::VectorXd\ mPose;}
+\DoxyCodeLine{00050\ \ \ \ \ Eigen::VectorXd\ mVel;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ Eigen::MatrixXd\ mJointSubspaceArr;}
+\DoxyCodeLine{00053\ \ \ \ \ Eigen::MatrixXd\ mChildParentMatArr;}
+\DoxyCodeLine{00054\ \ \ \ \ Eigen::MatrixXd\ mSpWorldJointTransArr;}
+\DoxyCodeLine{00055\ \ \ \ \ Eigen::MatrixXd\ mMassMat;}
+\DoxyCodeLine{00056\ \ \ \ \ Eigen::VectorXd\ mBiasForce;}
+\DoxyCodeLine{00057\ \ \ \ \ Eigen::MatrixXd\ mInertiaBuffer;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetPose(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ pose);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetVel(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vel);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ InitJointSubspaceArr();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateJointSubspaceArr();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateChildParentMatArr();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateSpWorldTrans();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateMassMat();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateBiasForce();}
+\DoxyCodeLine{00069\ \};}
+
+\end{DoxyCode}
