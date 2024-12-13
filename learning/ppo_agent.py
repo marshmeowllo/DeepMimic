@@ -33,15 +33,24 @@ class PPOAgent(PGAgent):
     def _load_params(self, json_data):
         super()._load_params(json_data)
 
+        # Number of training epochs per update
         self.epochs = 1 if (self.EPOCHS_KEY not in json_data) else json_data[self.EPOCHS_KEY]
+        # Batch size for updates
         self.batch_size = 1024 if (self.BATCH_SIZE_KEY not in json_data) else json_data[self.BATCH_SIZE_KEY]
+        # Clipping parameter for PPO
         self.ratio_clip = 0.2 if (self.RATIO_CLIP_KEY not in json_data) else json_data[self.RATIO_CLIP_KEY]
+        # Clipping for normalized advantages
         self.norm_adv_clip = 5 if (self.NORM_ADV_CLIP_KEY not in json_data) else json_data[self.NORM_ADV_CLIP_KEY]
+        # TD-lambda for return calculation
         self.td_lambda = 0.95 if (self.TD_LAMBDA_KEY not in json_data) else json_data[self.TD_LAMBDA_KEY]
+        # Target clipping fraction
         self.tar_clip_frac = -1 if (self.TAR_CLIP_FRAC not in json_data) else json_data[self.TAR_CLIP_FRAC]
 
+        # Adjust batch size to account for multiple processes
         num_procs = MPIUtil.get_num_procs()
         self._local_batch_size = int(np.ceil(self.batch_size / num_procs))
+
+        # Ensure replay buffer size is sufficient to avoid overflow
         min_replay_size = 2 * self._local_batch_size # needed to prevent buffer overflow
         assert(self.replay_buffer_size > min_replay_size)
 
@@ -50,18 +59,21 @@ class PPOAgent(PGAgent):
         return
 
     def _build_nets(self, json_data):
+        # Ensure required keys are present in configuration
         assert self.ACTOR_NET_KEY in json_data
         assert self.CRITIC_NET_KEY in json_data
 
+        # Load network names and initialization parameters
         actor_net_name = json_data[self.ACTOR_NET_KEY]
         critic_net_name = json_data[self.CRITIC_NET_KEY]
         actor_init_output_scale = 1 if (self.ACTOR_INIT_OUTPUT_SCALE_KEY not in json_data) else json_data[self.ACTOR_INIT_OUTPUT_SCALE_KEY]
 
+        # Retrieve input sizes for state, goal, and action spaces
         s_size = self.get_state_size()
         g_size = self.get_goal_size()
         a_size = self.get_action_size()
 
-        # setup input tensors
+        # Setup TensorFlow placeholders for inputs
         self._s_ph = tf.placeholder(tf.float32, shape=[None, s_size], name="s")
         self._g_ph = tf.placeholder(tf.float32, shape=([None, g_size] if self.has_goal() else None), name="g")
         self._a_ph = tf.placeholder(tf.float32, shape=[None, a_size], name="a")
@@ -69,16 +81,19 @@ class PPOAgent(PGAgent):
         self._tar_val_ph = tf.placeholder(tf.float32, shape=[None], name="tar_val")
         self._adv_ph = tf.placeholder(tf.float32, shape=[None], name="adv")
 
+        # Build actor and critic networks within the 'main' scope
         with tf.variable_scope('main'):
             self._norm_a_pd_tf = self._build_net_actor(actor_net_name, self._get_actor_inputs(), actor_init_output_scale)
             self._critic_tf = self._build_net_critic(critic_net_name, self._get_critic_inputs())
-                
+        
+        # Logging network build completion
         if (self._norm_a_pd_tf != None):
             Logger.print("Built actor net: " + actor_net_name)
 
         if (self._critic_tf != None):
             Logger.print("Built critic net: " + critic_net_name)
         
+        # Actor outputs: sampled action, mode action, and log probabilities
         sample_norm_a_tf = self._norm_a_pd_tf.sample()
         self._sample_a_tf = self._a_norm.unnormalize_tf(sample_norm_a_tf)
         self._sample_a_logp_tf = self._norm_a_pd_tf.logp(sample_norm_a_tf)
@@ -87,19 +102,27 @@ class PPOAgent(PGAgent):
         self._mode_a_tf = self._a_norm.unnormalize_tf(mode_norm_a_tf)
         self._mode_a_logp_tf = self._norm_a_pd_tf.logp(mode_norm_a_tf)
         
+        # Log probabilities for target actions
         norm_tar_a_tf = self._a_norm.normalize_tf(self._a_ph)
         self._a_logp_tf = self._norm_a_pd_tf.logp(norm_tar_a_tf)
         
         return
 
     def _build_losses(self, json_data):
+        # Set default hyperparameters for loss computation
+
+        # Penalty weight for action bounds
         actor_bound_loss_weight = 10.0
+        # Regularization for actor
         actor_weight_decay = 0 if (self.ACTOR_WEIGHT_DECAY_KEY not in json_data) else json_data[self.ACTOR_WEIGHT_DECAY_KEY]
+        # Regularization for critic
         critic_weight_decay = 0 if (self.CRITIC_WEIGHT_DECAY_KEY not in json_data) else json_data[self.CRITIC_WEIGHT_DECAY_KEY]
         
+        # Critic loss: mean squared error between target and predicted values
         val_diff = self._tar_val_ph - self._critic_tf
         self._critic_loss_tf = 0.5 * tf.reduce_mean(tf.square(val_diff))
 
+        # Add weight decay to critic loss
         if (critic_weight_decay != 0):
             self._critic_loss_tf += critic_weight_decay * self._weight_decay_loss(self.MAIN_SCOPE + '/critic')
         

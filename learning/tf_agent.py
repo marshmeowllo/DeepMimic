@@ -86,7 +86,7 @@ class TFAgent(RLAgent):
     def _tf_vars(self, scope=''):
         with self.sess.as_default(), self.graph.as_default():
             res = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope=self.tf_scope + '/' + scope)
-            assert len(res) > 0
+            assert len(res) > 0, f"No trainable variables found in scope: {self.tf_scope} / {scope}"
         return res
 
     def _build_normalizers(self):

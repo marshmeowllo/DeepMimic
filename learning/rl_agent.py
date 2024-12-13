@@ -483,6 +483,11 @@ class RLAgent(ABC):
         return
 
     def _train(self):
+        Logger.print("="*10)
+        print(f"RLAgent._train_step invoked from {type(self).__name__}")
+        Logger.print("="*10)
+
+
         samples = self.replay_buffer.total_count
         self._total_sample_count = int(MPIUtil.reduce_sum(samples))
         end_training = False

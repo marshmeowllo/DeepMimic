@@ -24,6 +24,8 @@ update_timestep = 1.0 / fps
 display_anim_time = int(1000 * update_timestep)
 animating = True
 
+# playback_speed controls the playback speed multiplier. 
+# playback_delta defines increments for speed adjustments.
 playback_speed = 1
 playback_delta = 0.05
 
@@ -61,6 +63,7 @@ def update_intermediate_buffer():
     return
 
 def update_world(world, time_elapsed):
+    # num_substeps: Updates the world’s environment in multiple substeps for physics stability.
     num_substeps = world.env.get_num_update_substeps()
     timestep = time_elapsed / num_substeps
     num_substeps = 1 if (time_elapsed == 0) else num_substeps
@@ -69,6 +72,7 @@ def update_world(world, time_elapsed):
         world.update(timestep)
 
         valid_episode = world.env.check_valid_episode()
+    # Episode End Check: If the episode ends, the agent resets and starts a new episode.
         if valid_episode:
             end_episode = world.env.is_episode_end()
             if (end_episode):
@@ -106,6 +110,7 @@ def step_anim(timestep):
     global animating
     global world
 
+    # Updates the world for a single animation step and stops further animations.
     update_world(world, timestep)
     animating = False
     glutPostRedisplay()
