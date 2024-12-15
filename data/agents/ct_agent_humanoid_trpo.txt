@@ -18,13 +18,13 @@
 	"CriticWeightDecay": 0,
 
 	"ItersPerUpdate": 1,
-	"Discount": 0.95,
-	"BatchSize": 48,
-	"MiniBatchSize": 48,
+	"Discount": 0.90,
+	"BatchSize": 24,
+	"MiniBatchSize": 24,
 	"Epochs": 3,
-	"ReplayBufferSize": 1000000,
+	"ReplayBufferSize": 10000,
 	"InitSamples": 1,
-	"NormalizerSamples": 1000000,
+	"NormalizerSamples": 10000,
 
 	"RatioClip": 0.2,
 	"NormAdvClip": 4,

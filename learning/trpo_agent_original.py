@@ -267,6 +267,7 @@ class TRPOAgent(PGAgent):
         Returns:
             numpy array: Solution vector x.
         """
+        
         gradient = np.asarray(gradient, dtype=np.float32)  # Ensure gradient is numpy array
         assert gradient.ndim == 1, "Gradient should be a 1D array."
 
@@ -352,7 +353,7 @@ class TRPOAgent(PGAgent):
 
                 critic_s = self.replay_buffer.get('states', critic_batch)
                 critic_g = self.replay_buffer.get('goals', critic_batch) if self.has_goal() else None
-                self._update_critic(critic_s, critic_g, critic_batch_vals)
+                curr_critic_loss = self._update_critic(critic_s, critic_g, critic_batch_vals)
 
                 actor_s = self.replay_buffer.get('states', actor_batch[:, 0])
                 actor_g = self.replay_buffer.get('goals', actor_batch[:, 0]) if self.has_goal() else None
@@ -360,12 +361,15 @@ class TRPOAgent(PGAgent):
 
                 self._current_states = actor_s
 
-                self._update_actor(actor_s, actor_g, actor_a, actor_batch_adv)
+                curr_actor_loss = self._update_actor(actor_s, actor_g, actor_a, actor_batch_adv)
+                actor_loss += np.abs(curr_actor_loss)
+                
+                critic_loss += curr_critic_loss
 
         critic_loss = MPIUtil.reduce_avg(critic_loss)
         actor_loss = MPIUtil.reduce_avg(actor_loss)
 
-        self.logger.log_tabular('Critic_Loss', critic_loss)
+        self.logger.log_tabular('Critic_Loss', curr_critic_loss)
         self.logger.log_tabular('Actor_Loss', actor_loss)
         self.logger.log_tabular('Adv_Mean', adv_mean)
         self.logger.log_tabular('Adv_Std', adv_std)
