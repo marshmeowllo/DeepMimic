@@ -1,3 +1,9 @@
+# TPRO
+
+To train ` python DeepMimic.py --arg_file sample_train.txt`
+
+To run model `python DeepMimic.py --arg_file run.txt`
+
 # Intro 
 
 Code accompanying the following papers:
